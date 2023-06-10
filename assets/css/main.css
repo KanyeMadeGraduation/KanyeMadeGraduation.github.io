@@ -1,0 +1,28 @@
+.sidebar {
+    left: -250px;
+  }
+
+  #section-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 30px);
+   }
+
+  .centered {
+    transform: translateX(-20px);
+  }
+
+  .front {
+    height: 100%; width: 100%;
+  }
+  
+  .content {
+    padding-top: 70px;
+    margin-left: 0;
+    left: 0;
+  }
+  
+  .top-bar {
+    left: 0;
+    width: 100%;
+  }

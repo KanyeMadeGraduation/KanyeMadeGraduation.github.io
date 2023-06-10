@@ -4,12 +4,12 @@ body,html {
   min-width: 100%;
   min-height:100%;
   overflow-x: hidden;
-  background-color: #0b0c0f;
+  background-color: #151515;
   scroll-behavior: smooth;
 }
 
 .context {
-  box-shadow: 0px 20px 10px #0b0c0f;
+  box-shadow: 0px 20px 10px #151515;
 }
 
 * {
@@ -22,7 +22,7 @@ body,html {
   left: 0;
   width: 250px;
   height: 100%;
-  background-color: #151515;
+  background-color: #101010;
   z-index: 100;
   overflow: hidden;
   float: left;
@@ -183,8 +183,9 @@ body {
   font-size: 24px;
   text-align: center;
   min-height: 100px;
-  background-color: rgba(10, 10, 10, 0.6);
-  display: grid;
+  background-color: #10101033;
+  display: flex;
+  flex-direction: column;
 }
 
 #main-container {
@@ -254,13 +255,13 @@ a:link {
 }
 /* visited link */
 a:visited {
-  color: #095484;
+  color: #ccc;
 }
 /* mouse over link */
 a:hover {
-  color: #8ebf42;
+  color: #ccc;
 }
 /* selected link */
 a:active {
-  color: #800000;
+  color: #ccc;
 }
