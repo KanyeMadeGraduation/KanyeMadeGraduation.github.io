@@ -1,0 +1,15 @@
+const includeHTML = () => {
+    const includes = document.body.getElementsByTagName('include');
+    for(const include of includes) {
+        let filePath = include.getAttribute('src');
+        console.log(include, filePath)
+        fetch(filePath).then((file) => {
+            file.text().then((content) => {
+                include.insertAdjacentHTML('afterend', content);
+                include.remove();
+            });
+        });
+    }
+};
+
+includeHTML()
