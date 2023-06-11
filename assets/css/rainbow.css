@@ -41,6 +41,12 @@
 .rainbow_tenacity {
     background-image: linear-gradient(to right,#EF83D7,#2EB8F0);
 }
+
 .rainbow_rat {
     background-image: linear-gradient(45deg, #ef8383,#f02e2e);
+}
+
+.rainbow_forge {
+    background-image: linear-gradient(45deg, #efe883,#edf02e);
+    color:black;
 }
