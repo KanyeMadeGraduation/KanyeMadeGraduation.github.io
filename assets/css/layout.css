@@ -210,11 +210,21 @@ body {
  font-size: 20px;
 }
 
+.nosidebar {
+  padding-right: 250px;
+  padding-left: 250px;
+}
 @media only screen and (max-width: 500px) {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(255px, auto));
     grid-auto-columns: max-content;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .nosidebar {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -223,6 +233,8 @@ body {
   .sidebar {
     left: -250px;
   }
+
+
 
   #section-container {
     display: flex;
