@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/dl.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/rainbow.css">
+    <link rel="stylesheet" href="assets/css/colours.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
@@ -50,56 +50,80 @@
           </div>
         </div>
 
-        <section class="nosidebar">
+        <section>
           <!-- Page -->
           <div id="main-container">
             <div id="section-container">
               <section class="grid-container">
                 <!-- Section -->
-                <div class="grid-item">
-                  <h1>hovac's <span class="rainbow_text_2 rainbow" style="display: inline;">qol</span></h1>
+                <div class="grid-item" style="background: rgba(0, 0, 0, 0); border: none;">
+                  <h2>hovac's <span class="rainbow_text_2 rainbow" style="display: inline;">qol</span></h2>
                   <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
                     Providing cheats since <span class="rainbow_tenacity rainbow" style="display: inline;">May 1st, 2022.</span><br>
-                    Back in service since <span class="rainbow_text_4 rainbow" style="display: inline;">June 1st, 2023!</span> We welcome you back.
+                    Back in service since <span class="rainbow_text_4 rainbow" style="display: inline;">June 1st, 2023!</span>
                   </h5>
                   <br>
-                  <button class="glow-on-hover fullblurple" style="font-size:.9em; font-weight:300; margin: 0 auto;"
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; margin: 0 auto;"
+                  onclick="window.scrollBy (0, window.innerHeight);"
+                    >View cheats <i class="fa-solid fa-gamepad"></i></button>
+                  <br>
+                  <iframe style="aspect-ratio: 16 / 9; width: 40%; margin: auto;" frameborder="0" allowfullscreen src="/youtube.html">
+                  </iframe>
+                  <div>
+                    <button class="glow-on-hover fullblurple" style="font-size:.9em; font-weight:300; margin: 0 auto;"
                     onclick="window.location.href='/discord';"
-                    >Join Discord <i class="fa-brands fa-discord"></i></button>
-                  <button class="glow-on-hover fullred" style="font-size:.9em; font-weight:300; margin: 16px auto;"
+                      >Join Discord <i class="fa-brands fa-discord"></i></button>
+                    <button class="glow-on-hover fullred" style="font-size:.9em; font-weight:300; margin: 16px auto;"
                     onclick="window.location.href='https://www.youtube.com/channel/UCG8WYvM1B04CcYbHHCPEhjg';"
-                    >Subscribe <i class="fa-brands fa-youtube"></i></button>
+                      >Subscribe <i class="fa-brands fa-youtube"></i></button>
+                  </div>
+                  <br>
+                  <h1>Browse our cheats:</h1>
                 </div>
               </section>
             </div>
           </div>
           <!-- Page -->
-          <div id="main-container">
+          <div id="main-container" class="nosidebar">
             <div id="section-container">
-              <section class="grid-container">
+              <section class="full-container">
                 <!-- Section -->
-                <div class="grid-item">
-                  Minecraft cheats
-                  <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
-                    A collection of the top free Minecraft cheats of all types for all versions! Ghost cheats, blatant cheats, any versions, we've got everything!
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                    onclick="window.location.href='/minecraft.html';"
-                    >See cheats <i class="fa-solid fa-gamepad"></i></button>
+                <div class="full-item" style="background-color: #00000000; border: none;">
+                  <div class="grid-item preview-img" style="display: inline-block; margin: 0; text-align: right; background-color: #00000000; border-radius: 16px 0 0 16px; background-size: cover; background-position: 50% 50%; background-image:
+                    url('/assets/img/minecraft.jpg');">
+                  </div>
+                  <div class="grid-item preview-box" style="vertical-align: top; display: inline-block; margin: 0; text-align: left; border-radius: 0 16px 16px 0;">
+                    Minecraft
+                    <br><br> <!-- gap -->
+                    <h5 style="font-weight: 200; flex-grow: 1;">
+                      A collection of the top free Minecraft cheats of all types for all versions! Ghost cheats, blatant cheats, any versions, we've got everything!
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;" onclick="window.location.href='/minecraft.html';">
+                        View cheats <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <!-- Section -->
-                <div class="grid-item">
-                  Roblox exploits
-                  <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
-                    The latest unpatched exploits, including level 8 script executors, along with useful tools like an FPS delimiter!
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                    onclick="window.location.href='/roblox.html';"
-                    >See cheats <i class="fa-solid fa-gamepad"></i></button>
+                <div class="full-item" style="background-color: #00000000; border: none;">
+                  <div class="grid-item preview-img" style="display: inline-block; margin: 0; text-align: right; background-color: #00000000; border-radius: 16px 0 0 16px; background-size: cover; background-position: 50% 50%; background-image:
+                    url('/assets/img/roblox.jpg');">
+                  </div>
+                  <div class="grid-item preview-box" style="vertical-align: top; display: inline-block; margin: 0; text-align: left; border-radius: 0 16px 16px 0;">
+                    Roblox
+                    <br><br> <!-- gap -->
+                    <h5 style="font-weight: 200; flex-grow: 1;">
+                      The latest unpatched exploits, including level 8 script executors, along with useful tools like an FPS delimiter!
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;" onclick="window.location.href='/roblox.html';">
+                        View cheats <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </section>
             </div>

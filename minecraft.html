@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/dl.css">
     <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/rainbow.css">
+    <link rel="stylesheet" href="assets/css/colours.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
@@ -64,19 +64,22 @@
             <div id="section-container">
               <section class="grid-container">
                 <!-- Section -->
-                <div class="grid-item">
+                <div class="grid-item" style="background: rgba(0, 0, 0, 0); border: none;">
                   <h1>hovac's <span class="rainbow_text_2 rainbow" style="display: inline;">qol</span></h1>
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <h5 class="section-text">
                     Providing cheats since <span class="rainbow_tenacity rainbow" style="display: inline;">May 1st, 2022.</span><br>
                     We're still migrating all the downloads from the old site here. Thank you for your patience.
                   </h5>
-                  <br>
-                  <button class="glow-on-hover fullblurple" style="font-size:.9em; font-weight:300; margin: 0 auto;"
-                  onclick="window.location.href='/discord';"
-                    >Join Discord <i class="fa-brands fa-discord"></i></button>
-                  <button class="glow-on-hover fullred" style="font-size:.9em; font-weight:300; margin: 16px auto;"
-                  onclick="window.location.href='https://www.youtube.com/channel/UCG8WYvM1B04CcYbHHCPEhjg';"
-                    >Subscribe <i class="fa-brands fa-youtube"></i></button>
+                  <div>
+                    <button class="glow-on-hover fullblurple" style="font-size:.9em; font-weight:300; margin: 0 auto;"
+                    onclick="window.location.href='/discord';"
+                      >Join Discord <i class="fa-brands fa-discord"></i></button>
+                    <button class="glow-on-hover fullred" style="font-size:.9em; font-weight:300; margin: 16px auto;"
+                    onclick="window.location.href='https://www.youtube.com/channel/UCG8WYvM1B04CcYbHHCPEhjg';"
+                      >Subscribe <i class="fa-brands fa-youtube"></i></button>
+                  </div>
+                  <iframe style="aspect-ratio: 16 / 9; width: 30%; margin-left: 35%;" frameborder="0" allowfullscreen src="/youtube.html">
+                  </iframe>
                 </div>
               </section>
             </div>
@@ -92,7 +95,7 @@
                   <div class="grid-item">
                     Lambda
                     <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A highly customizable utility client written in Kotlin. Provides a plugin system. Often used along side with 3arthh4ck. Based off of the client KAMI Blue.
                     </h5>
                     <br>
@@ -112,7 +115,7 @@
                   <div class="grid-item">
                     Wurst+
                     <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       The main competitor to Phobos. Includes downloads + src for all 3 versions!
                     </h5>
                     <br>
@@ -133,7 +136,7 @@
                     Wurst
                     <br><div class="badges"><h5 class="badge">1.16.5</h5><h5 class="badge">1.18.2</h5><h5 class="badge">1.19.x</h5><h5 class="badge">1.20.x</h5><h5 class="badge">Snapshots</h5><h5 class="badge rainbow_fabric">Fabric</h5></div>
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;"><i>Supported versions have been last checked since version 7.35.1, client may be updated!</i></h6>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Updates frequently. Supports versions 1.8.9 to 1.20.x, some versions are discontinued (such as 1.8.9) and only get security patches.
                     </h5>
                     <br>
@@ -151,7 +154,7 @@
                     Meteor
                     <br><div class="badges"><h5 class="badge">1.20</h5><h5 class="badge rainbow_fabric">Fabric</h5></div>
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;"><i>Supported versions have been last checked since version 0.5.4, client may be updated!</i></h6>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A popular crystal PvP client with a bunch of other utility features. Provides an addon system.
                     </h5>
                     <br>
@@ -172,7 +175,7 @@
                     Aristois
                     <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge">1.12.2</h5><h5 class="badge">1.13.2</h5><h5 class="badge">1.14.4</h5><h5 class="badge">1.15.2</h5><h5 class="badge">1.16.5</h5><h5 class="badge">1.17.1</h5><h5 class="badge">1.18.2</h5><h5 class="badge">1.19.x</h5><h5 class="badge">1.20.1</h5></div>
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;"><i>Supported versions have been last checked since version b461, client may be updated!</i></h6>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Offers a paid version, some features are exclusive. Updates frequently.
                     </h5>
                     <br>
@@ -185,7 +188,7 @@
                     BleachHack
                     <br><div class="badges"><h5 class="badge">1.17.1</h5><h5 class="badge">1.18.2</h5><h5 class="badge">1.19.4</h5><h5 class="badge rainbow_fabric">Fabric</h5></div>
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;"><i>Supported versions have been last checked since version 1.2.6, client may be updated!</i></h6>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A very simple, vanilla-esque UI. Has a powerful crystal aura. 
                     </h5>
                     <br>
@@ -202,7 +205,7 @@
                   <div class="grid-item">
                     3arthh4ck
                     <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A Phobos recode by oHareDaBoss.
                     </h5>
                     <br>
@@ -214,7 +217,7 @@
                   <div class="grid-item">
                     Phobos
                     <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A clean version of Phobos + src.
                     </h5>
                     <br>
@@ -232,7 +235,7 @@
                     Coffee
                     <br><div class="badges"><h5 class="badge">1.19.3</h5><h5 class="badge rainbow_fabric">Fabric</h5></div>
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;"><i>Supported versions have been last checked since version b34, client may be updated!</i></h6>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Partially discontinued. Popular for its amazing visuals. Provides an addon system.
                     </h5>
                     <br>
@@ -250,7 +253,7 @@
                     Ares
                     <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge">1.16.5</h5><h5 class="badge">1.17.1</h5><h5 class="badge">1.18.2</h5><h5 class="badge rainbow_forge">Forge</h5><h5 class="badge rainbow_fabric">Fabric</h5></div>
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;"><i>Supported versions have been last checked since version 2.9, client may be updated!</i></h6>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Includes a vast amount of modules and exploits. The UI is very easy-to-use but quite ugly.
                     </h5>
                     <br>
@@ -267,7 +270,7 @@
                   <div class="grid-item">
                     Xulu
                     <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A deobfuscated leak of Xulu w/src.
                     </h5>
                     <br>
@@ -293,8 +296,8 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Exhibition
-                  <br><h5 class="badge">1.8.9</h5>
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                  <h5 class="section-text">
                     Client created by Arithmo, the owner of Exhibition. Auth has been removed. It may require these JVM args when launching: "-XX:+DisableAttachMechanism -Xss4m"
                   </h5>
                   <br>
@@ -305,8 +308,8 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Vestige
-                  <br><h5 class="badge">1.8.9</h5>
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                  <h5 class="section-text">
                     Client owned by YesCheatPlus. Vestige is paid but this version (2.0.2) is free! Vestige has discontinued and may become free again, so stay tuned for v3!
                   </h5>
                   <br>
@@ -317,8 +320,8 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Hawk
-                  <br><h5 class="badge">1.8.9</h5>
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                  <h5 class="section-text">
                     Client owned by YesCheatPlus. It used to be the free version of Vestige, but now Vestige is free. 
                   </h5>
                   <br>
@@ -329,8 +332,8 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Lime Reborn
-                  <br><h5 class="badge">1.8.9</h5>
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                  <h5 class="section-text">
                     Client owned by Wykt. Lime Reborn is discontinued, as Lime 3.0 is in development, join their discord for news!
                   </h5>
                   <br>
@@ -346,8 +349,8 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Lime
-                  <br><h5 class="badge">1.8.9</h5>
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                  <h5 class="section-text">
                     Client owned by Wykt. This is an old version of the client that was released because Wykt lost motivation.
                   </h5>
                   <br>
@@ -363,8 +366,8 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Eternal
-                  <br><h5 class="badge">1.8.9</h5>
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                  <h5 class="section-text">
                     Client owned by polarity. The latest version is their Valentine's day release, but it has since been discontinued.
                   </h5>
                   <br>
@@ -380,8 +383,8 @@
                   <!-- Section -->
                   <div class="grid-item">
                     Azura
-                    <br><h5 class="badge">1.8.9</h5>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                    <h5 class="section-text">
                       Azura is free, however private. To get access you need an invitation or to apply.
                     </h5>
                     <br>
@@ -393,7 +396,7 @@
                   <div class="grid-item">
                     LiquidBounce Legacy
                     <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A free and open-source Forge client. We recommend you use their LiquidLauncher as it's more convenient.
                     </h5>
                     <br>
@@ -407,7 +410,7 @@
                   <div class="grid-item">
                     LiquidBounce+
                     <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Created by the WYSI foundation, LiquidBounce+ is a fork of LiquidBounce. This has more features, bypasses, and more than normal LiquidBounce.
                     </h5>
                     <br>
@@ -419,7 +422,7 @@
                   <div class="grid-item">
                     LiquidBounce++
                     <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Created by TheMosKau, LiquidBounce++ is a fork of LiquidBounce+. This comes with brand new visuals, bypasses, and more!
                     </h5>
                     <br>
@@ -431,7 +434,7 @@
                   <div class="grid-item">
                     NightX
                     <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Created by As_pw, NightX is a fork of LiquidBounce+. It comes with updated bypasses, beautiful visuals, and more!
                     </h5>
                     <br>
@@ -443,7 +446,7 @@
                   <div class="grid-item">
                     FDP
                     <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5><h5 class="badge rainbow_rat">Possibly Infected</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Created by Zywl, FDP is a fork of LiquidBounce. It logs your HWID and is considered by many as malicious, therefore use it at your own risk.
                     </h5>
                     <br>
@@ -465,7 +468,7 @@
                   <div class="grid-item">
                     ForgeWurst
                     <br><div class="badges"><h5 class="badge">1.10.2</h5><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       A Forge version of the Wurst client. Only has 36 modules compared to Wurst 7's 246 modules.
                     </h5>
                     <br>
@@ -482,7 +485,7 @@
                   <div class="grid-item">
                     Wolfram
                     <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge">1.9.4</h5><h5 class="badge">1.10.2</h5><h5 class="badge">1.11.2</h5><h5 class="badge">1.12.2</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Client maintained by Wurst, but originally created by ShadowSpl0it. An old client designed to bypass NCP.
                     </h5>
                     <br>
@@ -497,7 +500,7 @@
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;">
                       <i>Keep in mind the version badges do not include versions supported by Jello Portal.</i>
                     </h6>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Sigma 3.9 and 4.11 are provided by Cherry.
                     </h5>
                     <br>
@@ -517,7 +520,7 @@
                   <div class="grid-item">
                     Jigsaw
                     <br><div class="badges"><h5 class="badge">1.8.8</h5><h5 class="badge">1.12.2</h5></div>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                    <h5 class="section-text">
                       Client created by Robofån. It was one of the most influential hacked clients ever, with one of the first stable tp-aura and many ghost + blatant features.
                     </h5>
                     <br>
@@ -528,10 +531,7 @@
                   <!-- Section -->
                   <div class="grid-item">
                     CumClient
-                    <br><h5 class="badge">1.8.9</h5>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%;">
-                      Intent.store 2022 April Fools prank client, premium cracked. DM I got after releasing:
-                    </h5>
+                    <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
                     <img style="width: 40%; margin-left: 30%;" src="/assets/img/nef.png"><br>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
                     onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTmVmYXJpb3VzLnppcA';"
@@ -540,9 +540,9 @@
                   <!-- Section -->
                   <div class="grid-item">
                     Mylo Client
-                    <br><h5 class="badge">1.8.9</h5>
-                    <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
-                      Client created by Mylo a long time ago. Cracked and archived by hovac with permission of Mylo, but without Linkvertise as requested. Contains versions b1.3 to b2.5. Unzip the download to get access to all versions. Select whichever version (b2.5 recommended) and unzip it in your .minecraft/versions
+                    <br><div class="badges"><h5 class="badge">1.8.9</h5></div>
+                    <h5 class="section-text">
+                      Client created by Mylo a long time ago. Cracked and archived by hovac with permission of Mylo.
                     </h5>
                     <br>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
@@ -563,7 +563,7 @@
                 <div class="grid-item">
                   Jelte.lol Archive
                   <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <h5 class="section-text">
                     A full archive of the Jelte.lol website. You can visit their new rewritten website at <a href="https://slitt.in">Slitt.in</a>!
                   </h5>
                   <br>
@@ -575,7 +575,7 @@
                 <div class="grid-item">
                   Hactify.ru Archive
                   <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <h5 class="section-text">
                     A full archive of the Hactify.ru website. With 24+ exclusive downloads!
                   </h5>
                   <br>
@@ -587,7 +587,7 @@
                 <div class="grid-item">
                   SigmaClient.info Archive
                   <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <h5 class="section-text">
                     An archive of Sigma 5.0 (Jello), 4.11, and 3.9! With web-archives of the different time periods!
                   </h5>
                   <br>
@@ -599,7 +599,7 @@
                 <div class="grid-item">
                   JigsawClient.net Archive
                   <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <h5 class="section-text">
                     An archive of the Jigsaw website! Robofån already has <a href="https://toolhive.net/jigsaw/">his own archive</a>, but it only provides source codes, and no downloads.
                   </h5>
                   <br>
@@ -611,7 +611,7 @@
                 <div class="grid-item">
                   Cheats.gq Archive
                   <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <h5 class="section-text">
                     A full archive of the Cheats.gq, with 7+ clients and an optional launcher!
                   </h5>
                   <br>
@@ -623,7 +623,7 @@
                 <div class="grid-item">
                   Itami.cf Archive
                   <br><br> <!-- gap -->
-                  <h5 style="font-weight: 200; width: 80%; margin-left: 10%; flex-grow: 1;">
+                  <h5 class="section-text">
                     A full archive of the Itami.cf website. A fancier way to download the Itami client.
                   </h5>
                   <br>
