@@ -61,7 +61,12 @@
     color:black;
 }
 
-.rainbow_inject {
+.rainbow_external {
+    background-image: linear-gradient(45deg, #a41bff,#540268);
+    color:white;
+}
+
+.rainbow_internal {
     background-image: linear-gradient(45deg, #ff1b81,#680233);
     color:white;
 }

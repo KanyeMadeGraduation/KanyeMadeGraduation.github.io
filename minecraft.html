@@ -31,6 +31,7 @@
     <script src="https://kit.fontawesome.com/4ad53a318a.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
     <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/main.js"></script>
   </head>
   <body>
     <div class="context">
@@ -50,11 +51,12 @@
         </div>
         <div class="sidebar">
           <ul>
-            <button onclick="window.location.href = '#utility';">Utility Clients</button>
-            <button onclick="window.location.href = '#ghost';">Ghost Clients</button>
-            <button onclick="window.location.href = '#blatant';">Blatant Clients</button>
-            <button onclick="window.location.href = '#old';">Old Clients</button>
-            <button onclick="window.location.href = '#archives';">Web Archives</button>
+            <button onclick="scrollToId('utility');">Utility Clients</button>
+            <button onclick="scrollToId('ghost');">Ghost Clients</button>
+            <button onclick="scrollToId('blatant');">Blatant Clients</button>
+            <button onclick="scrollToId('clickers');">Autoclickers</button>
+            <button onclick="scrollToId('archives');">Web Archives</button>
+            <button onclick="scrollToId('old');">Old Clients</button>
           </ul>
         </div>
         <section>
@@ -294,6 +296,41 @@
               <section class="grid-container">
                 <!-- Section -->
                 <div class="grid-item">
+                  Sapphire
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5></div>
+                  <h5 class="section-text">
+                    A very advanced free ghost client, with features that arent even in most paid clients. Buy the paid version @ <a href="https://sapphire.ac/">Sapphire.ac</a>.
+                  </h5>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU2FwcGhpcmUuamFy';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL3NhcHBoaXJlY2hlYXRzL21jLWdob3N0LWxpdGU';"
+                    >Source code <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  DuelsEssentials
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5></div>
+                  <h5 class="section-text">
+                    Cracked by CystemZ and SKRRRTT. A Hypixel duels bot for sumo, classic, and boxing. Requires Patcher and OptiFine.
+                  </h5>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREV2MUNyYWNrLnJhcg';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREVCYWNrZW5kLnJhcg';"
+                    >Backend <i class="fa-solid fa-server"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.open('/archive/deFold');"
+                    >Fold <i class="fa-solid fa-face-grin-tears"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
                   Trump
                   <br><div class="badges"><h5 class="badge">1.7.10</h5><h5 class="badge rainbow_forge">Forge</h5></div>
                   <h5 class="section-text">
@@ -336,25 +373,6 @@
                 </div>
                 <!-- Section -->
                 <div class="grid-item">
-                  DuelsEssentials
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                  <h5 class="section-text">
-                    Cracked by CystemZ and SKRRRTT. A Hypixel duels bot for sumo, classic, and boxing. Requires Patcher and OptiFine.
-                  </h5>
-                  <div>
-                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
-                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREV2MUNyYWNrLnJhcg';"
-                    >Download <i class="fa-solid fa-download"></i></button>
-                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
-                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREVCYWNrZW5kLnJhcg';"
-                    >Backend <i class="fa-solid fa-server"></i></button>
-                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
-                    onclick="window.open('/archive/deFold');"
-                    >Fold <i class="fa-solid fa-face-grin-tears"></i></button>
-                  </div>
-                </div>
-                <!-- Section -->
-                <div class="grid-item">
                   Raven B+
                   <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_forge">Forge</h5></div>
                   <h5 class="section-text">
@@ -388,7 +406,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   RavenWeave
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5><h5 class="badge rainbow_inject">Internal</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5><h5 class="badge rainbow_internal">Internal</h5></div>
                   <h5 class="section-text">
                     RavenWeave is a port of Raven B++ to Weave so you can inject it into Lunar client. 
                   </h5>
@@ -401,7 +419,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Fractal
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5><h5 class="badge rainbow_inject">Internal</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5><h5 class="badge rainbow_internal">Internal</h5></div>
                   <h5 class="section-text">
                     Fractal is a Lunar client cheat by Flapjack for the Weave mod loader. Incompatible with RavenWeave.
                   </h5>
@@ -414,7 +432,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Slap
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">Internal</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_internal">Internal</h5></div>
                   <h5 class="section-text">
                     Slap is an injectable ghost client which was cracked by Vroom. 
                   </h5>
@@ -427,7 +445,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Eternal
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">Internal</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_internal">Internal</h5></div>
                   <h5 class="section-text">
                     Eternal is a DLL ghost client created by Vroom. It can be injected into Badlion, Forge, OptiFine, and Vanilla 1.8.9.
                   </h5>
@@ -440,7 +458,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Crypt
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">Internal</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_internal">Internal</h5></div>
                   <h5 class="section-text">
                     Crypt is an injectable ghost client which was cracked by the Kangaroos. 
                   </h5>
@@ -453,7 +471,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Dream
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     Dream is an external ghost client with a web gui, cracked by Vroom.
                   </h5>
@@ -466,7 +484,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Eternal Lite
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     Eternal Lite is an external aim-assist for Lunar client created by Vroom.
                   </h5>
@@ -478,8 +496,21 @@
                 </div>
                 <!-- Section -->
                 <div class="grid-item">
+                  Whiteout
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
+                  <h5 class="section-text">
+                    This is version 2.3 of Whiteout, only injects into Forge sadly.
+                  </h5>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvd2hpdGVvdXQuemlw';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
                   Itami
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     Itami was an external ghost client created by feticks/NightBot.
                   </h5>
@@ -492,7 +523,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Cucklord
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     Cucklord was a ghost client that got cracked, the autoclicker doesn't work but the ghost client and anti-ss works.
                   </h5>
@@ -505,7 +536,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Encephalon
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5><h5 class="badge rainbow_rat">Possibly Infected</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5><h5 class="badge rainbow_rat">Possibly Infected</h5></div>
                   <h5 class="section-text">
                     Encephalon is rumored by some to be a logger, so use it at your own risk.
                   </h5>
@@ -518,7 +549,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Iridium
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     Iridium was an external ghost client created by the Kangaroos.
                   </h5>
@@ -531,7 +562,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   DotEXE
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     DotEXE was an external ghost client created by the Kangaroos.
                   </h5>
@@ -544,7 +575,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   IceTea
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     IceTea was an external ghost client that got cracked. It offers velocity, reach, aim-assist and an autoclicker. 
                   </h5>
@@ -557,7 +588,7 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Koid
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_inject">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
                     Koid was an external ghost client that got cracked. It offers velocity, reach, throwpot, an autoclicker, and more. 
                   </h5>
@@ -746,6 +777,279 @@
             <aside class="sidebar" style="display: none;">
             </aside>
             <div id="section-container">
+              <h2 id="clickers">Autoclickers</h2>
+              <section class="grid-container">
+                  <!-- Section -->
+                  <div class="grid-item">
+                    hovac autoclicker
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      This is an autoclicker I made during class sometimes while bored. It's open-source and free!
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2VyL3JlbGVhc2VzL2xhdGVzdA';"
+                      >Download <i class="fa-solid fa-download"></i></button>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2Vy';"
+                      >Source code <i class="fa-solid fa-code"></i></button>
+                    </div>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Sapphire Lite
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Has a paid and free version, one of the most popular free autoclickers. Buy the paid version @ <a href="https://sapphire.ac/">Sapphire.ac</a>.
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU2FwcGhpcmUuZXhl';"
+                      >Download <i class="fa-solid fa-download"></i></button>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL3NhcHBoaXJlY2hlYXRzL3NhcHBoaXJlLWxpdGUtY2xpY2tlcg';"
+                      >Source code <i class="fa-solid fa-code"></i></button>
+                    </div>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Glock
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Cracked by pz.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZ2xvY2sucmFy';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Dropsy
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Cracked by pz.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZHJvcHN5LnJhcg';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Exelon
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Exelon is one of the best autoclickers for bypassing, as it offers one of the most realistic randomizers.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL3dleW5uL0V4ZWxvbi9yYXcvbWFpbi9leGVsb24uZXhl';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Nebula
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Nebula is now Exelon, however you can still use this version of the autoclicker.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbmVidWxhLmV4ZQ';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    ppClicker
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Has a paid and free version, one of the most popular free autoclickers.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9wcGNsaWNrZXIueHl6Lw';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    pyClicker
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Created by ScitusSnake, pyClicker is a Python autoclicker with features such as a built-in recorder.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvUFlDbGlja2VyLnppcA';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Thunder Clicker
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Thunder Clicker has some cool features such as an auto W-Tap and more! It's one of my favourites.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVGh1bmRlci5leGU';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    d0ge
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      Cracked by vroom.
+                    </h5>
+                    <br>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZG9nZS56aXA';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Spotify Autoclicker
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      An autoclicker disguised to look like the Spotify application.
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU3BvdGlmeS5leGU';"
+                      >Download <i class="fa-solid fa-download"></i></button>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvc3BvdGlmeXNyYy56aXA';"
+                      >Source code <i class="fa-solid fa-code"></i></button>
+                    </div>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Zoom Autoclicker
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      An autoclicker disguised to look like the Zoom application.
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvem9vbWNsaWNrZXIuemlw';"
+                      >Download <i class="fa-solid fa-download"></i></button>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvem9vbWNsaWNrZXJzcmMuemlw';"
+                      >Source code <i class="fa-solid fa-code"></i></button>
+                    </div>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Lunar Autoclicker
+                    <br><br> <!-- gap -->
+                    <h5 class="section-text">
+                      An autoclicker disguised to look like the Lunar client launcher.
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHVuYXJjbGlja2VyLnppcA';"
+                      >Download <i class="fa-solid fa-download"></i></button>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHVuYXJjbGlja2Vyc3JjLnppcA';"
+                      >Source code <i class="fa-solid fa-code"></i></button>
+                    </div>
+                  </div>
+              </section>
+            </div>
+          </div>
+          <!-- Page -->
+          <div id="main-container">
+            <aside class="sidebar" style="display: none;">
+            </aside>
+            <div id="section-container">
+              <h2 id="archives">Web Archives</h2>
+              <section class="grid-container">
+                <!-- Section -->
+                <div class="grid-item">
+                  Jelte.lol Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Jelte.lol website. You can visit their new rewritten website at <a href="https://slitt.in">Slitt.in</a>!
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/jelte';"
+                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Hactify.ru Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Hactify.ru website. With 24+ exclusive downloads!
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/hactify';"
+                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  SigmaClient.info Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    An archive of Sigma 5.0 (Jello), 4.11, and 3.9! With web-archives of the different time periods!
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/sigma';"
+                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  JigsawClient.net Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    An archive of the Jigsaw website! Robofån already has <a href="https://toolhive.net/jigsaw/">his own archive</a>, but it only provides source codes, and no downloads.
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/jigsaw';"
+                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Cheats.gq Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Cheats.gq, with 7+ clients and an optional launcher!
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/cheatsgq';"
+                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Itami.cf Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Itami.cf website. A fancier way to download the Itami client.
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/itami';"
+                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- Page -->
+          <div id="main-container">
+            <aside class="sidebar" style="display: none;">
+            </aside>
+            <div id="section-container">
               <h2 id="old">Old Clients</h2>
               <section class="grid-container">
                   <!-- Section -->
@@ -833,88 +1137,6 @@
                     onclick="window.location.href='https://www.mediafire.com/file/jo05zyy35ve5ncy/mylo.zip/file';"
                     >Download <i class="fa-solid fa-download"></i></button>
                   </div>
-              </section>
-            </div>
-          </div>
-          <!-- Page -->
-          <div id="main-container">
-            <aside class="sidebar" style="display: none;">
-            </aside>
-            <div id="section-container">
-              <h2 id="archives">Web Archives</h2>
-              <section class="grid-container">
-                <!-- Section -->
-                <div class="grid-item">
-                  Jelte.lol Archive
-                  <br><br> <!-- gap -->
-                  <h5 class="section-text">
-                    A full archive of the Jelte.lol website. You can visit their new rewritten website at <a href="https://slitt.in">Slitt.in</a>!
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                  onclick="window.location.href='/archive/jelte';"
-                    >View archive <i class="fa-solid fa-box-archive"></i></button>
-                </div>
-                <!-- Section -->
-                <div class="grid-item">
-                  Hactify.ru Archive
-                  <br><br> <!-- gap -->
-                  <h5 class="section-text">
-                    A full archive of the Hactify.ru website. With 24+ exclusive downloads!
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                  onclick="window.location.href='/archive/hactify';"
-                    >View archive <i class="fa-solid fa-box-archive"></i></button>
-                </div>
-                <!-- Section -->
-                <div class="grid-item">
-                  SigmaClient.info Archive
-                  <br><br> <!-- gap -->
-                  <h5 class="section-text">
-                    An archive of Sigma 5.0 (Jello), 4.11, and 3.9! With web-archives of the different time periods!
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                  onclick="window.location.href='/archive/sigma';"
-                    >View archive <i class="fa-solid fa-box-archive"></i></button>
-                </div>
-                <!-- Section -->
-                <div class="grid-item">
-                  JigsawClient.net Archive
-                  <br><br> <!-- gap -->
-                  <h5 class="section-text">
-                    An archive of the Jigsaw website! Robofån already has <a href="https://toolhive.net/jigsaw/">his own archive</a>, but it only provides source codes, and no downloads.
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                  onclick="window.location.href='/archive/jigsaw';"
-                    >View archive <i class="fa-solid fa-box-archive"></i></button>
-                </div>
-                <!-- Section -->
-                <div class="grid-item">
-                  Cheats.gq Archive
-                  <br><br> <!-- gap -->
-                  <h5 class="section-text">
-                    A full archive of the Cheats.gq, with 7+ clients and an optional launcher!
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                  onclick="window.location.href='/archive/cheatsgq';"
-                    >View archive <i class="fa-solid fa-box-archive"></i></button>
-                </div>
-                <!-- Section -->
-                <div class="grid-item">
-                  Itami.cf Archive
-                  <br><br> <!-- gap -->
-                  <h5 class="section-text">
-                    A full archive of the Itami.cf website. A fancier way to download the Itami client.
-                  </h5>
-                  <br>
-                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                  onclick="window.location.href='/archive/itami';"
-                    >View archive <i class="fa-solid fa-box-archive"></i></button>
-                </div>
               </section>
             </div>
           </div>
