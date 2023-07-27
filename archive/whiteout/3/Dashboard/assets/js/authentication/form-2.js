@@ -1,0 +1,5 @@
+var togglePassword=document.getElementById("toggle-password");var formContent=document.getElementsByClassName('form-content')[0];var getFormContentHeight=formContent.clientHeight;var formImage=document.getElementsByClassName('form-image')[0];if(formImage){var setFormImageHeight=formImage.style.height=getFormContentHeight+'px';}
+if(togglePassword){togglePassword.addEventListener('click',function(){var x=document.getElementById("password");if(x.type==="password"){x.type="text";}else{x.type="password";}});}
+$(document).ready(function(){if($('#register-failed').length){Snackbar.show({pos:'bottom-right',text:'Failed to Register. '.concat($('#register-failed').attr('fail-data')),duration:10000,actionTextColor:'#fff',backgroundColor:'#e7515a'});}
+if($('#login-failed').length){Snackbar.show({pos:'bottom-right',text:'Failed to Login. '.concat($('#login-failed').attr('fail-data')),duration:10000,actionTextColor:'#fff',backgroundColor:'#e7515a'});}
+if($('#register-success').length){Snackbar.show({pos:'bottom-right',text:'Account Created!',duration:10000,actionTextColor:'#fff',backgroundColor:'#8dbf42'});}});

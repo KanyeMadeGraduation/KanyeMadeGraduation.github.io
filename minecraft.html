@@ -51,12 +51,15 @@
         </div>
         <div class="sidebar">
           <ul>
+            <button onclick="scrollToId('featured');">Featured</button>
             <button onclick="scrollToId('utility');">Utility Clients</button>
             <button onclick="scrollToId('ghost');">Ghost Clients</button>
             <button onclick="scrollToId('blatant');">Blatant Clients</button>
             <button onclick="scrollToId('clickers');">Autoclickers</button>
             <button onclick="scrollToId('archives');">Web Archives</button>
             <button onclick="scrollToId('old');">Old Clients</button>
+            <button onclick="scrollToId('dev');">Development</button>
+            <button onclick="scrollToId('programs');">Programs</button>
           </ul>
         </div>
         <section>
@@ -80,6 +83,41 @@
                     <button class="glow-on-hover fullred" style="font-size:.9em; font-weight:300; margin: 16px auto;"
                     onclick="window.location.href='https://www.youtube.com/channel/UCG8WYvM1B04CcYbHHCPEhjg';"
                       >Subscribe <i class="fa-brands fa-youtube"></i></button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- Page -->
+          <div id="main-container">
+            <aside class="sidebar" style="display: none;">
+            </aside>
+            <div id="section-container">
+              <h2 id="featured">Featured</h2>
+              <section class="grid-container">
+                <!-- Section -->
+                <div class="grid-item">
+                  Jelte.lol Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Jelte.lol website. You can visit their new rewritten website at <a href="https://slitt.in">Slitt.in</a>!
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/jelte';"
+                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Fractal
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5></div>
+                  <h5 class="section-text">
+                    Fractal is a ghost client by Flapjack for Weave, which lets you inject it into Lunar Client.
+                  </h5>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0FyaWFKYWNraWUvRnJhY3RhbA';"
+                    >Download <i class="fa-solid fa-download"></i></button>
                   </div>
                 </div>
               </section>
@@ -233,6 +271,40 @@
                   </div>
                   <!-- Section -->
                   <div class="grid-item">
+                    Salhack
+                    <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
+                    <h5 class="section-text">
+                      Salhack is utility client by ionar2. It's branded based on the YouTuber SalC1.
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL2lvbmFyMi9zcGlkZXJtb2QvcmVsZWFzZXMvbGF0ZXN0';"
+                      >Download <i class="fa-solid fa-download"></i></button>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL2lvbmFyMi9zcGlkZXJtb2Q';"
+                      >Source code <i class="fa-solid fa-code"></i></button>
+                    </div>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
+                    Xulu
+                    <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
+                    <h5 class="section-text">
+                      A deobfuscated leak of Xulu w/src.
+                    </h5>
+                    <br>
+                    <div>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvcmVsZWFzZXMvdGFnLzE1Mg';"
+                      >Download <i class="fa-solid fa-download"></i></button>
+                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvdHJlZS9tYXN0ZXIveHVsdXYxLjUuMg';"
+                      >Source code <i class="fa-solid fa-code"></i></button>
+                    </div>
+                  </div>
+                  <!-- Section -->
+                  <div class="grid-item">
                     Coffee
                     <br><div class="badges"><h5 class="badge">1.19.3</h5><h5 class="badge rainbow_fabric">Fabric</h5></div>
                     <h6 style="font-weight: 200; width: 80%; margin-left: 10%;"><i>Supported versions have been last checked since version b34, client may be updated!</i></h6>
@@ -264,23 +336,6 @@
                       >Download <i class="fa-solid fa-download"></i></button>
                       <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
                       onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0FyZXNDbGllbnQvYXJlcw';"
-                      >Source code <i class="fa-solid fa-code"></i></button>
-                    </div>
-                  </div>
-                  <!-- Section -->
-                  <div class="grid-item">
-                    Xulu
-                    <br><div class="badges"><h5 class="badge">1.12.2</h5><h5 class="badge rainbow_forge">Forge</h5></div>
-                    <h5 class="section-text">
-                      A deobfuscated leak of Xulu w/src.
-                    </h5>
-                    <br>
-                    <div>
-                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvcmVsZWFzZXMvdGFnLzE1Mg';"
-                      >Download <i class="fa-solid fa-download"></i></button>
-                      <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
-                      onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvdHJlZS9tYXN0ZXIveHVsdXYxLjUuMg';"
                       >Source code <i class="fa-solid fa-code"></i></button>
                     </div>
                   </div>
@@ -383,11 +438,11 @@
                     onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvUmF2ZW5CK1N0YWJsZS5qYXI';"
                     >Stable <i class="fa-solid fa-download"></i></button>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
-                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvUmF2ZW5CK0JldGEuamFy';"
-                    >Beta <i class="fa-solid fa-download"></i></button>
-                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
                     onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvUmF2ZW5CK0V4cGVyaW1lbnRhbC5qYXI';"
                     >Experimental <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvUmF2ZW5CK0JldGEuamFy';"
+                    >Beta <i class="fa-solid fa-download"></i></button>
                   </div>
                 </div>
                 <!-- Section -->
@@ -406,9 +461,9 @@
                 <!-- Section -->
                 <div class="grid-item">
                   RavenWeave
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5><h5 class="badge rainbow_internal">Internal</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5></div>
                   <h5 class="section-text">
-                    RavenWeave is a port of Raven B++ to Weave so you can inject it into Lunar client. 
+                    RavenWeave is a port of Raven B++ to Weave. It is fully compatible with Lunar Client.
                   </h5>
                   <div>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
@@ -419,9 +474,9 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Fractal
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5><h5 class="badge rainbow_internal">Internal</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_weave">Weave</h5></div>
                   <h5 class="section-text">
-                    Fractal is a Lunar client cheat by Flapjack for the Weave mod loader. Incompatible with RavenWeave.
+                    Fractal is a ghost client by Flapjack for Weave, which lets you inject it into Lunar Client. Incompatible with RavenWeave.
                   </h5>
                   <div>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
@@ -470,6 +525,19 @@
                 </div>
                 <!-- Section -->
                 <div class="grid-item">
+                  Entropy
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_internal">Internal</h5><h5 class="badge rainbow_rat">Possibly Infected</h5></div>
+                  <h5 class="section-text">
+                    Cracked by VenTaz. <b>This is most likely a virus, run on a VM or don't at all. Likely a Discord token logger.</b>
+                  </h5>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRW50cm9weS56aXA&rat=true';"
+                    >Download <i class="fa-solid fa-triangle-exclamation"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
                   Dream
                   <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
@@ -486,7 +554,7 @@
                   Eternal Lite
                   <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
                   <h5 class="section-text">
-                    Eternal Lite is an external aim-assist for Lunar client created by Vroom.
+                    Eternal Lite is an external aim-assist for Lunar Client created by Vroom.
                   </h5>
                   <div>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
@@ -497,14 +565,36 @@
                 <!-- Section -->
                 <div class="grid-item">
                   Whiteout
-                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5><h5 class="badge rainbow_rat">Possibly Infected</h5></div>
                   <h5 class="section-text">
-                    This is version 2.3 of Whiteout, only injects into Forge sadly.
+                    I haven't checked either to see if they're clean, so I've labelled it as possibly infected. V3 was cracked by tomas.
                   </h5>
                   <div>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
-                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvd2hpdGVvdXQuemlw';"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vV2hpdGVvdXQucmFy';"
+                    >Download v3.03 <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vV2hpdGVvdXQuZXhl';"
+                    >Download v2.3 <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/archive/whiteout/3#faq';"
+                    >Lunar guide <i class="fa-solid fa-moon"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Dope
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
+                  <h5 class="section-text">
+                    Created by ssverify, Dope's src got released and compiled by BodyAlhoha.
+                  </h5>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZG9wZS56aXA';"
                     >Download <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZG9wZS1zcmMuemlw';"
+                    >Source code <i class="fa-solid fa-code"></i></button>
                   </div>
                 </div>
                 <!-- Section -->
@@ -595,6 +685,19 @@
                   <div>
                     <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
                     onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vYXJjaGl2ZS9qZWx0ZS9maWxlcy9rb2lkLmV4ZQ';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Zoomin
+                  <br><div class="badges"><h5 class="badge">1.8.9</h5><h5 class="badge rainbow_external">External</h5></div>
+                  <h5 class="section-text">
+                    Zoomin is an external ghost client by the Zoomin/Shiba team, it offers features like an autoclicker, reach, bhop, and more.
+                  </h5>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvem9vbWluLmV4ZQ';"
                     >Download <i class="fa-solid fa-download"></i></button>
                   </div>
                 </div>
@@ -948,7 +1051,7 @@
                     Lunar Autoclicker
                     <br><br> <!-- gap -->
                     <h5 class="section-text">
-                      An autoclicker disguised to look like the Lunar client launcher.
+                      An autoclicker disguised to look like the Lunar Client launcher.
                     </h5>
                     <br>
                     <div>
@@ -1023,7 +1126,7 @@
                   Cheats.gq Archive
                   <br><br> <!-- gap -->
                   <h5 class="section-text">
-                    A full archive of the Cheats.gq, with 7+ clients and an optional launcher!
+                    A full archive of the Cheats.gq website, with 7+ clients and an optional launcher!
                   </h5>
                   <br>
                   <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
@@ -1035,12 +1138,77 @@
                   Itami.cf Archive
                   <br><br> <!-- gap -->
                   <h5 class="section-text">
-                    A full archive of the Itami.cf website. A fancier way to download the Itami client.
+                    A full archive of the Itami.cf website, the original site for Itami.
                   </h5>
                   <br>
                   <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
                   onclick="window.location.href='/archive/itami';"
-                    >View archive <i class="fa-solid fa-box-archive"></i></button>
+                  >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  RavenBPlus.cf Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the RavenBPlus.cf website, the original site for Raven B+.
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/ravenbplus';"
+                  >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Sippin.cc Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Sippin.cc website, the original site for IceTea.
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/sippin';"
+                  >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Zoomin.fun Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Zoomin.fun website, the original site for Zoomin.
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/zoomin';"
+                  >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Salhack.com Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the Salhack.com website, the original site for Salhack.
+                  </h5>
+                  <br>
+                  <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                  onclick="window.location.href='/archive/salhack';"
+                  >View archive <i class="fa-solid fa-box-archive"></i></button>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Whiteout.lol Archive
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    A full archive of the old and new Whiteout.lol website, features the cracked version!
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/archive/whiteout/3';"
+                    >New archive <i class="fa-solid fa-box-archive"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/archive/whiteout/2';"
+                    >Old archive <i class="fa-solid fa-box-archive"></i></button>
+                  </div>
                 </div>
               </section>
             </div>
@@ -1137,6 +1305,193 @@
                     onclick="window.location.href='https://www.mediafire.com/file/jo05zyy35ve5ncy/mylo.zip/file';"
                     >Download <i class="fa-solid fa-download"></i></button>
                   </div>
+              </section>
+            </div>
+          </div>
+          <!-- Page -->
+          <div id="main-container">
+            <aside class="sidebar" style="display: none;">
+            </aside>
+            <div id="section-container">
+              <h2 id="dev">Development</h2>
+              <section class="grid-container">
+                <!-- Section -->
+                <div class="grid-item">
+                  MCP
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Minecraft Coder Pack (now known as Mod Coder Pack) is used to decompile, change, and recompile Minecraft's client and server. It supports alpha v1.1.2_01 to release 1.12.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cDovL3d3dy5tb2Rjb2RlcnBhY2suY29tL2ZpbGVzL21jcDkxOC56aXA';"
+                    >1.8.9 <i class="fa-solid fa-code"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vYXJjaGl2ZS9tY3AtMS4xMi4yLXR1dG9yaWFsLw';"
+                    >1.12.2 <i class="fa-solid fa-code"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9taW5lY3JhZnQuZmFuZG9tLmNvbS93aWtpL1R1dG9yaWFscy9Qcm9ncmFtc19hbmRfZWRpdG9ycy9Nb2RfQ29kZXJfUGFjayNEb3dubG9hZHM';"
+                    >More <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  MCP-Reborn
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    MCP-Reborn is an MCP (Mod Coder Pack) for Minecraft for making modded clients and researching its code. It supports release 1.13 and onwards.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0hleGVwdGlvbi9NQ1AtUmVib3JuL3JlbGVhc2VzL2xhdGVzdA';"
+                    >Latest <i class="fa-solid fa-code"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0hleGVwdGlvbi9NQ1AtUmVib3JuL3JlbGVhc2VzL3RhZy8xLjE2LjUtMjAyMTAxMTU';"
+                    >1.16.5 <i class="fa-solid fa-code"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0hleGVwdGlvbi9NQ1AtUmVib3JuL3RhZ3M';"
+                    >More <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  OptiFine SRC
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Optifine SRC for adding Optifine to your MCP clients. If the website is down, please use the backup download.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9vcHRpZmluZXNvdXJjZS5jby51ay8';"
+                    >Download <i class="fa-solid fa-code"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0hleGVwdGlvbi9PcHRpZmluZS1TUkM';"
+                    >Backup <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Weave Loom
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Weave Loom, used for creating mods. Unlike Forge and Fabric, Weave isn't for vanilla Minecraft, but rather for Lunar Client.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL1dlYXZlLU1DL1dlYXZlLUdyYWRsZQ';"
+                    >Download <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Forge MDK
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Forge MDK, used for creating mods. One of the oldest, most supported, and most popular mod loaders for Minecraft.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9maWxlcy5taW5lY3JhZnRmb3JnZS5uZXQvbmV0L21pbmVjcmFmdGZvcmdlL2ZvcmdlLw';"
+                    >Latest <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9maWxlcy5taW5lY3JhZnRmb3JnZS5uZXQvbmV0L21pbmVjcmFmdGZvcmdlL2ZvcmdlL2luZGV4XzEuOC45Lmh0bWw';"
+                    >1.8.9 <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Fabric API
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Fabric API, used for creating mods. Unlike Forge, it offers support for Snapshot versions of the game.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9mYWJyaWNtYy5uZXQvd2lraS90dXRvcmlhbDpzZXR1cA';"
+                    >Guide <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- Page -->
+          <div id="main-container">
+            <aside class="sidebar" style="display: none;">
+            </aside>
+            <div id="section-container">
+              <h2 id="programs">Programs</h2>
+              <section class="grid-container">
+                <!-- Section -->
+                <div class="grid-item">
+                  EzPing
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    EzPing is a software that modifies your Registry in an attempt to give you better ping and FPS. Cracked by Sapphire Industries.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZXpwaW5nLmV4ZQ';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZXpwaW5nLXNyYy56aXA';"
+                    >Source code <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Clumsy
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Clumsy is a program that simulates broken network conditions. You can ping spoof and fakelag without using a hacked client!
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL2phZ3QvY2x1bXN5L3JlbGVhc2VzL2xhdGVzdA';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL2phZ3QvY2x1bXN5L3RyZWUvbWFzdGVyL3NyYw';"
+                    >Source code <i class="fa-solid fa-code"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  Java Decompilers
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Java decompilers can turn a compiled .jar or .class into readable code, mostly useful for checking for viruses. 
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly93d3cuY29sZXkuc29mdHdhcmUvUmVjYWYv';"
+                    >Recaf <i class="fa-solid fa-download"></i></button>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL2phdmEtZGVjb21waWxlci9qZC1ndWkvcmVsZWFzZXMvbGF0ZXN0';"
+                    >JD-Gui <i class="fa-solid fa-download"></i></button>
+                  </div>
+                </div>
+                <!-- Section -->
+                <div class="grid-item">
+                  HostsMod
+                  <br><br> <!-- gap -->
+                  <h5 class="section-text">
+                    Blocks connections to viruses in some Minecraft cheats (such as Kant's viruses) and IP loggers.
+                  </h5>
+                  <br>
+                  <div>
+                    <button class="glow-on-hover" style="font-size:.9em; font-weight:300; align-self: end; margin: auto;"
+                    onclick="window.location.href='/ads.html?ad=aHR0cHM6Ly9naXRodWIuY29tL0dhcmRlbmluZ1Rvb2wvSG9zdHNNb2QvcmVsZWFzZXMvbGF0ZXN0';"
+                    >Download <i class="fa-solid fa-download"></i></button>
+                  </div>
+                </div>
               </section>
             </div>
           </div>
