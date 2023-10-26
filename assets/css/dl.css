@@ -7,6 +7,9 @@
     font-family: 'Exo', sans-serif;
 }
 
+button {
+    user-select: none;
+}
 
 .context {
     position: absolute;

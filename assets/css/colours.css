@@ -71,6 +71,11 @@
     color:white;
 }
 
+.rainbow_cracked {
+    background-image: linear-gradient(45deg, #66c76e,#1e9e0e);
+    color:white;
+}
+
 .colour_unc {
     background-color: #fc0343;
     background-image: none;

@@ -337,6 +337,7 @@ a:active {
   font-weight: 200;
   backdrop-filter: blur(8px);
   display: inline-block;
+  user-select: none;
 }
 .badges > .badge {
   margin: 0 5px 0;
