@@ -70,12 +70,12 @@ body {
 
 .content {
   position: absolute;
+  width: calc(100% - 280px);
   top: 0;
   overflow-x: hidden;
   left: 250px;
   padding-left: 15px;
-  padding-right: 6px;
-  width: 100%;
+  padding-right: 15px;
   min-height: 100%;
   padding-top: 70px!important; /* Add padding to accommodate the top bar */
   z-index: 1;
@@ -223,7 +223,7 @@ body {
 #section-container {
  display: flex;
  flex-direction: column;
- width: calc(100% - 280px);
+ width: 100%;
 }
 
 #section-container h2 {
@@ -240,6 +240,7 @@ body {
   padding-right: 250px;
   padding-left: 250px;
 }
+
 @media only screen and (max-width: 500px) {
   .grid-container {
     display: grid;
@@ -270,12 +271,18 @@ body {
 }
 
 @media only screen and (max-width: 830px) {
+  #main-container {
+    width: calc(100% + 28px)!important;
+  }
+
+  .content {
+    width: calc(100% - 30px);
+  }
+
   /* Hide the sidebar on screens with a maximum width of 650px */
   .sidebar {
     left: -250px;
   }
-
-
 
   #section-container {
     display: flex;
