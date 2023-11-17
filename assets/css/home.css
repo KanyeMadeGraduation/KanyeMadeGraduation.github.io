@@ -110,7 +110,7 @@ body,html {
   
   .full {
     height: 100%;
-    width: 100px;
+    /*width: 100px;*/
     color: white;
     background-color: #121212;
     border: 0;  
@@ -217,6 +217,7 @@ body,html {
    flex-direction: row;
    margin-bottom: 16px;
    margin-left: 14px;
+   margin-right: 14px;
   }
   
   #section-container {

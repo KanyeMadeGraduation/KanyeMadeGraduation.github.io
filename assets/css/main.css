@@ -228,7 +228,7 @@ button {
   #section-container {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 30px);
+    width: 100%;
    }
 
   .centered {
