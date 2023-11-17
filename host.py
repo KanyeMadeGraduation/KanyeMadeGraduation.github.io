@@ -1,4 +1,6 @@
-# Used for testing website locally, ignore this.
+# local testing server code
+port = 80
+
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import os
 class CustomHandler(SimpleHTTPRequestHandler):
@@ -12,6 +14,7 @@ class CustomHandler(SimpleHTTPRequestHandler):
                 self.wfile.write(file.read())
         else:
             super().do_GET()
-server_address = ('', 80)
+server_address = ('', port)
 httpd = HTTPServer(server_address, CustomHandler)
+print(f'Serving HTTP on :: port {port} (http://localhost:{port}/)')
 httpd.serve_forever()
