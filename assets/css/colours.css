@@ -46,6 +46,10 @@
     background-image: linear-gradient(45deg, #ef8383,#f02e2e);
 }
 
+.rainbow_rat2 {
+    background-image: linear-gradient(45deg, #efa583,#f0652e);
+}
+
 .rainbow_forge {
     background-image: linear-gradient(45deg, #efe883,#edf02e);
     color:black;
@@ -86,4 +90,10 @@
     background-color: #fc0343;
     background-image: none;
     color:white;
+}
+
+.colour_byfron {
+    background-color: #ffffff;
+    background-image: none;
+    color:rgb(0, 0, 0);
 }
