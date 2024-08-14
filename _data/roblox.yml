@@ -1,0 +1,177 @@
+- title: Executors
+  icon: fa-code
+  order: 1
+  clients:
+    - name: Wave
+      badges:
+        - text: UNC
+          class: unc
+      desc: >-
+        Has a decompiler, drawing library, and even an AI script writer.
+      download:
+        - link: aHR0cHM6Ly9nZXR3YXZlLmdnLw
+          icon: windows
+          brand: true
+          text: Windows
+    - name: Celery
+      badges:
+        - text: UNC
+          class: unc
+      desc: >-
+        A very popular exploit with a great reputation, offers two versions.
+      download:
+        - link: aHR0cHM6Ly9jZWxlcnkuemlwL0Rvd25sb2Fk
+          icon: windows
+          brand: true
+          text: Windows
+    - name: Delta
+      desc: >-
+        Delta is one of the fastest performing exploits and an extremely popular choice.
+      download:
+        - link: aHR0cHM6Ly9kZWx0YWV4cGxvaXRzLm5ldC9kZWx0YS1leGVjdXRvci1tb2JpbGU
+          icon: android
+          brand: true
+          text: Android
+        - link: aHR0cHM6Ly9kZWx0YWV4cGxvaXRzLm5ldC93aW5kb3dz
+          icon: windows
+          brand: true
+          text: Windows
+    - name: Apple-Ware
+      badges:
+        - text: UNC
+          class: unc
+      desc: >-
+        Apple-Ware is a level 7 exploit that works on iOS, no jailbreak needed.
+      download:
+        - link: aHR0cHM6Ly9hcHBsZXdhcmUuZGV2Lw
+          icon: apple
+          brand: true
+          text: iOS
+    - name: Arceus X
+      desc: >-
+        Arceus X is a mod menu for Android and iOS with an executor and script hub.
+      download:
+        - link: aHR0cHM6Ly9zcGRtdGVhbS5jb20vaW5kZXg_b3M9YW5kcm9pZA
+          icon: android
+          brand: true
+          text: Android
+        - link: aHR0cHM6Ly9zcGRtdGVhbS5jb20vaW5kZXg_b3M9aW9z
+          icon: apple
+          brand: true
+          text: iOS
+    - name: Codex
+      desc: >-
+        Basically a reskin of Arceus X, as they use the same core technology.
+      download:
+        - link: aHR0cHM6Ly9jb2RleC5sb2wvYW5kcm9pZA
+          icon: android
+          brand: true
+          text: Android
+        - link: aHR0cHM6Ly9jb2RleC5sb2wvaW9z
+          icon: apple
+          brand: true
+          text: iOS
+    - name: VegaX
+      desc: >-
+        Updates frequently, supports emulation on Windows.
+      download:
+        - link: aHR0cHM6Ly93d3cudmVnYXguZ2cv
+          icon: android
+          brand: true
+          text: Android
+    - name: JJSploit
+      badges:
+        - text: UNC
+          class: unc
+      desc: >-
+        A keyless exploit developed by 2JJ1 since 2017. Has a built-in script hub with aim bot!
+      download:
+        - link: aHR0cHM6Ly93ZWFyZWRldnMubmV0L2RpbmZvL0pKU3Bsb2l0
+          icon: windows
+          brand: true
+          text: Windows
+
+- title: Externals
+  icon: fa-window-restore
+  order: 2
+  clients:
+    - name: Nezur
+      desc: >-
+        Nezur is a cheat with an AI aimbot, triggerbot, spoofer, and more! Supports UWP & Byfron Roblox.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0JhYnloYW1zdGEvQWltbXk
+          icon: download
+          text: Download
+    - name: Aimmy
+      desc: >-
+        Aimmy is an open-source AI aimbot program. Supports UWP & Byfron Roblox, along with other games!
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0JhYnloYW1zdGEvQWltbXk
+          icon: download
+          text: Download
+
+- title: Roblox Tools
+  icon: fa-tools
+  order: 3
+  clients:
+    - name: FFlag Modifier
+      desc: >-
+        FFlag Modifier allows you to use ESP, noclip, and speed hacks without an executor by modifying your game settings.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2lpc2hhZGU0cmVhbC9Sb2Jsb3gtRkZsYWctTW9kaWZpZXI
+          icon: download
+          text: Download
+    - name: Downgrader
+      desc: >-
+        A tool for downgrading your Roblox to pre-Byfron, allowing you to use old exploits!
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2NlcmVhbHdpdGhtaWxrL3V3cC9yZWxlYXNlcy90YWcvMi41OTIuNTg2LjA
+          icon: download
+          text: Download
+    - name: FPS Unlocker
+      desc: >-
+        Disables Roblox's FPS cap, supports both UWP Roblox and normal Roblox!
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2F4c3Rpbi9yYnhmcHN1bmxvY2tlci9yZWxlYXNlcy9sYXRlc3Q
+          icon: download
+          text: Download
+    - name: Multiple Games
+      desc: >-
+        Allows for unlimited Roblox instances to be launched! Doesnt support UWP Roblox, only normal Roblox.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTXVsdGlSQkxYLmV4ZQ
+          icon: download
+          text: Download
+
+- title: Other Tools
+  icon: fa-syringe
+  order: 4
+  clients:
+    - name: Defender Control
+      desc: >-
+        An open-source and free Windows Defender disabler, allowing you to use your exploits in peace.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL3F0a2l0ZS9kZWZlbmRlci1jb250cm9sL3JlbGVhc2VzL2xhdGVzdA
+          icon: download
+          text: Download
+    - name: DLL Injector
+      desc: >-
+        A feature packed injector used to map DLL based cheats into games, both 64 bit and 32 bit.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvSW5qZWN0b3IubXNp
+          icon: download
+          text: Download
+    - name: Extreme Injector
+      desc: >-
+        A portable DLL injector, just download and run! Used to inject DLL based cheats into games.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXh0cmVtZUluamVjdG9yLmV4ZQ
+          icon: download
+          text: Download
+    - name: Lagswitch
+      desc: >-
+        A program that allows you to toggle your internet, allowing you to briefly turn your internet off on your device!
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTGFnU3dpdGNoLmV4ZQ
+          icon: download
+          text: Download

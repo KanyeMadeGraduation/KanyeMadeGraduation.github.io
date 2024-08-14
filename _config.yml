@@ -1,0 +1,54 @@
+title: hovac
+subtitle: Providing cheats since May 1st, 2022.
+description: >-
+  Providing cheats since May 1st, 2022.
+  Back in service since June 1st, 2023!
+author: hovac
+email: dmca@hovac.top
+avatar: assets/img/logo.png
+
+baseurl: ""
+url: ""
+
+# Social settings
+twitter_url:
+facebook_url:
+googleplus_url:
+instagram_url:
+linkedin_url:
+github_url:
+stackoverflow_url:
+pinterest_url:
+slack_url:
+dribbble_url:
+discord_url: /discord
+youtube_url: https://youtube.com/@hovac.
+
+# Google Analytics Tracking ID goes here:
+google_analytics:
+
+# The following settings are NECESSARY for the Prologue theme to run:
+theme: jekyll-theme-prologue
+collections:
+  sections:
+    output: true
+  archive:
+    output: true
+    permalink: /:path/:output_ext
+  games:
+    output: true
+    permalink: /:path/index.html
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+sass:
+  style: compressed

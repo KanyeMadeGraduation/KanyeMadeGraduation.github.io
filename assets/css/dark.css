@@ -1,0 +1,44 @@
+body, html {
+    background-color: #0b0c0f!important;
+}
+
+.shade-one {
+    background-color: #0b0c0f!important;
+    color:white;
+}
+
+.shade-two {
+    background-color: #0b0c0f!important;
+    color:white;
+}
+
+.shade-three {
+    background-color: #0b0c0f!important;
+    color:white;
+}
+
+.shade-four {
+    background-color: #0b0c0f!important;
+    color:white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+#home-link {
+    display: flex;
+}
+
+#logo .image {
+    position: relative;
+    margin-right: 8px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+#header {
+    background: #101016 url("images/overlay.png")
+}

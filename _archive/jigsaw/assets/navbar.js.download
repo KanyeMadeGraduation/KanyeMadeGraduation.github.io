@@ -1,0 +1,6 @@
+const menu_button = document.getElementById("menu-button")
+const menu = document.getElementById("menu")
+
+menu_button.addEventListener("click", () => {
+    menu.classList.toggle("open")
+})
