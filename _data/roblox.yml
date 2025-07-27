@@ -1,76 +1,91 @@
+- title: Featured
+  icon: fa-star
+  order: 0
+  clients:
+    - name: Bunni
+      desc: >-
+        Free Level 8 exploit with decompiler, includes required keysystem.
+      download:
+        - link: aHR0cHM6Ly9yZWFsYnVubmkuY29tLyNwbGF0Zm9ybXM
+          icon: windows
+          brand: true
+          text: Windows
+        - link: aHR0cHM6Ly9yZWFsYnVubmkuY29tLyNwbGF0Zm9ybXM
+          icon: apple
+          brand: true
+          text: MacOS
+    - name: NettWTF
+      desc: >-
+        Offers serversided execution with no paid version. Has a script hub, executor, and more features.
+      download:
+        - link: aHR0cHM6Ly9uZXR0Lnd0Zi8
+          icon: globe
+          text: Visit
+
 - title: Executors
   icon: fa-code
   order: 1
   clients:
-    - name: Wave
-      badges:
-        - text: UNC
-          class: unc
+    - name: Bunni
       desc: >-
-        Has a decompiler, drawing library, and even an AI script writer.
+        Free Level 8 exploit with decompiler, includes required keysystem.
       download:
-        - link: aHR0cHM6Ly9nZXR3YXZlLmdnLw
+        - link: aHR0cHM6Ly9yZWFsYnVubmkuY29tLyNwbGF0Zm9ybXM
           icon: windows
           brand: true
           text: Windows
-    - name: Celery
-      badges:
-        - text: UNC
-          class: unc
-      desc: >-
-        A very popular exploit with a great reputation, offers two versions.
-      download:
-        - link: aHR0cHM6Ly9jZWxlcnkuemlwL0Rvd25sb2Fk
-          icon: windows
+        - link: aHR0cHM6Ly9yZWFsYnVubmkuY29tLyNwbGF0Zm9ybXM
+          icon: apple
           brand: true
-          text: Windows
+          text: MacOS
     - name: Delta
       desc: >-
         Delta is one of the fastest performing exploits and an extremely popular choice.
       download:
-        - link: aHR0cHM6Ly9kZWx0YWV4cGxvaXRzLm5ldC9kZWx0YS1leGVjdXRvci1tb2JpbGU
+        - link: aHR0cHM6Ly9kZWx0YWV4cGxvaXRzLmdnL2RlbHRhLWV4ZWN1dG9yLWFuZHJvaWQ
           icon: android
           brand: true
           text: Android
-        - link: aHR0cHM6Ly9kZWx0YWV4cGxvaXRzLm5ldC93aW5kb3dz
+        - link: aHR0cHM6Ly9kZWx0YWV4cGxvaXRzLmdnL2RlbHRhLWV4ZWN1dG9yLWlvcw
+          icon: apple
+          brand: true
+          text: iOS
+    - name: LX63
+      desc: >-
+        Level 8 exploit featuring keyless access and built-in decompiler.
+      download:
+        - link: aHR0cHM6Ly9seDYzLnh5ei8
           icon: windows
           brand: true
           text: Windows
-    - name: Apple-Ware
-      badges:
-        - text: UNC
-          class: unc
+    - name: Krnl
       desc: >-
-        Apple-Ware is a level 7 exploit that works on iOS, no jailbreak needed.
+        Free Level 8 exploit offering decompiler and required keysystem included.
       download:
-        - link: aHR0cHM6Ly9hcHBsZXdhcmUuZGV2Lw
-          icon: apple
-          brand: true
-          text: iOS
-    - name: Arceus X
-      desc: >-
-        Arceus X is a mod menu for Android and iOS with an executor and script hub.
-      download:
-        - link: aHR0cHM6Ly9zcGRtdGVhbS5jb20vaW5kZXg_b3M9YW5kcm9pZA
+        - link: aHR0cHM6Ly9rcm5sLmNhdC9kb3dubG9hZHMv
           icon: android
           brand: true
           text: Android
-        - link: aHR0cHM6Ly9zcGRtdGVhbS5jb20vaW5kZXg_b3M9aW9z
+        - link: aHR0cHM6Ly9rcm5sLmNhdC9kb3dubG9hZHMv
           icon: apple
           brand: true
           text: iOS
-    - name: Codex
+    - name: Solara
       desc: >-
-        Basically a reskin of Arceus X, as they use the same core technology.
+        Free Level 3 exploit with no keysystem and built-in decompiler.
       download:
-        - link: aHR0cHM6Ly9jb2RleC5sb2wvYW5kcm9pZA
-          icon: android
+        - link: aHR0cHM6Ly9nZXRzb2xhcmEuZGV2Lw
+          icon: windows
           brand: true
-          text: Android
-        - link: aHR0cHM6Ly9jb2RleC5sb2wvaW9z
-          icon: apple
+          text: Windows
+    - name: Xeno
+      desc: >-
+        Free Level 3 exploit with no keysystem and basic decompiler.
+      download:
+        - link: aHR0cHM6Ly93d3cueGVuby5vbmwv
+          icon: windows
           brand: true
-          text: iOS
+          text: Windows
     - name: VegaX
       desc: >-
         Updates frequently, supports emulation on Windows.
@@ -79,10 +94,35 @@
           icon: android
           brand: true
           text: Android
+    - name: Swift
+      desc: >-
+        Free Level 8 exploit for Roblox with built-in decompiler.
+      download:
+        - link: aHR0cHM6Ly9nZXRzd2lmdC52aXAv
+          icon: windows
+          brand: true
+          text: Windows
+    - name: Velocity
+      desc: >-
+        Level 8 exploit with strong performance and no keysystem.
+      download:
+        - link: aHR0cHM6Ly9nZXR2ZWxvY2l0eS5saXZlLw
+          icon: windows
+          brand: true
+          text: Windows
+        - link: aHR0cHM6Ly9nZXR2ZWxvY2l0eS5saXZlLw
+          icon: apple
+          brand: true
+          text: MacOS
+    - name: Volcano
+      desc: >-
+        Free Level 8 exploit with decompiler and required keysystem included.
+      download:
+        - link: aHR0cHM6Ly92b2xjYW5vLnd0Zi8
+          icon: windows
+          brand: true
+          text: Windows
     - name: JJSploit
-      badges:
-        - text: UNC
-          class: unc
       desc: >-
         A keyless exploit developed by 2JJ1 since 2017. Has a built-in script hub with aim bot!
       download:
@@ -91,9 +131,28 @@
           brand: true
           text: Windows
 
+- title: Serversides
+  icon: fa-server
+  order: 2
+  clients:
+    - name: NettWTF
+      desc: >-
+        Offers serversided execution with no paid version. Has a script hub, executor, and more features.
+      download:
+        - link: aHR0cHM6Ly9uZXR0Lnd0Zi8
+          icon: globe
+          text: Visit
+    - name: Serverside.fun
+      desc: >-
+        Gives you up to 2 games with up to 20 players. Only has a script hub, no executor for free.
+      download:
+        - link: aHR0cHM6Ly9zZXJ2ZXJzaWRlLmZ1bi8
+          icon: globe
+          text: Visit
+  
 - title: Externals
   icon: fa-window-restore
-  order: 2
+  order: 3
   clients:
     - name: Nezur
       desc: >-
@@ -112,20 +171,13 @@
 
 - title: Roblox Tools
   icon: fa-tools
-  order: 3
+  order: 4
   clients:
     - name: FFlag Modifier
       desc: >-
         FFlag Modifier allows you to use ESP, noclip, and speed hacks without an executor by modifying your game settings.
       download:
         - link: aHR0cHM6Ly9naXRodWIuY29tL2lpc2hhZGU0cmVhbC9Sb2Jsb3gtRkZsYWctTW9kaWZpZXI
-          icon: download
-          text: Download
-    - name: Downgrader
-      desc: >-
-        A tool for downgrading your Roblox to pre-Byfron, allowing you to use old exploits!
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2NlcmVhbHdpdGhtaWxrL3V3cC9yZWxlYXNlcy90YWcvMi41OTIuNTg2LjA
           icon: download
           text: Download
     - name: FPS Unlocker
@@ -145,7 +197,7 @@
 
 - title: Other Tools
   icon: fa-syringe
-  order: 4
+  order: 5
   clients:
     - name: Defender Control
       desc: >-

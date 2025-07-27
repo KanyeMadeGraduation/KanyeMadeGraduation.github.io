@@ -9,6 +9,8 @@ game_img: /assets/img/roblox.jpg
 game_badges:
   - text: Windows
     icon: windows
+  - text: MacOS
+    icon: apple
   - text: iOS
     icon: apple
   - text: Android
