@@ -1192,6 +1192,23 @@
   icon: fa-cloud
   order: 7
   clients:
+    - name: Camel
+      badges:
+        - text: 1.21.5
+        - text: Fabric
+          class: fabric
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        Has macros, Dojo cheats, and more cheats beyond Skyblock, such as for Party Games!
+      download:
+        - link: aHR0cDovL2dobHVrYS5naXRodWIuaW8vY2FtZWw
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2dobHVrYS9DYW1lbENsaWVudExlZ2FjeQ
+          icon: code
+          text: Source code
     - name: Pizza Client
       badges:
         - text: 1.8.9
