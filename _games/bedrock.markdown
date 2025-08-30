@@ -39,7 +39,7 @@ game_badges:
                                         </h4>
                                         <div>
                                             {%- for download in client.download -%}
-                                                <button class="glow-on-hover" onclick="window.location.href='{% if download.link %}/ads.html?ad={{- download.link -}}{% endif %}{% if download.direct %}{{- download.direct -}}{% endif %}';"><span class="icon{% if download.brand %}-b{% endif %} fa-{{- download.icon -}}">{{- download.text -}}</span></button>
+                                                <button style="padding: .6em .3em; min-width: 150px!important;" class="glow-on-hover" onclick="window.location.href='{% if download.link %}/ads.html?ad={{- download.link -}}{% endif %}{% if download.direct %}{{- download.direct -}}{% endif %}';"><span style="font-size: .9em;" class="icon{% if download.brand %}-b{% endif %} fa-{{- download.icon -}}">{{- download.text -}}</span></button>
                                             {%- endfor -%}
                                         </div>
                                     </div>

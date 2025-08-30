@@ -15,11 +15,14 @@
         - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwva2FybWEucmFy
           icon: download
           text: Download
-    - name: Jelte.lol
+    - name: Intent.Store
+      badges:
+        - text: Cracked
+          class: cracked
       desc: >-
-        A full archive of the Jelte.lol website.
+        A full archive of the Intent.Store website. More clients are coming soon, archive is still in progress.
       download:
-        - direct: /jelte
+        - direct: /intent
           icon: archive
           text: Visit archive
 
@@ -293,25 +296,6 @@
         - link: aHR0cHM6Ly9naXRodWIuY29tL3NhcHBoaXJlY2hlYXRzL21jLWdob3N0LWxpdGU
           icon: code
           text: Source code
-    - name: DuelsEssentials
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Cracked by CystemZ and SKRRRTT. A Hypixel duels bot for sumo, classic, and boxing. Requires Patcher and OptiFine.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREV2MUNyYWNrLnJhcg
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREVCYWNrZW5kLnJhcg
-          icon: server
-          text: Backend
-        - direct: /deFold
-          icon: grin-tears
-          text: Fold
     - name: Trump
       badges:
         - text: 1.7.10
@@ -359,12 +343,10 @@
           class: forge
         - text: Cracked
           class: cracked
-        - text: Possibly Infected
-          class: rat
       desc: >-
-        Raven B4 is the latest official version of Raven by blowsy. This is a cracked version and may be infected.
+        Raven B4 is the latest official version of Raven by blowsy. Cracked by morrigan.
       download:
-        - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvUmF2ZW5CNC5qYXI&rat=true
+        - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvUmF2ZW5CNC5qYXI
           icon: download
           text: Download
     - name: Raven bS
@@ -553,22 +535,6 @@
         Toad is a DLL ghost client. It can be used for Lunar for 1.7.10 or 1.8.9. Has an external AND internal UI.
       download:
         - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvVG9hZC56aXA
-          icon: download
-          text: Download
-    - name: Ripterms
-      badges:
-        - text: 1.7.10
-        - text: 1.8.9
-        - text: 1.16.5
-        - text: 1.17.1
-        - text: 1.19.4
-        - text: 1.20.4
-        - text: Internal
-          class: internal
-      desc: >-
-        Ripterms is a DLL ghost client. Supports 1.7.10, 1.8.9, 1.16.5, 1.17.1, 1.19.4, 1.20.4 for Lunar, and 1.8.9 for Forge and Badlion.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvUmlwdGVybXMuZGxs
           icon: download
           text: Download
     - name: Raid0
@@ -787,6 +753,41 @@
         - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRW50aGFweS5leGU
           icon: download
           text: Download
+    - name: Ripterms
+      badges:
+        - text: 1.7.10
+        - text: 1.8.9
+        - text: 1.16.5
+        - text: 1.17.1
+        - text: 1.19.4
+        - text: 1.20.4
+        - text: Internal
+          class: internal
+      desc: >-
+        Ripterms is a DLL ghost client. Supports 1.7.10, 1.8.9, 1.16.5, 1.17.1, 1.19.4, 1.20.4 for Lunar, and 1.8.9 for Forge and Badlion.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvUmlwdGVybXMuZGxs
+          icon: download
+          text: Download
+    - name: DuelsEssentials
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Cracked by CystemZ and SKRRRTT. A Hypixel duels bot for sumo, classic, and boxing. Requires Patcher and OptiFine.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREV2MUNyYWNrLnJhcg
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvREVCYWNrZW5kLnJhcg
+          icon: server
+          text: Backend
+        - direct: /deFold
+          icon: grin-tears
+          text: Fold
 
 - title: Blatant Clients
   icon: fa-exclamation
@@ -1037,8 +1038,6 @@
           text: Download
     - name: Spotify Autoclicker
       badges:
-        - text: Cracked
-          class: cracked
       desc: >-
         An autoclicker disguised to look like the Spotify application.
       download:
@@ -1050,8 +1049,6 @@
           text: Source code
     - name: Zoom Autoclicker
       badges:
-        - text: Cracked
-          class: cracked
       desc: >-
         An autoclicker disguised to look like the Zoom application.
       download:
@@ -1063,8 +1060,6 @@
           text: Source code
     - name: Lunar Autoclicker
       badges:
-        - text: Cracked
-          class: cracked
       desc: >-
         An autoclicker disguised to look like the Lunar Client launcher.
       download:
@@ -1086,6 +1081,13 @@
   icon: fa-archive
   order: 6
   clients:
+    - name: Intent.Store
+      desc: >-
+        A full archive of the Intent.Store website.
+      download:
+        - direct: /intent
+          icon: archive
+          text: Visit archive
     - name: Jelte.lol
       desc: >-
         A full archive of the Jelte.lol website.

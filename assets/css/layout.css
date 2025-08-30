@@ -254,6 +254,9 @@ a:active {
   color:white;
   font-size: 0.9em;
 }
+.badges {
+  min-height: 38px!important;
+}
 .badges > .badge {
   margin: 0 5px 0;
 }
@@ -274,7 +277,7 @@ a:active {
   font-size: .8em;
   font-weight: 300;
   min-width: 220px;
-  border: none;
+  border: 1px #fff;
   outline: none;
   color: #fff;
   background: #000;
@@ -305,10 +308,6 @@ a:active {
 
 .glow-on-hover:active:after {
     background: transparent;
-}
-
-.glow-on-hover:active {
-    background: #000;
 }
 
 .glow-on-hover:hover:before {

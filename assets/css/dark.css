@@ -1,24 +1,24 @@
 body, html {
-    background-color: #0b0c0f!important;
+    background-color: #1d1d1d!important;
 }
 
 .shade-one {
-    background-color: #0b0c0f!important;
+    background-color: #1d1d1d!important;
     color:white;
 }
 
 .shade-two {
-    background-color: #0b0c0f!important;
+    background-color: #1d1d1d!important;
     color:white;
 }
 
 .shade-three {
-    background-color: #0b0c0f!important;
+    background-color: #1d1d1d!important;
     color:white;
 }
 
 .shade-four {
-    background-color: #0b0c0f!important;
+    background-color: #1d1d1d!important;
     color:white;
 }
 
@@ -40,5 +40,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header {
-    background: #101016 url("images/overlay.png")
+    background: #1d1d1d url("images/overlay.png")
 }
