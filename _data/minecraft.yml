@@ -279,7 +279,7 @@
       desc: >-
         Cracked by AllahLeaks, fixed!
       download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvanV1bC56aXA
+        - direct: /intent
           icon: download
           text: Download
     - name: Sapphire
@@ -808,31 +808,15 @@
           icon: youtube
           brand: true
           text: Tutorial
-    - name: Augustus
+    - name: ZeroDay
       badges:
         - text: 1.8.9
+        - text: Cracked
+          class: cracked
       desc: >-
-        Shoutout Ducadamul for the file. Not willing to check code, heard its clean but still use at your own risk.
+        ZeroDay b20.6. Created by Nef.
       download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvQXVndXN0dXMucmFy
-          icon: download
-          text: Download
-    - name: Exhibition
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Client created by Arithmo. It may require these JVM args when launching: <code>-XX:+DisableAttachMechanism -Xss4m</code>
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXhoaWJpdGlvbi56aXA
-          icon: download
-          text: Download
-    - name: Eternal
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Eternal is a blatant client that offers bypasses for pretty much every server and gives you an experience similar to paid clients, for free!
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXRlcm5hbC56aXA
+        - direct: /intent
           icon: download
           text: Download
     - name: Vestige
@@ -850,6 +834,33 @@
         - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVmVzdGlnZS1zcmMuemlw
           icon: code
           text: Source code
+    - name: Exhibition
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Client created by Arithmo. It may require these JVM args when launching: <code>-XX:+DisableAttachMechanism -Xss4m</code>
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXhoaWJpdGlvbi56aXA
+          icon: download
+          text: Download
+    - name: Augustus
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Shoutout Ducadamul for the file. Not willing to check code, heard its clean but still use at your own risk.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvQXVndXN0dXMucmFy
+          icon: download
+          text: Download
+    - name: Eternal
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Eternal is a blatant client that offers bypasses for pretty much every server and gives you an experience similar to paid clients, for free!
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXRlcm5hbC56aXA
+          icon: download
+          text: Download
     - name: Hawk
       badges:
         - text: 1.8.9
@@ -1506,7 +1517,7 @@
       desc: >-
         <img src="/assets/img/nef.png">
       download:
-        - direct: /huzuni
+        - direct: /intent
           icon: download
           text: Download
 

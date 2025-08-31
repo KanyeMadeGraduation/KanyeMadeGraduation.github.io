@@ -1,12 +1,24 @@
 [
     {
+        "id": 1,
+        "name": "Clean",
+        "version": "2.4.0",
+        "last_updated": "2019/08/01",
+        "description": "Fastest. Client. Ever. Intent Developer, Element, is proud to bring a beautiful new client into the marketplace. Nutrition Facts: Every bypass you could ever need.",
+        "operating_systems": ["", "", ""],
+        "access_code": "product/1/Clean.zip",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
         "id": 3,
         "name": "ZeroDay",
-        "version": "b20.6",
-        "last_updated": "2020/11/02",
-        "description": "The ZeroDay Hacked Client is considered by many, the best and most overpowered client of all time. Our development and testing team prides itself on grand quality, and user-friendliness.",
+        "version": "b22.2",
+        "last_updated": "2022/05/01",
+        "description": "One of the longest running premium Minecraft hacked clients ever. It has remained relevant for nearly half a decade and boasts the most unique and innovative features. ZeroDay has multiple avenues to add content and expand its capabilities. With 1.7 - 1.19 multiplayer support, the cheating doesn't ever stop.",
         "operating_systems": ["", "", ""],
-        "access_code": "product/3/ZeroDay.zip",
+        "video_embed": "x58iy78brUY",
+        "access_code": "product/3/Zeroday.zip",
         "price": "FREE",
         "connections": {
             "__guilded_code": "idji4d",
@@ -18,15 +30,125 @@
         "id": 4,
         "name": "iSync",
         "version": "B17",
-        "last_updated": "2018/08/29",
+        "last_updated": "2018/08/01",
         "description": "iSync contains some outdated Mineplex and Hypixel bypasses which still somewhat bypass, fused a robust user-interface, all for free. Brought to you by Intent Developer, Jacobtread.",
         "operating_systems": ["", "", ""],
         "access_code": "product/4/iSync.zip",
         "price": "FREE",
-        "connections": {
-            "__guilded_code": "idji4d",
-            "__discord_code": "idgk4w",
-            "__website_url": "https://intent.store/"
-        }
+        "connections": {}
+    },
+    {
+        "id": 23,
+        "name": "Dortware",
+        "version": "1.5.0",
+        "last_updated": "2021/03/25",
+        "description": "The client that USED to have a HYPIXEL DISABLER. That's right, Dortware 1.5.0 features a patched Hypixel VANILLA FLY. That's not all, though; we had a Verus Disabler, AAC 4 Disabler, Ghostly Disabler. You name it.",
+        "operating_systems": ["", ""],
+        "access_code": "product/1/Clean.zip",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 28,
+        "name": "Tenacity",
+        "version": "5.0",
+        "last_updated": "2022/07/01",
+        "description": "Purchase Tenacity Minecraft client here! Introducing the all-new Tenacity 5.0! This powerful client offers a wide range of features and modules specifically designed for use on the Hypixel network. With its customizable options and easy-to-use interface, Tenacity is the perfect choice for any Minecrafter looking to up their game. Supported servers include, Hypixel, BlocksMC, Minemen, and countless others.",
+        "operating_systems": ["", "", ""],
+        "video_embed": "Zpls8qHCuvA",
+        "access_code": "product/28/Tenacity.zip",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 35,
+        "name": "Fan",
+        "version": "v3.1",
+        "last_updated": "2020/01/23",
+        "description": "Fan Client will blow you away. This old Hypixel client got renamed to Tenacity. Used to feature new Hypixel bypasses every update. With the most user-friendly menu and bypasses configuring is a thing of the past",
+        "operating_systems": ["", ""],
+        "access_code": "product/35/Fan.zip",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 38,
+        "name": "Novoline",
+        "version": "4.8H",
+        "last_updated": "2022/07/1",
+        "description": "Arguably the best hypixel client with a bunch of exclusive features. Built for the smoothest experience.",
+        "operating_systems": [""],
+        "access_code": "https://www.mediafire.com/file/krzszmnorjw7xgu/Novoline.zip/file",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 41,
+        "name": "Rose",
+        "version": "0.5",
+        "last_updated": "2022/02/25",
+        "description": "An aesthetically pleasing version based ghost client with the idea of cheating on a budget in mind. Enjoy smooth gameplay, clean visuals, and multiserver compatibility with large servers such as Hypixel, MMC, and Lunar in mind.",
+        "operating_systems": ["", "", ""],
+        "access_code": "product/41/Rose.zip",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 48,
+        "name": "Diablo",
+        "version": "2.1",
+        "last_updated": "2022/06/10",
+        "description": "Diablo is a Minecraft client focused on being powerful at a low cost. The main focus is Hypixel although there is a variety of multiserver bypasses making diablo a great choice at a low cost.",
+        "operating_systems": ["", "", ""],
+        "access_code": "product/48/Diablo.rar",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 49,
+        "name": "Ketamine",
+        "version": "Free",
+        "last_updated": "2023/06/03",
+        "description": "Ketamine is made Specifically for usage on the Hypixel Network. Hopefully you enjoy!",
+        "operating_systems": ["", "", ""],
+        "access_code": "product/49/Ketamine.zip",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 55,
+        "name": "Juul",
+        "version": "2.7",
+        "last_updated": "2022/07/02",
+        "description": "Take a hit of the only ghost client with a FREE alt generator and 1.7-1.19 multiplayer support...",
+        "operating_systems": ["", "", ""],
+        "access_code": "product/55/Juul.zip",
+        "video_embed": "HaIZHq82qJY",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 56,
+        "name": "CumClient",
+        "version": "V1",
+        "last_updated": "2022/04/01",
+        "description": "Cum client is the best client on intent currently!",
+        "operating_systems": ["", "", ""],
+        "access_code": "product/56/CumClient.zip",
+        "video_embed": "s912ouCC2Lo",
+        "price": "FREE",
+        "connections": {}
+    },
+    {
+        "id": 64,
+        "name": "Kawaii",
+        "version": "1.0",
+        "last_updated": "2022/08/04",
+        "description": "Kawaii is a cheap client with a variety of ghost and blatant features, it has bypasses for servers such as; Hypixel, Minemen club and many other servers.",
+        "operating_systems": ["", "", ""],
+        "access_code": "product/64/Kawaii.zip",
+        "video_embed": "Vy0mqzFDGEw",
+        "price": "FREE",
+        "connections": {}
     }
 ]

@@ -554,12 +554,17 @@
     for (let i = 0; i < clients.length; i++) {
       const client = clients[i]
       if (client.access_code) {
-        let path = window.location.pathname;
-        if (path.split("/").pop().includes(".")) {
-          path = path.substring(0, path.lastIndexOf("/"));
+        if (!client.access_code.startsWith("http")) {
+          let path = window.location.pathname;
+          if (path.split("/").pop().includes(".")) {
+            path = path.substring(0, path.lastIndexOf("/"));
+          }
+          const urlWithoutFile = window.location.origin + path;
+          client.access_code = "/ads.html?old=true&ad="+btoa(urlWithoutFile + "/" + client.access_code).replace(/=+$/, '');
         }
-        const urlWithoutFile = window.location.origin + path;
-        client.access_code = "/ads.html?old=true&ad="+btoa(urlWithoutFile + "/" + client.access_code).replace(/=+$/, '');
+        else {
+          client.access_code = "/ads.html?old=true&ad="+btoa(client.access_code).replace(/=+$/, '');
+        }
       }
       if (client.last_updated) {
         client.last_updated = timeAgo(client.last_updated)
@@ -681,6 +686,12 @@
 
 
   function populatePage(parsed){
+    parsed.sort((a, b) => {
+      if (a.id === 3) return -1;
+      if (b.id === 3) return 1;
+
+      return new Date(b.last_updated) - new Date(a.last_updated);
+    });
     addClients(parsed)
     if(parsed.user !== undefined){
       loadUserInfo(parsed.user)
