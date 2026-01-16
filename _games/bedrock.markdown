@@ -1,6 +1,6 @@
 ---
 title: Minecraft
-order: 3
+order: 4
 layout: default
 
 game_name: Minecraft Bedrock Edition
