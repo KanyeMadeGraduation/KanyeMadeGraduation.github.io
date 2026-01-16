@@ -1,0 +1,19 @@
+- title: Featured
+  icon: fa-star
+  order: 0
+  clients:
+    - name: Teleport
+      desc: >-
+        Made by Urbanstorm, teleport millions of blocks, even on servers.
+      download:
+        - direct: https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/733869-hytale-teleporter.html
+          icon: windows
+          brand: true
+          text: Windows
+    - name: CheatEngine
+      desc: >-
+        Useful if you know how to use it, but you can also use it just for the speed hack.
+      download:
+        - direct: https://www.cheatengine.org/
+          icon: globe
+          text: Visit
