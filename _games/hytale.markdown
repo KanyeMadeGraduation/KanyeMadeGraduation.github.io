@@ -1,0 +1,54 @@
+---
+title: Hytale
+order: 2
+layout: default
+
+game_name: Hytale
+game_desc: Hytale cheats for the early access game, including groundbreaking exploits like teleportation.
+game_img: /assets/img/hytale.jpg
+game_badges:
+  - text: Windows
+    icon: windows
+  - text: MacOS
+    icon: apple
+  - text: Linux
+    icon: linux
+---
+{%- assign _sections = site.data.minecraft | sort: 'order' -%}
+{%- include header.html scrolly_nav=_sections -%}
+<!-- Main -->
+<div id="main">
+    <article class="shade-two">
+        <div class="container">
+            <div id="main-container">
+                <div id="section-container">
+                    {%- for section in _sections -%}
+                        <div id="{{- section.title | downcase | replace:' ','-' -}}">
+                        <h3>{{- section.title -}}</h3>
+                            <section class="grid-container">
+                                {%- for client in section.clients -%}
+                                    <div class="grid-item">
+                                        <h3>{{- client.name -}}</h3>
+                                        <div class="badges">
+                                            {%- for badge in client.badges -%}
+                                                <h6 class="badge rainbow_{{- badge.class -}}">{{- badge.text -}}</h6>
+                                            {%- endfor -%}
+                                        </div>
+                                        <h4 class="section-text">
+                                            {{- client.desc -}}
+                                        </h4>
+                                        <div>
+                                            {%- for download in client.download -%}
+                                                <button style="padding: .6em .3em; min-width: 150px!important;" class="glow-on-hover" onclick="window.location.href='{% if download.link %}/ads.html?ad={{- download.link -}}{% endif %}{% if download.direct %}{{- download.direct -}}{% endif %}';"><span style="font-size: .9em;" class="icon{% if download.brand %}-b{% endif %} fa-{{- download.icon -}}">{{- download.text -}}</span></button>
+                                            {%- endfor -%}
+                                        </div>
+                                    </div>
+                                {%- endfor -%}
+                            </section>
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
