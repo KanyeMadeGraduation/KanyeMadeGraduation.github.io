@@ -18,7 +18,7 @@
       desc: >-
         The only serverside thats ONLY free. Has a script hub, executor, and more features.
       download:
-        - link: aHR0cHM6Ly9uZXR0Lnd0Zi8
+        - direct: https://nett.wtf/
           icon: globe
           text: Visit
 
