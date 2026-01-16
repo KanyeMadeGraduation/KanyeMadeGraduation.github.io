@@ -14,7 +14,7 @@ game_badges:
   - text: Linux
     icon: linux
 ---
-{%- assign _sections = site.data.minecraft | sort: 'order' -%}
+{%- assign _sections = site.data.hytale | sort: 'order' -%}
 {%- include header.html scrolly_nav=_sections -%}
 <!-- Main -->
 <div id="main">
