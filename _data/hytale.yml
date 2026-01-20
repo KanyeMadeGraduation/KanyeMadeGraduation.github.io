@@ -2,14 +2,14 @@
   icon: fa-star
   order: 0
   clients:
-    - name: Hytale Trainer
+    - name: Haxtale
       desc: >-
         Made by Urbanstorm, lets you use fly, speed, noclip, infinite stamina, and more, even on servers.
       download:
-        - direct: https://hovac.top/dl/hytale_trainer.exe
+        - direct: https://hovac.top/dl/haxtale.exe
           icon: windows
           brand: true
-          text: Windows
+          text: Download
     - name: Hytale Teleporter
       desc: >-
         Made by Urbanstorm, teleport millions of blocks, even on servers.
@@ -23,11 +23,11 @@
   icon: fa-exclamation
   order: 0
   clients:
-    - name: Hytale Trainer
+    - name: Haxtale
       desc: >-
         Made by Urbanstorm, lets you use fly, speed, noclip, infinite stamina, and more, even on servers.
       download:
-        - direct: https://hovac.top/dl/hytale_trainer.exe
+        - direct: https://hovac.top/dl/haxtale.exe
           icon: windows
           brand: true
           text: Download
