@@ -6,15 +6,15 @@
       desc: >-
         Made by Urbanstorm, lets you use fly, speed, noclip, infinite stamina, and more, even on servers.
       download:
-        - direct: https://hovac.top/dl/haxtale.exe
+        - direct: https://hovac.top/dl/Haxtale.exe
           icon: windows
           brand: true
           text: Download
     - name: Hytale Teleporter
       desc: >-
-        Made by Urbanstorm, teleport millions of blocks, even on servers.
+        Made by Daffyjeff, teleport millions of blocks, even on servers. Bypasses the latest anti-cheats.
       download:
-        - direct: https://hovac.top/dl/hytale_tp.exe
+        - direct: https://hovac.top/dl/teleport.zip
           icon: windows
           brand: true
           text: Download
@@ -27,16 +27,16 @@
       desc: >-
         Made by Urbanstorm, lets you use fly, speed, noclip, infinite stamina, and more, even on servers.
       download:
-        - direct: https://hovac.top/dl/haxtale.exe
+        - direct: https://hovac.top/dl/Haxtale.exe
           icon: windows
           brand: true
           text: Download
     - name: Hytale Teleporter
       desc: >-
-        Made by Urbanstorm, teleport millions of blocks, even on servers.
+        Made by Daffyjeff, teleport millions of blocks, even on servers. Bypasses the latest anti-cheats.
       download:
-        - direct: https://hovac.top/dl/hytale_tp.exe
-          icon: windows
+        - direct: https://hovac.top/dl/teleport.zip
+          icon: download
           brand: true
           text: Download
           
@@ -51,3 +51,15 @@
         - direct: https://www.cheatengine.org/
           icon: globe
           text: Visit
+
+- title: Source Codes
+  icon: fa-code
+  order: 3
+  clients:
+    - name: Haxtale
+      desc: >-
+        Made by Urbanstorm, the source code to Haxtale v0.1.
+      download:
+        - direct: https://hovac.top/dl/Haxtale.ct
+          icon: code
+          text: Download
