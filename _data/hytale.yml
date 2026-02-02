@@ -2,11 +2,11 @@
   icon: fa-star
   order: 0
   clients:
-    - name: Haxtale
+    - name: Hyx
       desc: >-
-        Made by Urbanstorm, lets you use fly, speed, noclip, infinite stamina, and more, even on servers.
+        Made by Urbanstorm, lets you fly, noclip, ESP, aimbot, and a bunch of other features.
       download:
-        - direct: https://hovac.top/dl/Haxtale.exe
+        - direct: https://urbanstorm.uk/
           icon: windows
           brand: true
           text: Download
@@ -23,11 +23,11 @@
   icon: fa-exclamation
   order: 0
   clients:
-    - name: Haxtale
+    - name: Hyx
       desc: >-
-        Made by Urbanstorm, lets you use fly, speed, noclip, infinite stamina, and more, even on servers.
+        Made by Urbanstorm, lets you fly, noclip, ESP, aimbot, and a bunch of other features.
       download:
-        - direct: https://hovac.top/dl/Haxtale.exe
+        - direct: https://urbanstorm.uk/
           icon: windows
           brand: true
           text: Download
