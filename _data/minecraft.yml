@@ -2,17 +2,16 @@
   icon: fa-star
   order: 1
   clients:
-    - name: Karma
+    - name: Doomsday
       badges:
         - text: 1.8.9
-        - text: External
-          class: external
-        - text: Cracked
-          class: cracked
+        - text: Latest
+        - text: Internal
+          class: internal
       desc: >-
-        Karma is a continuation of the Whiteout ghost client. Karma offers tons of features that bypass any anti-cheat!
+        An injectable client for Windows, Linux, MacOS, and Android! Has great ghost features, but also utility.
       download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwva2FybWEucmFy
+        - link: aHR0cHM6Ly9kb29tc2RheWNsaWVudC5jb20v
           icon: download
           text: Download
     - name: Intent.Store
@@ -20,11 +19,12 @@
         - text: Cracked
           class: cracked
       desc: >-
-        A full archive of the Intent.Store website. More clients are coming soon, archive is still in progress.
+        A full archive of the Intent.Store website, once the biggest client marketplace. Every client there is now free!
       download:
         - direct: /intent
           icon: archive
           text: Visit archive
+
 
 - title: Utility Clients
   icon: fa-tools
@@ -32,8 +32,7 @@
   clients:
     - name: Meteor
       badges:
-        - text: 1.20.x
-        - text: 1.21.x
+        - text: Latest
         - text: Fabric
           class: fabric
       desc: >-
@@ -45,47 +44,9 @@
         - link: aHR0cHM6Ly9naXRodWIuY29tL01ldGVvckRldmVsb3BtZW50L21ldGVvci1jbGllbnQ
           icon: code
           text: Source code
-        - link: aHR0cHM6Ly9hbnRpY29wZS5wYWdlcy5kZXYv
-          icon: puzzle-piece
-          text: Addons
-    - name: Lambda
-      badges:
-        - text: 1.12.x
-        - text: Forge
-          class: forge
-      desc: >-
-        Often used along side with 3arthh4ck. Based off of the client KAMI Blue. Provides a plugin system.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2xhbWJkYS1jbGllbnQvbGFtYmRhL3JlbGVhc2VzL2xhdGVzdA
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2xhbWJkYS1jbGllbnQvbGFtYmRh
-          icon: code
-          text: Source code
-        - link: aHR0cHM6Ly9naXRodWIuY29tL29yZ3MvbGFtYmRhLXBsdWdpbnMvcmVwb3NpdG9yaWVz
-          icon: puzzle-piece
-          text: Addons
-    - name: Wurst+
-      badges:
-        - text: 1.12.x
-        - text: Forge
-          class: forge
-      desc: >-
-        The main competitor to Phobos. Includes downloads + src for all 3 versions!
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1RydnNGL3d1cnN0cGx1cy1vbmU
-          icon: code
-          text: Download V1
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1d1cnN0UGx1cy93dXJzdHBsdXMtdHdv
-          icon: code
-          text: Download V2
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1d1cnN0UGx1cy93dXJzdC1wbHVzLXRocmVl
-          icon: code
-          text: Download V3
     - name: Wurst
       badges:
-        - text: 1.20.x
-        - text: 1.21.x
+        - text: Latest
         - text: Snapshots
         - text: More (1.7.2 - 1.20.6)
         - text: Fabric
@@ -99,9 +60,20 @@
         - link: aHR0cHM6Ly9naXRodWIuY29tL1d1cnN0LUltcGVyaXVtL1d1cnN0Nw
           icon: code
           text: Source code
+    - name: Aoba
+      badges:
+        - text: Latest
+        - text: Fabric
+          class: fabric
+      desc: >-
+        A free and open source utility client, with tons of exploits and automators. Provides an addon system.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2NvbHRvbms5MDQzL0FvYmEtQ2xpZW50
+          icon: download
+          text: Download
     - name: Aristois
       badges:
-        - text: 1.21.x
+        - text: Latest
         - text: More (1.8.9 - 1.20.6)
       desc: >-
         Offers a paid version, some features are exclusive. Updates frequently.
@@ -109,151 +81,7 @@
         - link: aHR0cHM6Ly9hcmlzdG9pcy5uZXQvZG93bmxvYWQ
           icon: download
           text: Download
-    - name: BleachHack
-      badges:
-        - text: 1.17.1
-        - text: 1.18.2
-        - text: 1.19.4
-        - text: 1.20.4
-        - text: Fabric
-          class: fabric
-      desc: >-
-        A very simple, vanilla-esque UI. Has a powerful crystal aura.
-      download:
-        - link: aHR0cHM6Ly9ibGVhY2hoYWNrLm9yZy9kb3dubG9hZHMuaHRtbA
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0JsZWFjaERldi9CbGVhY2hIYWNr
-          icon: code
-          text: Source code
-    - name: Impact
-      badges:
-        - text: 1.12.2
-        - text: 1.16.5
-        - text: More (1.11.2 - 1.15.2)
-        - text: Forge
-          class: forge
-      desc: >-
-        Developed by LeafHacker, Brady, and leijurv. A popular Future alternative that supports Forge and Vanilla.
-      download:
-        - link: aHR0cHM6Ly9pbXBhY3RjbGllbnQubmV0Lw
-          icon: download
-          text: Download
-    - name: Salhack
-      badges:
-        - text: 1.12.2
-        - text: Forge
-          class: forge
-      desc: >-
-        Salhack is utility client by ionar2. It's branded based on the YouTuber SalC1.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2lvbmFyMi9zcGlkZXJtb2QvcmVsZWFzZXMvbGF0ZXN0
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2lvbmFyMi9zcGlkZXJtb2Q
-          icon: code
-          text: Source code
-    - name: Coffee
-      badges:
-        - text: 1.20.1
-        - text: Fabric
-          class: fabric
-      desc: >-
-        Partially discontinued. Popular for its amazing visuals. Provides an addon system.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0NvZmZlZS1DbGllbnQvQ29mZmVlL3Jhdy9tYXN0ZXIvYmluL2xhdGVzdC5qYXI
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0NvZmZlZS1DbGllbnQvQ29mZmVl
-          icon: code
-          text: Source code
-    - name: Ares
-      badges:
-        - text: 1.12.2
-        - text: 1.16.5
-        - text: 1.17.1
-        - text: 1.18.2
-        - text: Forge
-          class: forge
-      desc: >-
-        Includes a vast amount of modules and exploits. The UI is very easy-to-use but quite ugly.
-      download:
-        - link: aHR0cHM6Ly9hcmVzY2xpZW50Lm9yZy9kb3dubG9hZA
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0FyZXNDbGllbnQvYXJlcw
-          icon: code
-          text: Source code
-    - name: Inertia
-      badges:
-        - text: 1.12.2
-        - text: 1.13.2
-        - text: 1.14.4
-        - text: 1.15.2
-        - text: 1.16.5
-        - text: Forge
-          class: forge
-        - text: Fabric
-          class: fabric
-      desc: >-
-        A pretty advanced utility client with features not in other clients such as trident aim bot.
-      download:
-        - link: aHR0cHM6Ly9pbmVydGlhY2xpZW50LmNvbS9Eb3dubG9hZC5waHA
-          icon: download
-          text: Download
-    - name: ForgeHax
-      badges:
-        - text: 1.12.x
-        - text: 1.16.5
-        - text: Forge
-          class: forge
-      desc: >-
-        Created by fr1kin. Popular for its dupe utilities and book bot. Hasn't been updated since 2021.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2ZyMWtpbi9Gb3JnZUhheC9yZWxlYXNlcw
-          icon: download
-          text: Download
-    - name: 3arthh4ck
-      badges:
-        - text: 1.12.2
-        - text: Forge
-          class: forge
-      desc: >-
-        A Phobos recode by oHareDaBoss.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2NvbG9yYmxpbmRuZXNzLzNhcnRoaDRjaw
-          icon: download
-          text: Download
-    - name: Phobos
-      badges:
-        - text: 1.12.2
-        - text: Forge
-          class: forge
-      desc: >-
-        A clean version of Phobos + src.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1RoZS1Hb3BybzMzNi1BcmNoaXZlL0NMRUFOX1Bob2Jvc18xLjkuMC1CVUlMREFCTEUtU1JDL3JlbGVhc2VzL2xhdGVzdA
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1RoZS1Hb3BybzMzNi1BcmNoaXZlL0NMRUFOX1Bob2Jvc18xLjkuMC1CVUlMREFCTEUtU1JD
-          icon: code
-          text: Source code
-    - name: Xulu
-      badges:
-        - text: 1.12.2
-        - text: Forge
-          class: forge
-        - text: Cracked
-          class: cracked
-      desc: >-
-        A deobfuscated leak of Xulu w/src.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvcmVsZWFzZXMvdGFnLzE1Mg
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvdHJlZS9tYXN0ZXIveHVsdXYxLjUuMg
-          icon: code
-          text: Source code
+
 
 - title: Ghost Clients
   icon: fa-ghost
@@ -262,26 +90,660 @@
     - name: Doomsday
       badges:
         - text: 1.8.9
-        - text: 1.21.x
+        - text: Latest
         - text: Internal
           class: internal
       desc: >-
-        An injectable client for Windows, Linux, MacOS, and Android!
+        An injectable client for Windows, Linux, MacOS, and Android! Has great ghost features, but also utility.
       download:
         - link: aHR0cHM6Ly9kb29tc2RheWNsaWVudC5jb20v
           icon: download
           text: Download
-    - name: Juul
+    - name: OpenMyau
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        One of the most popular ghost clients for all servers, including Hypixel. Has semi-blatant features too.
+      download:
+        - link: aHR0cHM6Ly9kaXNjb3JkLmdnL3lqU2FUdWZtcVU
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tLzYwMTI0ODA4ODY2L09wZW5NeWF1
+          icon: code
+          text: Source code
+    - name: Camel
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        A ghost client for PvP that has cheats for party games, skyblock, and more.
+      download:
+        - link: aHR0cDovL2dobHVrYS5naXRodWIuaW8vY2FtZWw
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2dobHVrYS9DYW1lbENsaWVudExlZ2FjeQ
+          icon: code
+          text: Source code
+    - name: Raven B++
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        Raven B++ is a ghost client by K-ov for Forge 1.8.9. It's a continuation of Raven B+.
+      download:
+        - link: aHR0cHM6Ly9rLW92LmdpdGh1Yi5pby8
+          icon: download
+          text: Download
+
+
+- title: Blatant PvP Clients
+  icon: fa-exclamation
+  order: 4
+  clients:
+    - name: LiquidBounce
+      badges:
+        - text: Latest
+        - text: Fabric
+          class: fabric
+      desc: >-
+        Useful on anarchy and PvP servers! We recommend you use their LiquidLauncher as it's more convenient.
+      download:
+        - link: aHR0cHM6Ly9saXF1aWRib3VuY2UubmV0L2Rvd25sb2Fk
+          icon: download
+          text: Download
+    - name: FDP
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        Created by Zywl, FDP is a fork of LiquidBounce. A very old blatant client that still gets updates.
+      download:
+        - link: aHR0cHM6Ly9mZHBpbmZvLmdpdGh1Yi5pby9kb3dubG9hZA
+          icon: download
+          text: Download
+
+
+- title: Skyblock Clients
+  icon: fa-cloud
+  order: 5
+  clients:
+    - name: Pizza Client
+      badges:
+        - text: Latest
+        - text: Fabric
+          class: fabric
+      desc: >-
+        One of the best Skyblock mods, full of features for dungeons, mining, and other QoL.
+      download:
+        - link: aHR0cHM6Ly9waXp6YWNsaWVudC5uZXQvZGlzY29yZA
+          icon: download
+          text: Download
+    - name: Odin
+      badges:
+        - text: Latest
+        - text: Fabric
+          class: fabric
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        Has a legit and cheat version! Has tons of floor 7 utilities. Also has a cookie clicker bot!
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL29kdGhla2luZy9PZGluL3JlbGVhc2VzL2xhdGVzdA
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL29kdGhla2luZy9PZGlu
+          icon: code
+          text: Source code
+
+
+- title: Autoclickers
+  icon: fa-mouse-pointer
+  order: 6
+  clients:
+    - name: hovac autoclicker
+      desc: >-
+        This is an autoclicker I made during class sometimes while bored. It's open-source and free!
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2VyL3JlbGVhc2VzL2xhdGVzdA
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2Vy
+          icon: code
+          text: Source code
+    - name: Sapphire Lite
+      desc: >-
+        Has a paid and free version, one of the most popular free autoclickers.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU2FwcGhpcmUuZXhl
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL3NhcHBoaXJlY2hlYXRzL3NhcHBoaXJlLWxpdGUtY2xpY2tlcg
+          icon: code
+          text: Source code
+    - name: Glock
+      badges:
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Cracked by pz.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZ2xvY2sucmFy
+          icon: download
+          text: Download
+    - name: Dropsy
+      badges:
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Cracked by pz.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZHJvcHN5LnJhcg
+          icon: download
+          text: Download
+    - name: Exelon
+      desc: >-
+        Exelon is one of the best autoclickers for bypassing, as it offers one of the most realistic randomizers.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL3dleW5uL0V4ZWxvbi9yYXcvbWFpbi9leGVsb24uZXhl
+          icon: download
+          text: Download
+    - name: Nebula
+      desc: >-
+        Nebula is now Exelon, however you can still use this version of the autoclicker.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbmVidWxhLmV4ZQ
+          icon: download
+          text: Download
+    - name: ppClicker
+      desc: >-
+        Has a paid and free version, one of the most popular free autoclickers.
+      download:
+        - link: aHR0cHM6Ly9wcGNsaWNrZXIueHl6Lw
+          icon: download
+          text: Download
+    - name: Thunder Clicker
+      desc: >-
+        Thunder Clicker has some cool features such as an auto W-Tap and more! It's one of my favourites.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVGh1bmRlci5leGU
+          icon: download
+          text: Download
+    - name: Spark Clicker
+      badges:
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Cracked by CystemZ & Andy @ Anti-Skid Inc. Shitty C++ clicker with 2013 prot!
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU3BhcmtDbGlja2VyLnppcA
+          icon: download
+          text: Download
+    - name: Cooper Clicker
+      badges:
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Cracked by CystemZ & Andy @ Anti-Skid Inc. Terrible autoclicker, who tf would pay for this.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvQ29vcGVyLnppcA
+          icon: download
+          text: Download
+    - name: d0ge
+      badges:
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Cracked by vroom.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZG9nZS56aXA
+          icon: download
+          text: Download
+    - name: Spotify Autoclicker
+      badges:
+      desc: >-
+        An autoclicker disguised to look like the Spotify application.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU3BvdGlmeS5leGU
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvc3BvdGlmeXNyYy56aXA
+          icon: code
+          text: Source code
+    - name: Zoom Autoclicker
+      badges:
+      desc: >-
+        An autoclicker disguised to look like the Zoom application.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvem9vbWNsaWNrZXIuemlw
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvem9vbWNsaWNrZXJzcmMuemlw
+          icon: code
+          text: Source code
+    - name: Lunar Autoclicker
+      badges:
+      desc: >-
+        An autoclicker disguised to look like the Lunar Client launcher.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHVuYXJjbGlja2VyLnppcA
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHVuYXJjbGlja2Vyc3JjLnppcA
+          icon: code
+          text: Source code
+    - name: Luvsy Autoclicker
+      desc: >-
+        Luvsy's old autoclicker. 99% sure this is some tutorial clicker bro did ��
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHV2c3kuZXhl
+          icon: download
+          text: Download
+
+
+- title: Archived Sites
+  icon: fa-archive
+  order: 7
+  clients:
+    - name: Intent.Store
+      desc: >-
+        A full archive of the Intent.Store website.
+      download:
+        - direct: /intent
+          icon: archive
+          text: Visit archive
+    - name: Jelte.lol
+      desc: >-
+        A full archive of the Jelte.lol website.
+      download:
+        - direct: /jelte
+          icon: archive
+          text: Visit archive
+    - name: Hovac.lol
+      desc: >-
+        A full archive of the original Hovac.lol website.
+      download:
+        - direct: /hovac
+          icon: archive
+          text: Visit archive
+    - name: Hactify.ru
+      desc: >-
+        A full archive of the Hactify.ru website. With 24+ exclusive downloads!
+      download:
+        - direct: /hactify
+          icon: archive
+          text: Visit archive
+    - name: SigmaClient.info
+      desc: >-
+        An archive of Sigma 5.0 (Jello), 4.11, and 3.9! With web-archives of the different time periods!
+      download:
+        - direct: /sigma
+          icon: archive
+          text: Visit archives
+    - name: JigsawClient.net
+      desc: >-
+        An extended archive of the Jigsaw website, with downloads and source code.
+      download:
+        - direct: /jigsaw
+          icon: archive
+          text: Visit archive
+    - name: Cheats.gq
+      desc: >-
+        A full archive of the Cheats.gq website, with 7+ clients and an optional launcher!
+      download:
+        - direct: /cheatsgq
+          icon: archive
+          text: Visit archive
+    - name: Itami.cf
+      desc: >-
+        A full archive of the Itami.cf website, the original site for Itami.
+      download:
+        - direct: /itami
+          icon: archive
+          text: Visit archive
+    - name: RavenBPlus.cf
+      desc: >-
+        A full archive of the RavenBPlus.cf website, the original site for Raven B+.
+      download:
+        - direct: /ravenbplus
+          icon: archive
+          text: Visit archive
+    - name: Sippin.cc
+      desc: >-
+        A full archive of the Sippin.cc website, the original site for IceTea.
+      download:
+        - direct: /sippin
+          icon: archive
+          text: Visit archive
+    - name: Zoomin.fun
+      desc: >-
+        A full archive of the Zoomin.fun website, the original site for Zoomin.
+      download:
+        - direct: /zoomin
+          icon: archive
+          text: Visit archive
+    - name: Salhack.com
+      desc: >-
+        A full archive of the Salhack.com website, the original site for Salhack.
+      download:
+        - direct: /salhack
+          icon: archive
+          text: Visit archive
+    - name: Whiteout.lol
+      desc: >-
+        A full archive of the old and new Whiteout.lol website, features the cracked version!
+      download:
+        - direct: /whiteout/3
+          icon: archive
+          text: New archive
+        - direct: /whiteout/2
+          icon: archive
+          text: Old archive
+    - name: HuzuniClient.com
+      desc: >-
+        A full archive of the HuzuniClient.com website, the original site for Huzuni.
+      download:
+        - direct: /huzuni
+          icon: archive
+          text: Visit archive
+    - name: Bounce Killer
+      desc: >-
+        Bounce Killer is an archive by Czf_233 of every LiquidBounce fork, paid or not, that doesnt comply with GPL.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0ltQ3pmMjMzL0Zha2VCb3VuY2UtS2lsbGVy
+          icon: archive
+          text: Visit archive
+
+
+- title: Old Blatant Clients
+  icon: fa-exclamation
+  order: 8
+  clients:
+    - name: Astolfo
       badges:
         - text: 1.8.9
         - text: Cracked
           class: cracked
       desc: >-
-        Cracked by AllahLeaks, fixed!
+        Old version of Astolfo cracked by AllahLeaks, fixed by shxzu!
+      download:
+        - link: aHR0cHM6Ly9tZWdhLm56L2ZpbGUvTEhZWDJJQWIjMmR1dEFncDBsdmJ2ZDQ1TmJLQmhod1NlZjkzSG51bG1QeW9ackx2QWpHYw
+          icon: download
+          text: Download
+        - direct: https://archive.org/details/LuvsyAstolfoTutorial
+          icon: youtube
+          brand: true
+          text: Tutorial
+    - name: ZeroDay
+      badges:
+        - text: 1.8.9
+        - text: Cracked
+          class: cracked
+      desc: >-
+        ZeroDay b22.2. Created by Nefarious Intent.
       download:
         - direct: /intent
           icon: download
           text: Download
+    - name: Vestige
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Vestige is a discontinued client by YesCheatPlus, you can Download version 2 and 3 for free now!
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVmVzdGlnZTMuemlw
+          icon: download
+          text: Download V3
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVmVzdGlnZTIuemlw
+          icon: download
+          text: Download V2
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVmVzdGlnZS1zcmMuemlw
+          icon: code
+          text: Source code
+    - name: Exhibition
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Client created by Arithmo. It may require these JVM args when launching: <code>-XX:+DisableAttachMechanism -Xss4m</code>
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXhoaWJpdGlvbi56aXA
+          icon: download
+          text: Download
+    - name: Augustus
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Shoutout Ducadamul for the file. Not willing to check code, heard its clean but still use at your own risk.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvQXVndXN0dXMucmFy
+          icon: download
+          text: Download
+    - name: Tenacity 5.0
+      badges:
+        - text: 1.8.9
+        - text: Cracked
+          class: cracked
+      desc: >-
+        An old client who was once on Intent.Store. Created by Cedo, known for its incredible visuals.
+      download:
+        - direct: /intent
+          icon: download
+          text: Download
+    - name: Eternal
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Eternal is a blatant client that offers bypasses for pretty much every server and gives you an experience similar to paid clients, for free!
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXRlcm5hbC56aXA
+          icon: download
+          text: Download
+    - name: Hawk
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Client owned by YesCheatPlus. It used to be the free version of Vestige, but now Vestige is free.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvSGF3ay56aXA
+          icon: download
+          text: Download
+    - name: Lime Reborn
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Client owned by Wykt. Lime is now discontinued.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTGltZS56aXA
+          icon: download
+          text: Download
+    - name: Lime
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Client owned by Wykt. This is an old version of the client that was released because Wykt lost motivation.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvT2xkTGltZS56aXA
+          icon: download
+          text: Download
+    - name: LiquidBounce Legacy
+      badges:
+        - text: 1.8.9
+        - text: 1.12.2
+        - text: Forge
+          class: forge
+      desc: >-
+        A free and open-source Forge client. We recommend you use their LiquidLauncher as it's more convenient.
+      download:
+        - link: aHR0cHM6Ly9saXF1aWRib3VuY2UubmV0L2Rvd25sb2Fk
+          icon: download
+          text: Download
+    - name: LiquidBounce+
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        Created by the WYSI foundation, LiquidBounce+ is a fork of LiquidBounce. This has more features, bypasses, and more than normal LiquidBounce.
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTGlxdWlkQm91bmNlKy5qYXI
+          icon: download
+          text: Download
+    - name: LiquidBounce++
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        Created by TheMosKau, LiquidBounce++ is a fork of LiquidBounce+. This comes with brand new visuals, bypasses, and more!
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTGlxdWlkQm91bmNlKysuemlw
+          icon: download
+          text: Download
+    - name: NightX
+      badges:
+        - text: 1.8.9
+        - text: Forge
+          class: forge
+      desc: >-
+        Created by As_pw, NightX is a fork of LiquidBounce+. It comes with updated bypasses, beautiful visuals, and more!
+      download:
+        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTmlnaHRYLnppcA
+          icon: download
+          text: Download
+    - name: Ketamine
+      badges:
+        - text: 1.8.9
+        - text: Cracked
+          class: cracked
+      desc: >-
+        An old client featured on Intent.Store. Had really nice visuals.
+      download:
+        - direct: /intent
+          icon: download
+          text: Download
+    - name: Wolfram
+      badges:
+        - text: 1.8.9
+        - text: 1.9.4
+        - text: 1.10.2
+        - text: 1.11.2
+        - text: 1.12.2
+      desc: >-
+        Client maintained by Wurst, but originally created by ShadowSpl0it. An old client designed to bypass NCP.
+      download:
+        - direct: https://linkvertise.com/460576/wolfram/1
+          icon: download
+          text: Download
+    - name: Fan
+      badges:
+        - text: 1.8.9
+        - text: Cracked
+          class: cracked
+      desc: >-
+        The predecessor to Tenacity, this is its version V3.1.
+      download:
+        - direct: /intent
+          icon: download
+          text: Download
+    - name: Sigma
+      badges:
+        - text: 1.8.9
+        - text: 1.9.4
+        - text: 1.10.2
+        - text: 1.11.2
+        - text: 1.12.2
+      desc: >-
+        Sigma 3.9 and 4.11 are provided by Cherry. Erm what da sigma?
+      download:
+        - direct: /sigma/5/
+          icon: download
+          text: Download 5.0
+        - direct: /sigma/4/
+          icon: download
+          text: Download 4.11
+        - direct: /sigma/3/
+          icon: download
+          text: Download 3.9
+    - name: Jigsaw
+      badges:
+        - text: 1.8.8
+        - text: 1.12.2
+      desc: >-
+        Client created by Robofån. It was one of the most influential hacked clients ever, with one of the first stable tp-aura and many ghost + blatant features.
+      download:
+        - direct: /jigsaw
+          icon: download
+          text: Download
+    - name: Mylo Client
+      badges:
+        - text: 1.8.9
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Client created by Mylo a long time ago. Cracked and archived by hovac with permission of Mylo.
+      download:
+        - link: aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL2pvMDV6eXkzNXZlNW5jeS9teWxvLnppcC9maWxl
+          icon: download
+          text: Download
+    - name: Huzuni Client
+      badges:
+        - text: 1.5
+        - text: 1.6
+        - text: 1.7.5
+        - text: 1.7.10
+        - text: 1.8.9
+        - text: 1.10
+        - text: 1.11.2
+        - text: Cracked
+          class: cracked
+      desc: >-
+        Client created by Halalaboos. VIP cracked for free.
+      download:
+        - direct: /huzuni/downloads
+          icon: download
+          text: Download
+    - name: Cum Client
+      badges:
+        - text: 1.8.9
+        - text: Cracked
+          class: cracked
+      desc: >-
+        <img src="/assets/img/nef.png">
+      download:
+        - direct: /intent
+          icon: download
+          text: Download
+    - name: Clean
+      badges:
+        - text: 1.8.9
+        - text: Cracked
+          class: cracked
+      desc: >-
+        There was a Clean v2.6.0, but this is the v2.4.0. It had a weird fly where it would put a fake Ender Dragon under you.
+      download:
+        - direct: /intent
+          icon: download
+          text: Download
+    - name: iSync
+      badges:
+        - text: 1.8.9
+      desc: >-
+        Build version 17 of iSync by Jacobtread. It was the first free client available on Intent.Store. Known for being old.
+      download:
+        - direct: /intent
+          icon: download
+          text: Download
+
+
+- title: Old Ghost Clients
+  icon: fa-user-secret
+  order: 9
+  clients:
     - name: Sapphire
       badges:
         - text: 1.8.9
@@ -293,9 +755,6 @@
         - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU2FwcGhpcmUuamFy
           icon: download
           text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL3NhcHBoaXJlY2hlYXRzL21jLWdob3N0LWxpdGU
-          icon: code
-          text: Source code
     - name: Trump
       badges:
         - text: 1.7.10
@@ -336,41 +795,6 @@
         - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvc2tpbGxlZHYzLmphcg
           icon: download
           text: Download V3
-    - name: Raven B4
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Raven B4 is the latest official version of Raven by blowsy. Cracked by morrigan.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvUmF2ZW5CNC5qYXI
-          icon: download
-          text: Download
-    - name: Raven bS
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Raven bS is a ghost client by Strangerrrs for Forge 1.8.9. It's a continuation of Raven b3 designed to copy Raven b4.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1N0cmFuZ2VycnJzL1JhdmVuLWJTL3JlbGVhc2VzL2xhdGVzdA
-          icon: download
-          text: Download
-    - name: Raven XD
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Raven XD is a ghost client by Xia for Forge 1.8.9. It's a fork of Raven bS designed to add non-Hypixel features.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL3hpYS1tYy9SYXZlbi1YRC9yZWxlYXNlcy9sYXRlc3Q
-          icon: download
-          text: Download
     - name: Raven B+
       badges:
         - text: 1.8.9
@@ -385,17 +809,6 @@
         - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvUmF2ZW5CK0JldGEuamFy
           icon: download
           text: Download (Beta)
-    - name: Raven B++
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Raven B++ is a ghost client by K-ov for Forge 1.8.9. It's a continuation of Raven B+.
-      download:
-        - link: aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0stb3YvUmF2ZW4tYlBMVVMvc3RhYmxlL2J1aWxkL2xpYnMvJTVCMS44LjklNUQlMjBCZXR0ZXJLZXlzdHJva2VzJTIwVi0xLjIuamFy
-          icon: download
-          text: Download
     - name: RavenWeave
       badges:
         - text: 1.8.9
@@ -421,28 +834,6 @@
         - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvSGFydS5yYXI
           icon: download
           text: Download (MCP)
-    - name: Fractal
-      badges:
-        - text: 1.8.9
-        - text: Weave
-          class: weave
-      desc: >-
-        Fractal is a ghost client by Flapjack for Weave, which lets you inject it into Lunar Client. Incompatible with RavenWeave.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0FyaWFKYWNraWUvRnJhY3RhbA
-          icon: download
-          text: Download
-    - name: Smok
-      badges:
-        - text: 1.8.9
-        - text: Weave
-          class: weave
-      desc: >-
-        Smok is a ghost client by SleepyFish for Weave, which lets you inject it into Lunar Client.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1NsZWVweUZpc2hZVC9TTW9rLUNsaWVudC9yZWxlYXNlcy9sYXRlc3Q
-          icon: download
-          text: Download
     - name: Blue
       badges:
         - text: 1.8.9
@@ -788,454 +1179,233 @@
         - direct: /deFold
           icon: grin-tears
           text: Fold
-
-- title: Blatant Clients
-  icon: fa-exclamation
-  order: 4
-  clients:
-    - name: Astolfo
+    - name: Rose
       badges:
         - text: 1.8.9
         - text: Cracked
           class: cracked
       desc: >-
-        Cracked by AllahLeaks, fixed by shxzu!
-      download:
-        - link: aHR0cHM6Ly9tZWdhLm56L2ZpbGUvTEhZWDJJQWIjMmR1dEFncDBsdmJ2ZDQ1TmJLQmhod1NlZjkzSG51bG1QeW9ackx2QWpHYw
-          icon: download
-          text: Download
-        - direct: https://archive.org/details/LuvsyAstolfoTutorial
-          icon: youtube
-          brand: true
-          text: Tutorial
-    - name: ZeroDay
-      badges:
-        - text: 1.8.9
-        - text: Cracked
-          class: cracked
-      desc: >-
-        ZeroDay b20.6. Created by Nef.
+        A very old ghost client that you used to get for free if you purchased Tenacity v3.
       download:
         - direct: /intent
           icon: download
           text: Download
-    - name: Vestige
+
+
+- title: Old Utility Clients
+  icon: fa-hammer
+  order: 10
+  clients:
+    - name: ForgeWurst
       badges:
-        - text: 1.8.9
-      desc: >-
-        Vestige is a discontinued client by YesCheatPlus, you can Download version 2 and 3 for free now!
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVmVzdGlnZTMuemlw
-          icon: download
-          text: Download V3
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVmVzdGlnZTIuemlw
-          icon: download
-          text: Download V2
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVmVzdGlnZS1zcmMuemlw
-          icon: code
-          text: Source code
-    - name: Exhibition
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Client created by Arithmo. It may require these JVM args when launching: <code>-XX:+DisableAttachMechanism -Xss4m</code>
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXhoaWJpdGlvbi56aXA
-          icon: download
-          text: Download
-    - name: Augustus
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Shoutout Ducadamul for the file. Not willing to check code, heard its clean but still use at your own risk.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvQXVndXN0dXMucmFy
-          icon: download
-          text: Download
-    - name: Eternal
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Eternal is a blatant client that offers bypasses for pretty much every server and gives you an experience similar to paid clients, for free!
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvRXRlcm5hbC56aXA
-          icon: download
-          text: Download
-    - name: Hawk
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Client owned by YesCheatPlus. It used to be the free version of Vestige, but now Vestige is free.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvSGF3ay56aXA
-          icon: download
-          text: Download
-    - name: Lime Reborn
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Client owned by Wykt. Lime is now discontinued.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTGltZS56aXA
-          icon: download
-          text: Download
-    - name: Lime
-      badges:
-        - text: 1.8.9
-      desc: >-
-        Client owned by Wykt. This is an old version of the client that was released because Wykt lost motivation.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvT2xkTGltZS56aXA
-          icon: download
-          text: Download
-    - name: LiquidBounce Legacy
-      badges:
-        - text: 1.8.9
+        - text: 1.10.2
         - text: 1.12.2
         - text: Forge
           class: forge
       desc: >-
-        A free and open-source Forge client. We recommend you use their LiquidLauncher as it's more convenient.
+        A Forge version of the Wurst client. Only has 36 modules compared to Wurst 7's 246 modules.
       download:
-        - link: aHR0cHM6Ly9saXF1aWRib3VuY2UubmV0L2Rvd25sb2Fk
+        - link: aHR0cHM6Ly9mb3JnZS53dXJzdGNsaWVudC5uZXQvZG93bmxvYWQv
           icon: download
           text: Download
-    - name: LiquidBounce+
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Created by the WYSI foundation, LiquidBounce+ is a fork of LiquidBounce. This has more features, bypasses, and more than normal LiquidBounce.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTGlxdWlkQm91bmNlKy5qYXI
-          icon: download
-          text: Download
-    - name: LiquidBounce++
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Created by TheMosKau, LiquidBounce++ is a fork of LiquidBounce+. This comes with brand new visuals, bypasses, and more!
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTGlxdWlkQm91bmNlKysuemlw
-          icon: download
-          text: Download
-    - name: FDP
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Created by Zywl, FDP is a fork of LiquidBounce. It logs your HWID and is considered by many as malicious, therefore use it at your own risk.
-      download:
-        - link: aHR0cHM6Ly9mZHBpbmZvLmdpdGh1Yi5pby9kb3dubG9hZA
-          icon: download
-          text: Download
-    - name: NightX
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Created by As_pw, NightX is a fork of LiquidBounce+. It comes with updated bypasses, beautiful visuals, and more!
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvTmlnaHRYLnppcA
-          icon: download
-          text: Download
-
-- title: Autoclickers
-  icon: fa-mouse-pointer
-  order: 5
-  clients:
-    - name: hovac autoclicker
-      desc: >-
-        This is an autoclicker I made during class sometimes while bored. It's open-source and free!
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2VyL3JlbGVhc2VzL2xhdGVzdA
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2Vy
+        - link: aHR0cHM6Ly9naXRodWIuY29tL1d1cnN0LUltcGVyaXVtL0ZvcmdlV3Vyc3Q
           icon: code
           text: Source code
-    - name: Sapphire Lite
-      desc: >-
-        Has a paid and free version, one of the most popular free autoclickers.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU2FwcGhpcmUuZXhl
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL3NhcHBoaXJlY2hlYXRzL3NhcHBoaXJlLWxpdGUtY2xpY2tlcg
-          icon: code
-          text: Source code
-    - name: Glock
+    - name: BleachHack
       badges:
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Cracked by pz.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZ2xvY2sucmFy
-          icon: download
-          text: Download
-    - name: Dropsy
-      badges:
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Cracked by pz.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZHJvcHN5LnJhcg
-          icon: download
-          text: Download
-    - name: Exelon
-      desc: >-
-        Exelon is one of the best autoclickers for bypassing, as it offers one of the most realistic randomizers.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL3dleW5uL0V4ZWxvbi9yYXcvbWFpbi9leGVsb24uZXhl
-          icon: download
-          text: Download
-    - name: Nebula
-      desc: >-
-        Nebula is now Exelon, however you can still use this version of the autoclicker.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbmVidWxhLmV4ZQ
-          icon: download
-          text: Download
-    - name: ppClicker
-      desc: >-
-        Has a paid and free version, one of the most popular free autoclickers.
-      download:
-        - link: aHR0cHM6Ly9wcGNsaWNrZXIueHl6Lw
-          icon: download
-          text: Download
-    - name: Thunder Clicker
-      desc: >-
-        Thunder Clicker has some cool features such as an auto W-Tap and more! It's one of my favourites.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvVGh1bmRlci5leGU
-          icon: download
-          text: Download
-    - name: Spark Clicker
-      badges:
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Cracked by CystemZ & Andy @ Anti-Skid Inc. Shitty C++ clicker with 2013 prot!
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU3BhcmtDbGlja2VyLnppcA
-          icon: download
-          text: Download
-    - name: Cooper Clicker
-      badges:
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Cracked by CystemZ & Andy @ Anti-Skid Inc. Terrible autoclicker, who tf would pay for this.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvQ29vcGVyLnppcA
-          icon: download
-          text: Download
-    - name: d0ge
-      badges:
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Cracked by vroom.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvZG9nZS56aXA
-          icon: download
-          text: Download
-    - name: Spotify Autoclicker
-      badges:
-      desc: >-
-        An autoclicker disguised to look like the Spotify application.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvU3BvdGlmeS5leGU
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvc3BvdGlmeXNyYy56aXA
-          icon: code
-          text: Source code
-    - name: Zoom Autoclicker
-      badges:
-      desc: >-
-        An autoclicker disguised to look like the Zoom application.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvem9vbWNsaWNrZXIuemlw
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvem9vbWNsaWNrZXJzcmMuemlw
-          icon: code
-          text: Source code
-    - name: Lunar Autoclicker
-      badges:
-      desc: >-
-        An autoclicker disguised to look like the Lunar Client launcher.
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHVuYXJjbGlja2VyLnppcA
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHVuYXJjbGlja2Vyc3JjLnppcA
-          icon: code
-          text: Source code
-    - name: Luvsy Autoclicker
-      desc: >-
-        Luvsy's old autoclicker. 99% sure this is some tutorial clicker bro did 💀💀
-      download:
-        - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvbHV2c3kuZXhl
-          icon: download
-          text: Download
-
-- title: Archives
-  icon: fa-archive
-  order: 6
-  clients:
-    - name: Intent.Store
-      desc: >-
-        A full archive of the Intent.Store website.
-      download:
-        - direct: /intent
-          icon: archive
-          text: Visit archive
-    - name: Jelte.lol
-      desc: >-
-        A full archive of the Jelte.lol website.
-      download:
-        - direct: /jelte
-          icon: archive
-          text: Visit archive
-    - name: Hovac.lol
-      desc: >-
-        A full archive of the original Hovac.lol website.
-      download:
-        - direct: /hovac
-          icon: archive
-          text: Visit archive
-    - name: Hactify.ru
-      desc: >-
-        A full archive of the Hactify.ru website. With 24+ exclusive downloads!
-      download:
-        - direct: /hactify
-          icon: archive
-          text: Visit archive
-    - name: SigmaClient.info
-      desc: >-
-        An archive of Sigma 5.0 (Jello), 4.11, and 3.9! With web-archives of the different time periods!
-      download:
-        - direct: /sigma
-          icon: archive
-          text: Visit archives
-    - name: JigsawClient.net
-      desc: >-
-        An extended archive of the Jigsaw website, with downloads and source code.
-      download:
-        - direct: /jigsaw
-          icon: archive
-          text: Visit archive
-    - name: Cheats.gq
-      desc: >-
-        A full archive of the Cheats.gq website, with 7+ clients and an optional launcher!
-      download:
-        - direct: /cheatsgq
-          icon: archive
-          text: Visit archive
-    - name: Itami.cf
-      desc: >-
-        A full archive of the Itami.cf website, the original site for Itami.
-      download:
-        - direct: /itami
-          icon: archive
-          text: Visit archive
-    - name: RavenBPlus.cf
-      desc: >-
-        A full archive of the RavenBPlus.cf website, the original site for Raven B+.
-      download:
-        - direct: /ravenbplus
-          icon: archive
-          text: Visit archive
-    - name: Sippin.cc
-      desc: >-
-        A full archive of the Sippin.cc website, the original site for IceTea.
-      download:
-        - direct: /sippin
-          icon: archive
-          text: Visit archive
-    - name: Zoomin.fun
-      desc: >-
-        A full archive of the Zoomin.fun website, the original site for Zoomin.
-      download:
-        - direct: /zoomin
-          icon: archive
-          text: Visit archive
-    - name: Salhack.com
-      desc: >-
-        A full archive of the Salhack.com website, the original site for Salhack.
-      download:
-        - direct: /salhack
-          icon: archive
-          text: Visit archive
-    - name: Whiteout.lol
-      desc: >-
-        A full archive of the old and new Whiteout.lol website, features the cracked version!
-      download:
-        - direct: /whiteout/3
-          icon: archive
-          text: New archive
-        - direct: /whiteout/2
-          icon: archive
-          text: Old archive
-    - name: HuzuniClient.com
-      desc: >-
-        A full archive of the HuzuniClient.com website, the original site for Huzuni.
-      download:
-        - direct: /huzuni
-          icon: archive
-          text: Visit archive
-    - name: Bounce Killer
-      desc: >-
-        Bounce Killer is an archive by Czf_233 of every LiquidBounce fork, paid or not, that doesnt comply with GPL.
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0ltQ3pmMjMzL0Zha2VCb3VuY2UtS2lsbGVy
-          icon: archive
-          text: Visit archive
-
-- title: Skyblock Clients
-  icon: fa-cloud
-  order: 7
-  clients:
-    - name: Camel
-      badges:
-        - text: 1.21.5
+        - text: 1.17.1
+        - text: 1.18.2
+        - text: 1.19.4
+        - text: 1.20.4
         - text: Fabric
           class: fabric
-        - text: 1.8.9
+      desc: >-
+        A very simple, vanilla-esque UI. Has a powerful crystal aura.
+      download:
+        - link: aHR0cHM6Ly9ibGVhY2hoYWNrLm9yZy9kb3dubG9hZHMuaHRtbA
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0JsZWFjaERldi9CbGVhY2hIYWNr
+          icon: code
+          text: Source code
+    - name: Lambda
+      badges:
+        - text: 1.12.x
         - text: Forge
           class: forge
       desc: >-
-        Has macros, Dojo cheats, and more cheats beyond Skyblock, such as for Party Games!
+        Often used along side with 3arthh4ck. Based off of the client KAMI Blue. Provides a plugin system.
       download:
-        - link: aHR0cDovL2dobHVrYS5naXRodWIuaW8vY2FtZWw
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2xhbWJkYS1jbGllbnQvbGFtYmRhL3JlbGVhc2VzL2xhdGVzdA
           icon: download
           text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2dobHVrYS9DYW1lbENsaWVudExlZ2FjeQ
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2xhbWJkYS1jbGllbnQvbGFtYmRh
           icon: code
           text: Source code
-    - name: Pizza Client
+        - link: aHR0cHM6Ly9naXRodWIuY29tL29yZ3MvbGFtYmRhLXBsdWdpbnMvcmVwb3NpdG9yaWVz
+          icon: puzzle-piece
+          text: Addons
+    - name: Wurst+
+      badges:
+        - text: 1.12.x
+        - text: Forge
+          class: forge
+      desc: >-
+        The main competitor to Phobos. Includes downloads + src for all 3 versions!
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL1RydnNGL3d1cnN0cGx1cy1vbmU
+          icon: code
+          text: Download V1
+        - link: aHR0cHM6Ly9naXRodWIuY29tL1d1cnN0UGx1cy93dXJzdHBsdXMtdHdv
+          icon: code
+          text: Download V2
+        - link: aHR0cHM6Ly9naXRodWIuY29tL1d1cnN0UGx1cy93dXJzdC1wbHVzLXRocmVl
+          icon: code
+          text: Download V3
+    - name: Impact
+      badges:
+        - text: 1.12.2
+        - text: 1.16.5
+        - text: More (1.11.2 - 1.15.2)
+        - text: Forge
+          class: forge
+      desc: >-
+        Developed by LeafHacker, Brady, and leijurv. A popular Future alternative that supports Forge and Vanilla.
+      download:
+        - link: aHR0cHM6Ly9pbXBhY3RjbGllbnQubmV0Lw
+          icon: download
+          text: Download
+    - name: Salhack
+      badges:
+        - text: 1.12.2
+        - text: Forge
+          class: forge
+      desc: >-
+        Salhack is utility client by ionar2. It's branded based on the YouTuber SalC1.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2lvbmFyMi9zcGlkZXJtb2QvcmVsZWFzZXMvbGF0ZXN0
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2lvbmFyMi9zcGlkZXJtb2Q
+          icon: code
+          text: Source code
+    - name: Coffee
+      badges:
+        - text: 1.20.1
+        - text: Fabric
+          class: fabric
+      desc: >-
+        Partially discontinued. Popular for its amazing visuals. Provides an addon system.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0NvZmZlZS1DbGllbnQvQ29mZmVlL3Jhdy9tYXN0ZXIvYmluL2xhdGVzdC5qYXI
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0NvZmZlZS1DbGllbnQvQ29mZmVl
+          icon: code
+          text: Source code
+    - name: Ares
+      badges:
+        - text: 1.12.2
+        - text: 1.16.5
+        - text: 1.17.1
+        - text: 1.18.2
+        - text: Forge
+          class: forge
+      desc: >-
+        Includes a vast amount of modules and exploits. The UI is very easy-to-use but quite ugly.
+      download:
+        - link: aHR0cHM6Ly9hcmVzY2xpZW50Lm9yZy9kb3dubG9hZA
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0FyZXNDbGllbnQvYXJlcw
+          icon: code
+          text: Source code
+    - name: Inertia
+      badges:
+        - text: 1.12.2
+        - text: 1.13.2
+        - text: 1.14.4
+        - text: 1.15.2
+        - text: 1.16.5
+        - text: Forge
+          class: forge
+        - text: Fabric
+          class: fabric
+      desc: >-
+        A pretty advanced utility client with features not in other clients such as trident aim bot.
+      download:
+        - link: aHR0cHM6Ly9pbmVydGlhY2xpZW50LmNvbS9Eb3dubG9hZC5waHA
+          icon: download
+          text: Download
+    - name: ForgeHax
+      badges:
+        - text: 1.12.x
+        - text: 1.16.5
+        - text: Forge
+          class: forge
+      desc: >-
+        Created by fr1kin. Popular for its dupe utilities and book bot. Hasn't been updated since 2021.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2ZyMWtpbi9Gb3JnZUhheC9yZWxlYXNlcw
+          icon: download
+          text: Download
+    - name: 3arthh4ck
+      badges:
+        - text: 1.12.2
+        - text: Forge
+          class: forge
+      desc: >-
+        A Phobos recode by oHareDaBoss.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL2NvbG9yYmxpbmRuZXNzLzNhcnRoaDRjaw
+          icon: download
+          text: Download
+    - name: Phobos
+      badges:
+        - text: 1.12.2
+        - text: Forge
+          class: forge
+      desc: >-
+        A clean version of Phobos + src.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL1RoZS1Hb3BybzMzNi1BcmNoaXZlL0NMRUFOX1Bob2Jvc18xLjkuMC1CVUlMREFCTEUtU1JDL3JlbGVhc2VzL2xhdGVzdA
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL1RoZS1Hb3BybzMzNi1BcmNoaXZlL0NMRUFOX1Bob2Jvc18xLjkuMC1CVUlMREFCTEUtU1JD
+          icon: code
+          text: Source code
+    - name: Xulu
+      badges:
+        - text: 1.12.2
+        - text: Forge
+          class: forge
+        - text: Cracked
+          class: cracked
+      desc: >-
+        A deobfuscated leak of Xulu w/src.
+      download:
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvcmVsZWFzZXMvdGFnLzE1Mg
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9naXRodWIuY29tL0VsZW1lbnRhcnMvWHVsdS12MS41LjIvdHJlZS9tYXN0ZXIveHVsdXYxLjUuMg
+          icon: code
+          text: Source code
+
+- title: Dead Clients
+  icon: fa-radiation
+  order: 11
+  clients:
+    - name: Pizza Client V1
       badges:
         - text: 1.8.9
         - text: Forge
           class: forge
       desc: >-
-        We recommend you use V2, which has paid features. V1 is mostly here for archival purposes.
+        A very old version of Pizza Client.
       download:
-        - link: aHR0cHM6Ly9waXp6YWNsaWVudC5uZXQvZGlzY29yZA
-          icon: download
-          text: Download V2
         - link: aHR0cHM6Ly9ob3ZhYy5mdW4vZGwvUGl6emFDbGllbnQtMS4xLjMuamFy
           icon: download
-          text: Download V1
+          text: Download
     - name: GumTune
       badges:
         - text: 1.8.9
@@ -1248,34 +1418,6 @@
           icon: download
           text: Download
         - link: aHR0cHM6Ly9naXRodWIuY29tL1Jvc2VHb2xkSXNudEdheS9HdW1UdW5lQ2xpZW50
-          icon: code
-          text: Source code
-    - name: SkySkipped
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Tons of macros and cheats for farming, fishing, and COFL (auction)!
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0NlcGhldGlyL1NreVNraXBwZWQvcmVsZWFzZXMvbGF0ZXN0
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL0NlcGhldGlyL1NreVNraXBwZWQ
-          icon: code
-          text: Source code
-    - name: Odin
-      badges:
-        - text: 1.8.9
-        - text: Forge
-          class: forge
-      desc: >-
-        Has a legit and cheat version! Has tons of floor 7 utilities. Also has a cookie clicker bot!
-      download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL29kdGhla2luZy9PZGluQ2xpZW50L3JlbGVhc2VzL2xhdGVzdA
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL29kdGhla2luZy9PZGluQ2xpZW50
           icon: code
           text: Source code
     - name: Aurora
@@ -1420,110 +1562,10 @@
           icon: code
           text: Source code
 
-- title: Old Clients
-  icon: fa-skull
-  order: 8
-  clients:
-    - name: ForgeWurst
-      badges:
-        - text: 1.10.2
-        - text: 1.12.2
-        - text: Forge
-          class: forge
-      desc: >-
-        A Forge version of the Wurst client. Only has 36 modules compared to Wurst 7's 246 modules.
-      download:
-        - link: aHR0cHM6Ly9mb3JnZS53dXJzdGNsaWVudC5uZXQvZG93bmxvYWQv
-          icon: download
-          text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL1d1cnN0LUltcGVyaXVtL0ZvcmdlV3Vyc3Q
-          icon: code
-          text: Source code
-    - name: Wolfram
-      badges:
-        - text: 1.8.9
-        - text: 1.9.4
-        - text: 1.10.2
-        - text: 1.11.2
-        - text: 1.12.2
-      desc: >-
-        Client maintained by Wurst, but originally created by ShadowSpl0it. An old client designed to bypass NCP.
-      download:
-        - direct: https://linkvertise.com/460576/wolfram/1
-          icon: download
-          text: Download
-    - name: Sigma
-      badges:
-        - text: 1.8.9
-        - text: 1.9.4
-        - text: 1.10.2
-        - text: 1.11.2
-        - text: 1.12.2
-      desc: >-
-        Sigma 3.9 and 4.11 are provided by Cherry. Erm what da sigma?
-      download:
-        - direct: /sigma/5/
-          icon: download
-          text: Download 5.0
-        - direct: /sigma/4/
-          icon: download
-          text: Download 4.11
-        - direct: /sigma/3/
-          icon: download
-          text: Download 3.9
-    - name: Jigsaw
-      badges:
-        - text: 1.8.8
-        - text: 1.12.2
-      desc: >-
-        Client created by Robofån. It was one of the most influential hacked clients ever, with one of the first stable tp-aura and many ghost + blatant features.
-      download:
-        - direct: /jigsaw
-          icon: download
-          text: Download
-    - name: Mylo Client
-      badges:
-        - text: 1.8.9
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Client created by Mylo a long time ago. Cracked and archived by hovac with permission of Mylo.
-      download:
-        - link: aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL2pvMDV6eXkzNXZlNW5jeS9teWxvLnppcC9maWxl
-          icon: download
-          text: Download
-    - name: Huzuni Client
-      badges:
-        - text: 1.5
-        - text: 1.6
-        - text: 1.7.5
-        - text: 1.7.10
-        - text: 1.8.9
-        - text: 1.10
-        - text: 1.11.2
-        - text: Cracked
-          class: cracked
-      desc: >-
-        Client created by Halalaboos. VIP cracked for free.
-      download:
-        - direct: /huzuni/downloads
-          icon: download
-          text: Download
-    - name: Cum Client
-      badges:
-        - text: 1.8.9
-        - text: Cracked
-          class: cracked
-      desc: >-
-        <img src="/assets/img/nef.png">
-      download:
-        - direct: /intent
-          icon: download
-          text: Download
 
 - title: Development
   icon: fa-code
-  order: 9
+  order: 12
   clients:
     - name: MCP
       desc: >-
@@ -1586,9 +1628,10 @@
           icon: code
           text: Backup
 
+
 - title: Programs
   icon: fa-window-restore
-  order: 10
+  order: 13
   clients:
     - name: EzPing
       desc: >-

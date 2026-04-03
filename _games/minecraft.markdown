@@ -4,7 +4,7 @@ order: 1
 layout: default
 
 game_name: Minecraft Java Edition
-game_desc: Minecraft Java cheats for any version of the game! We offer ghost, blatant, and other types of cheats!
+game_desc: Minecraft Java cheats for Skyblock, PvP, anarchy, and more! Download the latest cheats for the newest versions, or archives of the oldest clients!
 game_img: /assets/img/minecraft.jpg
 game_badges:
   - text: Windows

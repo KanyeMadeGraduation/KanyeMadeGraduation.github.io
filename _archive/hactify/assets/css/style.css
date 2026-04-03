@@ -567,4 +567,9 @@ body
     top: 598px;
     left: calc(50% - 280px/2 - 15px);
 }
+
+.rainbow_text_1,
+.rainbow_text_1:link,
+.rainbow_text_1:visited {
+    color: #2CCB8A!important;
 }
