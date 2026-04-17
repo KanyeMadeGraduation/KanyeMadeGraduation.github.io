@@ -103,6 +103,20 @@
         - link: aHR0cHM6Ly9naXRodWIuY29tL2dobHVrYS9NZWR2ZWRDbGllbnQ
           icon: code
           text: Source code
+    - name: Raven Bs
+      badges:
+        - text: Latest
+        - text: Fabric
+          class: fabric
+      desc: >-
+        One of the most up-to-date Raven forks, with tons of modern ghost features. Made by Strangerrrrs.
+      download:
+        - link: aHR0cHM6Ly9jb2RlYmVyZy5vcmcvc3RyYW5nZXJycnJzL3JhdmVuLWJTL3JlbGVhc2VzL2xhdGVzdA
+          icon: download
+          text: Download
+        - link: aHR0cHM6Ly9jb2RlYmVyZy5vcmcvc3RyYW5nZXJycnJzL3JhdmVuLWJT
+          icon: code
+          text: Source code
     - name: OpenMyau
       badges:
         - text: 1.8.9
@@ -257,12 +271,9 @@
       desc: >-
         This is an autoclicker I made during class sometimes while bored. It's open-source and free!
       download:
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2VyL3JlbGVhc2VzL2xhdGVzdA
+        - link: aHR0cHM6Ly9ob3ZhYy50b3AvZGwvUnVudGltZUJyb2tlci5leGU
           icon: download
           text: Download
-        - link: aHR0cHM6Ly9naXRodWIuY29tL2dhbWUtaGF4L2hvdmFjLWF1dG9jbGlja2Vy
-          icon: code
-          text: Source code
     - name: Sapphire Lite
       desc: >-
         Has a paid and free version, one of the most popular free autoclickers.
