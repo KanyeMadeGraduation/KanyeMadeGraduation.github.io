@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="46">
+  <CheatEntries/>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Code :movss xmm0,[rcx+00000284]</Description>
+      <AddressString>HytaleClient.exe+41E22E</AddressString>
+      <Before>
+        <Byte>38</Byte>
+        <Byte>48</Byte>
+        <Byte>8B</Byte>
+        <Byte>49</Byte>
+        <Byte>10</Byte>
+      </Before>
+      <Actual>
+        <Byte>F3</Byte>
+        <Byte>0F</Byte>
+        <Byte>10</Byte>
+        <Byte>81</Byte>
+        <Byte>84</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>0F</Byte>
+        <Byte>16</Byte>
+        <Byte>C0</Byte>
+        <Byte>0F</Byte>
+        <Byte>12</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+  <LuaScript>
+--============================================
+-- HYTALE TRAINER by Urbanstorm
+--============================================
+
+local aobScansInitialized = false
+
+function initializeAOBScans()
+    if aobScansInitialized then
+        return true
+    end
+
+    local assemblyScript = [[
+        aobscanmodule(player_flight,HytaleClient.exe,80xxxxxxxxxxxx74xx80xxxxxx0F85xxxxxxxx488Bxx4Cxxxxxxxxxxxx41FFxx85xx0F85xxxxxxxx0FB6xxxxxxxxxx88xxxxxxxxxxF3xxxxxxxx0F16xx0F12xx0F57xx0F28xx0FC6xxxx0F28xx0FC6xxxx0F59xx0F28xx0FC6xxxx0F58xx0F28xx0FC6xxxx0F58xxF3xxxxxxF3xxxxxxxxxxxxxxF3xxxxxxE8xxxxxxxx0F28xxF2xxxxxxxx66xxxxxxBAxxxxxxxxF2xxxxxx66xxxxxxxxxxxxxx0F42xx8Bxx0F57xxF3xxxxxx0FC6xxxx0F5Exx85xx7Exx8Bxx0F29xxxxxx488Dxxxxxx488BxxE8xxxxxxxxFFxx75xx85xx0F85)
+        alloc(newmemplayer_flight,$100,player_flight)
+        alloc(flight,8,player_flight)
+        label(codeplayer_flight returnplayer_flight)
+
+        newmemplayer_flight:
+        mov [flight],rbx
+
+        codeplayer_flight:
+        cmp byte ptr [rbx+000000A7],00
+        jmp returnplayer_flight
+
+        player_flight:
+        jmp newmemplayer_flight
+        nop 2
+        returnplayer_flight:
+        registersymbol(player_flight flight)
+
+        aobscanmodule(player_vel,HytaleClient.exe,F3 * * * * * * * F3 * * * F3 * * * * * * * F3 * * * F3 * * * F3 * * * F3 * * * * * 80 * * * * * * 0F)
+        alloc(newmemplayer_vel,$100,player_vel)
+        alloc(vel,8,player_vel)
+        label(codeplayer_vel returnplayer_vel)
+
+        newmemplayer_vel:
+        mov [vel],rbx
+
+        codeplayer_vel:
+        movss xmm0,[rbx+000000E0]
+        jmp returnplayer_vel
+
+        player_vel:
+        jmp newmemplayer_vel
+        nop 3
+        returnplayer_vel:
+        registersymbol(player_vel vel)
+
+        aobscanmodule(player_pCords,HytaleClient.exe,0F12xxxxxxxxxx0F28xxF3xxxxxxF3xxxxxxE8)
+        alloc(newmemplayer_pCords,$100,player_pCords)
+        alloc(pCords,8,player_pCords)
+        label(codeplayer_pCords returnplayer_pCords)
+
+        newmemplayer_pCords:
+        mov [pCords],rax
+
+        codeplayer_pCords:
+        movlps xmm6,[rax+0000027C]
+        jmp returnplayer_pCords
+
+        player_pCords:
+        jmp newmemplayer_pCords
+        nop 2
+        returnplayer_pCords:
+        registersymbol(player_pCords pCords)
+
+        aobscanmodule(player_fov,HytaleClient.exe,F3xxxxxxxxxxxxxx0F28xxF3xxxxxx0F54xxxxxxxxxxF3xxxxxxxxxxxxxx0F2Exx76xxF3xxxxxxxxxxxxxx0F28)
+        alloc(newmemplayer_fov,$100,player_fov)
+        alloc(fov,8,player_fov)
+        alloc(fov_valv,8,player_fov)
+        label(codeplayer_fov returnplayer_fov)
+
+        fov_valv:
+        dq (float)90
+
+        newmemplayer_fov:
+        mov [fov],rcx
+        movss xmm1,[fov_valv]
+        jmp returnplayer_fov
+
+        codeplayer_fov:
+        movss xmm1,[rcx+00000214]
+        jmp returnplayer_fov
+
+        player_fov:
+        jmp newmemplayer_fov
+        nop 3
+        returnplayer_fov:
+        registersymbol(player_fov fov fov_valv)
+
+        aobscanmodule(effecttime,HytaleClient.exe,F3 * * * * 48 * * * 48 * * * * * * 39 * 48 * * * 5B E9)
+        alloc(newmemeffecttime,$100,effecttime)
+        alloc(time,8,effecttime)
+        alloc(custom_time,8,effecttime)
+        label(codeeffecttime returneffecttime)
+
+        newmemeffecttime:
+        mov [time],rbx
+        push rsi
+        mov rsi,[rbx+20]
+        mov [custom_time],rsi
+        movss xmm0,[custom_time]
+        pop rsi
+
+        codeeffecttime:
+        movss [rbx+20],xmm0
+        jmp returneffecttime
+
+        effecttime:
+        jmp newmemeffecttime
+        returneffecttime:
+        registersymbol(effecttime time custom_time)
+
+        aobscanmodule(setGamemode,HytaleClient.exe,80xxxxxx74xx488Bxxxx4038)
+        aobscanmodule(jeaddress,HytaleClient.exe,B8xxxxxxxx4883xxxx5B5EC3909090909055)
+        alloc(newmemsetGamemode,$100,setGamemode)
+        alloc(gamemode,8,setGamemode)
+        label(codesetGamemode returnsetGamemode)
+
+        newmemsetGamemode:
+        mov [gamemode],rcx
+
+        codesetGamemode:
+        cmp byte ptr [rcx+0A],01
+        je jeaddress
+        jmp returnsetGamemode
+
+        setGamemode:
+        jmp newmemsetGamemode
+        nop 1
+        returnsetGamemode:
+        registersymbol(setGamemode jeaddress gamemode)
+
+        aobscanmodule(player_stamina,HytaleClient.exe,F3xxxxxxxxF3xxxxxxxxF3xxxxxxxxF3xxxxxxxx0F2E)
+        alloc(newmemplayer_stamina,$100,player_stamina)
+        alloc(stamina,8,player_stamina)
+        label(codeplayer_stamina returnplayer_stamina)
+
+        newmemplayer_stamina:
+        cmp [rbp+13c],0
+        jne codeplayer_stamina
+        mov [stamina],rbp
+        mov [rbp+10],(float)10
+
+        codeplayer_stamina:
+        movss xmm0,[rbp+10]
+        jmp returnplayer_stamina
+
+        player_stamina:
+        jmp newmemplayer_stamina
+        returnplayer_stamina:
+        registersymbol(player_stamina stamina)
+    ]]
+
+    local success, result = pcall(autoAssemble, assemblyScript)
+    if success then
+        aobScansInitialized = true
+        return true
+    end
+    return false
+end
+
+--============================================
+-- WAYPOINTS SYSTEM
+--============================================
+
+local waypointsFilePath = getCheatEngineDir() .. "Hytale_Waypoints.txt"
+local waypointsData = {}
+local currentServer = "Default"
+
+function loadWaypoints()
+    waypointsData = {}
+
+    if fileExists(waypointsFilePath) then
+        local file = io.open(waypointsFilePath, "r")
+        if file then
+            local content = file:read("*all")
+            file:close()
+
+            for serverName, waypointName, xCoord, yCoord, zCoord in content:gmatch("([^|]+)|([^,]+),([^,]+),([^,]+),([^\n]+)\n?") do
+                if not waypointsData[serverName] then
+                    waypointsData[serverName] = {}
+                end
+                table.insert(waypointsData[serverName], {
+                    name = waypointName,
+                    x = tonumber(xCoord),
+                    y = tonumber(yCoord),
+                    z = tonumber(zCoord)
+                })
+            end
+        end
+    end
+
+    if not waypointsData["Default"] then
+        waypointsData["Default"] = {}
+    end
+end
+
+function saveWaypoints()
+    local file = io.open(waypointsFilePath, "w")
+    if file then
+        for serverName, waypoints in pairs(waypointsData) do
+            for index, waypoint in ipairs(waypoints) do
+                file:write(string.format("%s|%s,%.3f,%.3f,%.3f\n", serverName, waypoint.name, waypoint.x, waypoint.y, waypoint.z))
+            end
+        end
+        file:close()
+    end
+end
+
+function addWaypoint(serverName, waypointName, x, y, z)
+    if not waypointsData[serverName] then
+        waypointsData[serverName] = {}
+    end
+    table.insert(waypointsData[serverName], {
+        name = waypointName,
+        x = x,
+        y = y,
+        z = z
+    })
+    saveWaypoints()
+end
+
+function deleteWaypoint(serverName, index)
+    if waypointsData[serverName] and waypointsData[serverName][index] then
+        table.remove(waypointsData[serverName], index)
+        saveWaypoints()
+    end
+end
+
+function addServer(serverName)
+    if not waypointsData[serverName] then
+        waypointsData[serverName] = {}
+        saveWaypoints()
+    end
+end
+
+function deleteServer(serverName)
+    if waypointsData[serverName] then
+        waypointsData[serverName] = nil
+        saveWaypoints()
+        if currentServer == serverName then
+            currentServer = "Default"
+        end
+    end
+end
+
+function getServerList()
+    local serverList = {}
+    for serverName, _ in pairs(waypointsData) do
+        table.insert(serverList, serverName)
+    end
+    table.sort(serverList)
+    return serverList
+end
+
+loadWaypoints()
+
+--============================================
+-- CHEAT STATE VARIABLES
+--============================================
+
+local cheatsEnabled = {
+    flight = false,
+    noclip = false,
+    speedBoost = false,
+    infiniteStamina = false,
+    creativeMode = false
+}
+
+local flightSpeed = 5
+local speedMultiplier = 2
+local fovValue = 90
+
+--============================================
+-- MAIN FORM CREATION
+--============================================
+
+local mainForm = createForm()
+mainForm.BorderStyle = bsNone
+mainForm.Width = 440
+mainForm.Height = 560
+mainForm.Position = poScreenCenter
+mainForm.Color = 0x0D0D0D
+
+-- Drag state variables
+local isDragging = false
+local dragStartX, dragStartY = 0, 0
+local formStartLeft, formStartTop = 0, 0
+
+-- State variables
+local isTeleporting = false
+local cancelTeleport = false
+local isConnected = false
+local processId = nil
+local currentTab = 1
+
+function startDrag(x, y)
+    isDragging = true
+    dragStartX = x
+    dragStartY = y
+    formStartLeft = mainForm.Left
+    formStartTop = mainForm.Top
+end
+
+function doDrag(x, y)
+    if isDragging then
+        mainForm.Left = formStartLeft + x - dragStartX
+        mainForm.Top = formStartTop + y - dragStartY
+    end
+end
+
+function stopDrag()
+    isDragging = false
+end
+
+--============================================
+-- HEADER PANEL
+--============================================
+
+local headerPanel = createPanel(mainForm)
+headerPanel.Left = 0
+headerPanel.Top = 0
+headerPanel.Width = 440
+headerPanel.Height = 60
+headerPanel.Color = 0x0D0D0D
+headerPanel.BevelOuter = "bvNone"
+
+local accentLine = createPanel(headerPanel)
+accentLine.Left = 0
+accentLine.Top = 0
+accentLine.Width = 440
+accentLine.Height = 3
+accentLine.Color = 0xDC5EFF
+accentLine.BevelOuter = "bvNone"
+
+local titleLabel = createLabel(headerPanel)
+titleLabel.Caption = "HYTALE TRAINER"
+titleLabel.Left = 20
+titleLabel.Top = 12
+titleLabel.Font.Size = 16
+titleLabel.Font.Style = "[fsBold]"
+titleLabel.Font.Color = 0xDC5EFF
+titleLabel.Transparent = true
+
+local authorLabel = createLabel(headerPanel)
+authorLabel.Caption = "by Urbanstorm"
+authorLabel.Left = 20
+authorLabel.Top = 38
+authorLabel.Font.Size = 9
+authorLabel.Font.Color = 0x707070
+authorLabel.Transparent = true
+
+local windowControlsPanel = createPanel(headerPanel)
+windowControlsPanel.Left = 370
+windowControlsPanel.Top = 12
+windowControlsPanel.Width = 60
+windowControlsPanel.Height = 30
+windowControlsPanel.Color = 0x0D0D0D
+windowControlsPanel.BevelOuter = "bvNone"
+
+local minimizeButton = createLabel(windowControlsPanel)
+minimizeButton.Caption = "_"
+minimizeButton.Left = 0
+minimizeButton.Top = 0
+minimizeButton.Width = 25
+minimizeButton.Height = 25
+minimizeButton.Font.Size = 14
+minimizeButton.Font.Style = "[fsBold]"
+minimizeButton.Font.Color = 0x808080
+minimizeButton.Alignment = "taCenter"
+minimizeButton.Transparent = true
+minimizeButton.OnClick = function()
+    mainForm.WindowState = "wsMinimized"
+end
+
+local closeButton = createLabel(windowControlsPanel)
+closeButton.Caption = "X"
+closeButton.Left = 30
+closeButton.Top = 2
+closeButton.Width = 25
+closeButton.Height = 25
+closeButton.Font.Size = 12
+closeButton.Font.Style = "[fsBold]"
+closeButton.Font.Color = 0xFF5555
+closeButton.Alignment = "taCenter"
+closeButton.Transparent = true
+closeButton.OnClick = function()
+    cancelTeleport = true
+    closeCE()
+end
+
+-- Header drag events
+headerPanel.OnMouseDown = function(sender, button, x, y)
+    if button == mbLeft then
+        startDrag(mainForm.Left + x, mainForm.Top + y)
+    end
+end
+
+headerPanel.OnMouseMove = function(sender, x, y)
+    doDrag(mainForm.Left + x, mainForm.Top + y)
+end
+
+headerPanel.OnMouseUp = function(sender, button)
+    if button == mbLeft then
+        stopDrag()
+    end
+end
+
+titleLabel.OnMouseDown = function(sender, button, x, y)
+    if button == mbLeft then
+        startDrag(mainForm.Left + titleLabel.Left + x, mainForm.Top + titleLabel.Top + y)
+    end
+end
+
+titleLabel.OnMouseMove = function(sender, x, y)
+    doDrag(mainForm.Left + titleLabel.Left + x, mainForm.Top + titleLabel.Top + y)
+end
+
+titleLabel.OnMouseUp = function(sender, button)
+    if button == mbLeft then
+        stopDrag()
+    end
+end
+
+--============================================
+-- TAB SYSTEM
+--============================================
+
+local tabBarPanel = createPanel(mainForm)
+tabBarPanel.Left = 0
+tabBarPanel.Top = 60
+tabBarPanel.Width = 440
+tabBarPanel.Height = 45
+tabBarPanel.Color = 0x111111
+tabBarPanel.BevelOuter = "bvNone"
+
+local tabNames = {"MOVEMENT", "PLAYER", "TELEPORT"}
+local tabLabels = {}
+local tabPanels = {}
+local tabIndicators = {}
+
+function switchTab(index)
+    currentTab = index
+    for i, label in ipairs(tabLabels) do
+        if i == index then
+            label.Font.Color = 0xDC5EFF
+            tabIndicators[i].Color = 0xDC5EFF
+        else
+            label.Font.Color = 0x606060
+            tabIndicators[i].Color = 0x111111
+        end
+    end
+    for i, panel in ipairs(tabPanels) do
+        panel.Visible = (i == index)
+    end
+end
+
+local tabWidth = 130
+local tabStartX = 15
+
+for i, name in ipairs(tabNames) do
+    local label = createLabel(tabBarPanel)
+    label.Caption = name
+    label.Left = tabStartX + (i - 1) * (tabWidth + 10)
+    label.Top = 10
+    label.Width = tabWidth
+    label.Height = 20
+    label.Font.Size = 10
+    label.Font.Style = "[fsBold]"
+    label.Font.Color = (i == 1) and 0xDC5EFF or 0x606060
+    label.Alignment = "taCenter"
+    label.Transparent = true
+    label.OnClick = function()
+        switchTab(i)
+    end
+    tabLabels[i] = label
+
+    local indicator = createPanel(tabBarPanel)
+    indicator.Left = tabStartX + (i - 1) * (tabWidth + 10)
+    indicator.Top = 38
+    indicator.Width = tabWidth
+    indicator.Height = 3
+    indicator.Color = (i == 1) and 0xDC5EFF or 0x111111
+    indicator.BevelOuter = "bvNone"
+    tabIndicators[i] = indicator
+end
+
+--============================================
+-- CONTENT AREA
+--============================================
+
+local contentPanel = createPanel(mainForm)
+contentPanel.Left = 0
+contentPanel.Top = 105
+contentPanel.Width = 440
+contentPanel.Height = 400
+contentPanel.Color = 0x0D0D0D
+contentPanel.BevelOuter = "bvNone"
+
+for i = 1, 3 do
+    local panel = createPanel(contentPanel)
+    panel.Left = 0
+    panel.Top = 0
+    panel.Width = 440
+    panel.Height = 400
+    panel.Color = 0x0D0D0D
+    panel.BevelOuter = "bvNone"
+    panel.Visible = (i == 1)
+    tabPanels[i] = panel
+end
+
+--============================================
+-- STATUS BAR
+--============================================
+
+local statusBarPanel = createPanel(mainForm)
+statusBarPanel.Left = 0
+statusBarPanel.Top = 505
+statusBarPanel.Width = 440
+statusBarPanel.Height = 55
+statusBarPanel.Color = 0x111111
+statusBarPanel.BevelOuter = "bvNone"
+
+local connectionStatusPanel = createPanel(statusBarPanel)
+connectionStatusPanel.Left = 340
+connectionStatusPanel.Top = 15
+connectionStatusPanel.Width = 90
+connectionStatusPanel.Height = 25
+connectionStatusPanel.Color = 0x111111
+connectionStatusPanel.BevelOuter = "bvNone"
+
+local connectionDot = createLabel(connectionStatusPanel)
+connectionDot.Caption = "●"
+connectionDot.Left = 0
+connectionDot.Top = 2
+connectionDot.Width = 18
+connectionDot.Height = 18
+connectionDot.Font.Size = 12
+connectionDot.Font.Color = 0xFF5555
+connectionDot.Transparent = true
+
+local connectionLabel = createLabel(connectionStatusPanel)
+connectionLabel.Caption = "OFFLINE"
+connectionLabel.Left = 20
+connectionLabel.Top = 4
+connectionLabel.Font.Size = 9
+connectionLabel.Font.Style = "[fsBold]"
+connectionLabel.Font.Color = 0x606060
+connectionLabel.Transparent = true
+
+local statusLabel = createLabel(statusBarPanel)
+statusLabel.Caption = "Waiting for Hytale..."
+statusLabel.Left = 20
+statusLabel.Top = 12
+statusLabel.Width = 320
+statusLabel.Font.Size = 10
+statusLabel.Font.Color = 0xDC5EFF
+statusLabel.Transparent = true
+
+local coordinatesLabel = createLabel(statusBarPanel)
+coordinatesLabel.Caption = "X: --- | Y: --- | Z: ---"
+coordinatesLabel.Left = 20
+coordinatesLabel.Top = 32
+coordinatesLabel.Width = 320
+coordinatesLabel.Font.Size = 8
+coordinatesLabel.Font.Color = 0x505050
+coordinatesLabel.Transparent = true
+
+function setStatus(message, isError)
+    statusLabel.Caption = message
+    statusLabel.Font.Color = isError and 0xFF5555 or 0x55FF55
+end
+
+function updateConnectionStatus(connected)
+    isConnected = connected
+    if connected then
+        connectionDot.Font.Color = 0x55FF55
+        connectionLabel.Caption = "ONLINE"
+        connectionLabel.Font.Color = 0x55FF55
+    else
+        connectionDot.Font.Color = 0xFF5555
+        connectionLabel.Caption = "OFFLINE"
+        connectionLabel.Font.Color = 0x606060
+    end
+end
+
+--============================================
+-- UI HELPER FUNCTIONS
+--============================================
+
+function createToggleButton(parent, title, yPos, cheatKey, hotkey)
+    local panel = createPanel(parent)
+    panel.Left = 20
+    panel.Top = yPos
+    panel.Width = 400
+    panel.Height = 50
+    panel.Color = 0x151515
+    panel.BevelOuter = "bvNone"
+
+    local accentBar = createPanel(panel)
+    accentBar.Left = 0
+    accentBar.Top = 0
+    accentBar.Width = 4
+    accentBar.Height = 50
+    accentBar.Color = 0x252525
+    accentBar.BevelOuter = "bvNone"
+
+    local titleLbl = createLabel(panel)
+    titleLbl.Caption = title
+    titleLbl.Left = 20
+    titleLbl.Top = 10
+    titleLbl.Font.Size = 11
+    titleLbl.Font.Style = "[fsBold]"
+    titleLbl.Font.Color = 0xDDDDDD
+    titleLbl.Transparent = true
+
+    local hotkeyLabel = createLabel(panel)
+    hotkeyLabel.Caption = hotkey and ("Hotkey: " .. hotkey) or ""
+    hotkeyLabel.Left = 20
+    hotkeyLabel.Top = 30
+    hotkeyLabel.Font.Size = 8
+    hotkeyLabel.Font.Color = 0x555555
+    hotkeyLabel.Transparent = true
+
+    local toggleButton = createButton(panel)
+    toggleButton.Caption = "OFF"
+    toggleButton.Left = 320
+    toggleButton.Top = 10
+    toggleButton.Width = 65
+    toggleButton.Height = 30
+    toggleButton.Font.Size = 10
+    toggleButton.Font.Style = "[fsBold]"
+    toggleButton.Color = 0x1F1F1F
+    toggleButton.Font.Color = 0x606060
+    toggleButton.OnClick = function()
+        cheatsEnabled[cheatKey] = not cheatsEnabled[cheatKey]
+        if cheatsEnabled[cheatKey] then
+            toggleButton.Caption = "ON"
+            toggleButton.Font.Color = 0x55FF55
+            accentBar.Color = 0xDC5EFF
+        else
+            toggleButton.Caption = "OFF"
+            toggleButton.Font.Color = 0x606060
+            accentBar.Color = 0x252525
+        end
+    end
+
+    return {
+        panel = panel,
+        button = toggleButton,
+        accent = accentBar,
+        label = titleLbl
+    }
+end
+
+function createSliderPanel(parent, title, yPos, minVal, maxVal, defaultVal, onChange)
+    local panel = createPanel(parent)
+    panel.Left = 20
+    panel.Top = yPos
+    panel.Width = 400
+    panel.Height = 65
+    panel.Color = 0x151515
+    panel.BevelOuter = "bvNone"
+
+    local accentBar = createPanel(panel)
+    accentBar.Left = 0
+    accentBar.Top = 0
+    accentBar.Width = 4
+    accentBar.Height = 65
+    accentBar.Color = 0x252525
+    accentBar.BevelOuter = "bvNone"
+
+    local titleLbl = createLabel(panel)
+    titleLbl.Caption = title
+    titleLbl.Left = 20
+    titleLbl.Top = 8
+    titleLbl.Font.Size = 10
+    titleLbl.Font.Style = "[fsBold]"
+    titleLbl.Font.Color = 0xDDDDDD
+    titleLbl.Transparent = true
+
+    local valueLabel = createLabel(panel)
+    valueLabel.Caption = tostring(defaultVal)
+    valueLabel.Left = 360
+    valueLabel.Top = 8
+    valueLabel.Width = 30
+    valueLabel.Font.Size = 11
+    valueLabel.Font.Style = "[fsBold]"
+    valueLabel.Font.Color = 0xDC5EFF
+    valueLabel.Alignment = "taRightJustify"
+    valueLabel.Transparent = true
+
+    local trackBar = createTrackBar(panel)
+    trackBar.Left = 20
+    trackBar.Top = 32
+    trackBar.Width = 360
+    trackBar.Height = 25
+    trackBar.Min = minVal
+    trackBar.Max = maxVal
+    trackBar.Position = defaultVal
+    trackBar.OnChange = function()
+        valueLabel.Caption = tostring(trackBar.Position)
+        if onChange then
+            onChange(trackBar.Position)
+        end
+    end
+
+    return {
+        panel = panel,
+        track = trackBar,
+        valueLabel = valueLabel,
+        accent = accentBar
+    }
+end
+
+--============================================
+-- MOVEMENT TAB
+--============================================
+
+local movementTab = tabPanels[1]
+
+local flightToggle = createToggleButton(movementTab, "Flight Mode", 10, "flight", "`")
+local noclipToggle = createToggleButton(movementTab, "No Clip", 70, "noclip", "F1")
+local speedBoostToggle = createToggleButton(movementTab, "Speed Boost", 130, "speedBoost", "F2")
+
+local flightSpeedSlider = createSliderPanel(movementTab, "Flight Speed", 195, 1, 10, 5, function(value)
+    flightSpeed = value
+    local address = getAddressSafe('[flight]+48')
+    if address then
+        pcall(writeFloat, address, value)
+    end
+end)
+
+local speedMultiplierSlider = createSliderPanel(movementTab, "Speed Multiplier", 270, 1, 10, 2, function(value)
+    speedMultiplier = value
+end)
+
+--============================================
+-- PLAYER TAB
+--============================================
+
+local playerTab = tabPanels[2]
+
+local staminaToggle = createToggleButton(playerTab, "Infinite Stamina", 10, "infiniteStamina", "F3")
+local creativeModeToggle = createToggleButton(playerTab, "Creative Mode", 70, "creativeMode", "F4")
+
+local fovSlider = createSliderPanel(playerTab, "Field of View", 140, 60, 150, 90, function(value)
+    fovValue = value
+    local address = getAddressSafe('fov_valv')
+    if address then
+        pcall(writeFloat, address, value)
+    end
+end)
+
+--============================================
+-- TELEPORT TAB
+--============================================
+
+local teleportTab = tabPanels[3]
+
+-- Coordinate pointer paths
+local coordPointerX = "[[[[[THREADSTACK0-4B0]+8]+88]+10]+10]+27C"
+local coordPointerY = "[[[[[THREADSTACK0-4B0]+8]+88]+10]+10]+280"
+local coordPointerZ = "[[[[[THREADSTACK0-4B0]+8]+88]+10]+10]+284"
+
+function getCoordPointers()
+    local xAddr = getAddressSafe('[pCords]+27C')
+    local yAddr = getAddressSafe('[pCords]+280')
+    local zAddr = getAddressSafe('[pCords]+284')
+
+    if xAddr and yAddr and zAddr then
+        return xAddr, yAddr, zAddr, true
+    end
+    return coordPointerX, coordPointerY, coordPointerZ, false
+end
+
+-- Quick save position
+local savedX, savedY, savedZ = 0, 0, 0
+
+-- Current Position Panel
+local positionPanel = createPanel(teleportTab)
+positionPanel.Left = 20
+positionPanel.Top = 10
+positionPanel.Width = 400
+positionPanel.Height = 50
+positionPanel.Color = 0x151515
+positionPanel.BevelOuter = "bvNone"
+
+local positionAccent = createPanel(positionPanel)
+positionAccent.Left = 0
+positionAccent.Top = 0
+positionAccent.Width = 4
+positionAccent.Height = 50
+positionAccent.Color = 0xDC5EFF
+positionAccent.BevelOuter = "bvNone"
+
+local positionTitle = createLabel(positionPanel)
+positionTitle.Caption = "CURRENT POSITION"
+positionTitle.Left = 20
+positionTitle.Top = 8
+positionTitle.Font.Size = 8
+positionTitle.Font.Color = 0x707070
+positionTitle.Transparent = true
+
+local positionDisplay = createLabel(positionPanel)
+positionDisplay.Caption = "X: --- | Y: --- | Z: ---"
+positionDisplay.Left = 20
+positionDisplay.Top = 26
+positionDisplay.Font.Size = 11
+positionDisplay.Font.Style = "[fsBold]"
+positionDisplay.Font.Color = 0xDC5EFF
+positionDisplay.Transparent = true
+
+-- Target Coordinates Panel
+local targetPanel = createPanel(teleportTab)
+targetPanel.Left = 20
+targetPanel.Top = 70
+targetPanel.Width = 400
+targetPanel.Height = 70
+targetPanel.Color = 0x151515
+targetPanel.BevelOuter = "bvNone"
+
+local targetAccent = createPanel(targetPanel)
+targetAccent.Left = 0
+targetAccent.Top = 0
+targetAccent.Width = 4
+targetAccent.Height = 70
+targetAccent.Color = 0xDC5EFF
+targetAccent.BevelOuter = "bvNone"
+
+local targetTitle = createLabel(targetPanel)
+targetTitle.Caption = "TARGET COORDINATES (dbl-click X for current pos)"
+targetTitle.Left = 20
+targetTitle.Top = 6
+targetTitle.Font.Size = 7
+targetTitle.Font.Color = 0x707070
+targetTitle.Transparent = true
+
+local xLabel = createLabel(targetPanel)
+xLabel.Caption = "X"
+xLabel.Left = 25
+xLabel.Top = 25
+xLabel.Font.Size = 9
+xLabel.Font.Style = "[fsBold]"
+xLabel.Font.Color = 0xDC5EFF
+xLabel.Transparent = true
+
+local xInput = createEdit(targetPanel)
+xInput.Left = 25
+xInput.Top = 42
+xInput.Width = 105
+xInput.Text = "0"
+xInput.Color = 0x1F1F1F
+xInput.Font.Color = 0xFFFFFF
+xInput.BorderStyle = bsNone
+
+local yLabel = createLabel(targetPanel)
+yLabel.Caption = "Y"
+yLabel.Left = 150
+yLabel.Top = 25
+yLabel.Font.Size = 9
+yLabel.Font.Style = "[fsBold]"
+yLabel.Font.Color = 0xDC5EFF
+yLabel.Transparent = true
+
+local yInput = createEdit(targetPanel)
+yInput.Left = 150
+yInput.Top = 42
+yInput.Width = 105
+yInput.Text = "0"
+yInput.Color = 0x1F1F1F
+yInput.Font.Color = 0xFFFFFF
+yInput.BorderStyle = bsNone
+
+local zLabel = createLabel(targetPanel)
+zLabel.Caption = "Z"
+zLabel.Left = 275
+zLabel.Top = 25
+zLabel.Font.Size = 9
+zLabel.Font.Style = "[fsBold]"
+zLabel.Font.Color = 0xDC5EFF
+zLabel.Transparent = true
+
+local zInput = createEdit(targetPanel)
+zInput.Left = 275
+zInput.Top = 42
+zInput.Width = 105
+zInput.Text = "0"
+zInput.Color = 0x1F1F1F
+zInput.Font.Color = 0xFFFFFF
+zInput.BorderStyle = bsNone
+
+-- Action Buttons
+local teleportButton = createButton(teleportTab)
+teleportButton.Caption = "TELEPORT"
+teleportButton.Left = 20
+teleportButton.Top = 150
+teleportButton.Width = 195
+teleportButton.Height = 40
+teleportButton.Font.Size = 12
+teleportButton.Font.Style = "[fsBold]"
+teleportButton.Color = 0xDC5EFF
+teleportButton.Font.Color = 0xFFFFFF
+
+local waypointsButton = createButton(teleportTab)
+waypointsButton.Caption = "WAYPOINTS"
+waypointsButton.Left = 225
+waypointsButton.Top = 150
+waypointsButton.Width = 195
+waypointsButton.Height = 40
+waypointsButton.Font.Size = 12
+waypointsButton.Font.Style = "[fsBold]"
+waypointsButton.Color = 0x1F1F1F
+waypointsButton.Font.Color = 0xDC5EFF
+
+local cancelButton = createButton(teleportTab)
+cancelButton.Caption = "CANCEL"
+cancelButton.Left = 20
+cancelButton.Top = 150
+cancelButton.Width = 400
+cancelButton.Height = 40
+cancelButton.Font.Size = 12
+cancelButton.Font.Style = "[fsBold]"
+cancelButton.Color = 0xFF5555
+cancelButton.Font.Color = 0xFFFFFF
+cancelButton.Visible = false
+cancelButton.OnClick = function()
+    cancelTeleport = true
+    setStatus("Bypass cancelled!", true)
+end
+
+-- Bypass Settings Panel
+local bypassPanel = createPanel(teleportTab)
+bypassPanel.Left = 20
+bypassPanel.Top = 200
+bypassPanel.Width = 400
+bypassPanel.Height = 50
+bypassPanel.Color = 0x151515
+bypassPanel.BevelOuter = "bvNone"
+
+local bypassAccent = createPanel(bypassPanel)
+bypassAccent.Left = 0
+bypassAccent.Top = 0
+bypassAccent.Width = 4
+bypassAccent.Height = 50
+bypassAccent.Color = 0x555555
+bypassAccent.BevelOuter = "bvNone"
+
+local bypassTitle = createLabel(bypassPanel)
+bypassTitle.Caption = "BYPASS SETTINGS"
+bypassTitle.Left = 20
+bypassTitle.Top = 4
+bypassTitle.Font.Size = 7
+bypassTitle.Font.Color = 0x555555
+bypassTitle.Transparent = true
+
+local freezeLabel = createLabel(bypassPanel)
+freezeLabel.Caption = "Freeze"
+freezeLabel.Left = 20
+freezeLabel.Top = 20
+freezeLabel.Font.Size = 7
+freezeLabel.Font.Color = 0x555555
+freezeLabel.Transparent = true
+
+local freezeInput = createEdit(bypassPanel)
+freezeInput.Left = 20
+freezeInput.Top = 32
+freezeInput.Width = 75
+freezeInput.Text = "500"
+freezeInput.Color = 0x1F1F1F
+freezeInput.Font.Color = 0xFFFFFF
+freezeInput.Font.Size = 9
+freezeInput.BorderStyle = bsNone
+
+local travelYLabel = createLabel(bypassPanel)
+travelYLabel.Caption = "Travel Y"
+travelYLabel.Left = 110
+travelYLabel.Top = 20
+travelYLabel.Font.Size = 7
+travelYLabel.Font.Color = 0x555555
+travelYLabel.Transparent = true
+
+local travelYInput = createEdit(bypassPanel)
+travelYInput.Left = 110
+travelYInput.Top = 32
+travelYInput.Width = 75
+travelYInput.Text = "150"
+travelYInput.Color = 0x1F1F1F
+travelYInput.Font.Color = 0xFFFFFF
+travelYInput.Font.Size = 9
+travelYInput.BorderStyle = bsNone
+
+local stepLabel = createLabel(bypassPanel)
+stepLabel.Caption = "Step"
+stepLabel.Left = 200
+stepLabel.Top = 20
+stepLabel.Font.Size = 7
+stepLabel.Font.Color = 0x555555
+stepLabel.Transparent = true
+
+local stepInput = createEdit(bypassPanel)
+stepInput.Left = 200
+stepInput.Top = 32
+stepInput.Width = 75
+stepInput.Text = "25"
+stepInput.Color = 0x1F1F1F
+stepInput.Font.Color = 0xFFFFFF
+stepInput.Font.Size = 9
+stepInput.BorderStyle = bsNone
+
+local delayLabel = createLabel(bypassPanel)
+delayLabel.Caption = "Delay"
+delayLabel.Left = 290
+delayLabel.Top = 20
+delayLabel.Font.Size = 7
+delayLabel.Font.Color = 0x555555
+delayLabel.Transparent = true
+
+local delayInput = createEdit(bypassPanel)
+delayInput.Left = 290
+delayInput.Top = 32
+delayInput.Width = 75
+delayInput.Text = "100"
+delayInput.Color = 0x1F1F1F
+delayInput.Font.Color = 0xFFFFFF
+delayInput.Font.Size = 9
+delayInput.BorderStyle = bsNone
+
+-- Quick Save/Load Buttons
+local quickSaveButton = createButton(teleportTab)
+quickSaveButton.Caption = "QUICK SAVE"
+quickSaveButton.Left = 20
+quickSaveButton.Top = 260
+quickSaveButton.Width = 195
+quickSaveButton.Height = 32
+quickSaveButton.Color = 0x1F1F1F
+quickSaveButton.Font.Color = 0xDC5EFF
+quickSaveButton.Font.Size = 9
+quickSaveButton.Font.Style = "[fsBold]"
+
+local quickLoadButton = createButton(teleportTab)
+quickLoadButton.Caption = "QUICK LOAD"
+quickLoadButton.Left = 225
+quickLoadButton.Top = 260
+quickLoadButton.Width = 195
+quickLoadButton.Height = 32
+quickLoadButton.Color = 0x1F1F1F
+quickLoadButton.Font.Color = 0xDC5EFF
+quickLoadButton.Font.Size = 9
+quickLoadButton.Font.Style = "[fsBold]"
+
+--============================================
+-- WAYPOINTS WINDOW
+--============================================
+
+local waypointsForm = nil
+local serverComboBox = nil
+local waypointListBox = nil
+
+function refreshServerList()
+    if serverComboBox then
+        serverComboBox.Items.clear()
+        for _, serverName in ipairs(getServerList()) do
+            serverComboBox.Items.add(serverName)
+        end
+
+        local index = serverComboBox.Items.indexOf(currentServer)
+        if index &gt;= 0 then
+            serverComboBox.ItemIndex = index
+        elseif serverComboBox.Items.Count &gt; 0 then
+            serverComboBox.ItemIndex = 0
+            currentServer = serverComboBox.Items[0]
+        end
+    end
+end
+
+function refreshWaypointList()
+    if waypointListBox and currentServer then
+        waypointListBox.Items.clear()
+        if waypointsData[currentServer] then
+            for i, waypoint in ipairs(waypointsData[currentServer]) do
+                waypointListBox.Items.add(string.format("%s (%.0f, %.0f, %.0f)", waypoint.name, waypoint.x, waypoint.y, waypoint.z))
+            end
+        end
+    end
+end
+
+function showWaypointsWindow()
+    if waypointsForm then
+        waypointsForm.show()
+        refreshServerList()
+        refreshWaypointList()
+        return
+    end
+
+    waypointsForm = createForm(false)
+    waypointsForm.Caption = "Waypoints Manager"
+    waypointsForm.Width = 350
+    waypointsForm.Height = 420
+    waypointsForm.Position = poScreenCenter
+    waypointsForm.Color = 0x0D0D0D
+    waypointsForm.BorderStyle = bsNone
+
+    -- Header
+    local wpHeader = createPanel(waypointsForm)
+    wpHeader.Left = 0
+    wpHeader.Top = 0
+    wpHeader.Width = 350
+    wpHeader.Height = 50
+    wpHeader.Color = 0x0D0D0D
+    wpHeader.BevelOuter = "bvNone"
+
+    local wpAccent = createPanel(wpHeader)
+    wpAccent.Left = 0
+    wpAccent.Top = 0
+    wpAccent.Width = 350
+    wpAccent.Height = 3
+    wpAccent.Color = 0xDC5EFF
+    wpAccent.BevelOuter = "bvNone"
+
+    local wpTitle = createLabel(wpHeader)
+    wpTitle.Caption = "WAYPOINTS MANAGER"
+    wpTitle.Left = 15
+    wpTitle.Top = 14
+    wpTitle.Font.Size = 14
+    wpTitle.Font.Style = "[fsBold]"
+    wpTitle.Font.Color = 0xDC5EFF
+    wpTitle.Transparent = true
+
+    local wpCloseButton = createLabel(wpHeader)
+    wpCloseButton.Caption = "X"
+    wpCloseButton.Left = 320
+    wpCloseButton.Top = 10
+    wpCloseButton.Width = 25
+    wpCloseButton.Height = 25
+    wpCloseButton.Font.Size = 12
+    wpCloseButton.Font.Style = "[fsBold]"
+    wpCloseButton.Font.Color = 0xFF5555
+    wpCloseButton.Alignment = "taCenter"
+    wpCloseButton.Transparent = true
+    wpCloseButton.OnClick = function()
+        waypointsForm.hide()
+    end
+
+    -- Drag functionality for waypoints window
+    local wpDragging = false
+    local wpDragStartX, wpDragStartY = 0, 0
+    local wpFormStartLeft, wpFormStartTop = 0, 0
+
+    local function wpStartDrag(x, y)
+        wpDragging = true
+        wpDragStartX = x
+        wpDragStartY = y
+        wpFormStartLeft = waypointsForm.Left
+        wpFormStartTop = waypointsForm.Top
+    end
+
+    local function wpDoDrag(x, y)
+        if wpDragging then
+            waypointsForm.Left = wpFormStartLeft + x - wpDragStartX
+            waypointsForm.Top = wpFormStartTop + y - wpDragStartY
+        end
+    end
+
+    local function wpStopDrag()
+        wpDragging = false
+    end
+
+    wpHeader.OnMouseDown = function(sender, button, x, y)
+        if button == mbLeft then
+            wpStartDrag(waypointsForm.Left + x, waypointsForm.Top + y)
+        end
+    end
+
+    wpHeader.OnMouseMove = function(sender, x, y)
+        wpDoDrag(waypointsForm.Left + x, waypointsForm.Top + y)
+    end
+
+    wpHeader.OnMouseUp = function(sender, button)
+        if button == mbLeft then
+            wpStopDrag()
+        end
+    end
+
+    wpTitle.OnMouseDown = function(sender, button, x, y)
+        if button == mbLeft then
+            wpStartDrag(waypointsForm.Left + wpTitle.Left + x, waypointsForm.Top + wpTitle.Top + y)
+        end
+    end
+
+    wpTitle.OnMouseMove = function(sender, x, y)
+        wpDoDrag(waypointsForm.Left + wpTitle.Left + x, waypointsForm.Top + wpTitle.Top + y)
+    end
+
+    wpTitle.OnMouseUp = function(sender, button)
+        if button == mbLeft then
+            wpStopDrag()
+        end
+    end
+
+    -- Content Panel
+    local wpContent = createPanel(waypointsForm)
+    wpContent.Left = 0
+    wpContent.Top = 50
+    wpContent.Width = 350
+    wpContent.Height = 370
+    wpContent.Color = 0x0D0D0D
+    wpContent.BevelOuter = "bvNone"
+
+    -- Server/Folder section
+    local serverLabel = createLabel(wpContent)
+    serverLabel.Caption = "SERVER / FOLDER"
+    serverLabel.Left = 15
+    serverLabel.Top = 5
+    serverLabel.Font.Size = 9
+    serverLabel.Font.Style = "[fsBold]"
+    serverLabel.Font.Color = 0xDC5EFF
+
+    serverComboBox = createComboBox(wpContent)
+    serverComboBox.Left = 15
+    serverComboBox.Top = 28
+    serverComboBox.Width = 195
+    serverComboBox.Style = csDropDownList
+    serverComboBox.OnChange = function()
+        if serverComboBox.ItemIndex &gt;= 0 then
+            currentServer = serverComboBox.Items[serverComboBox.ItemIndex]
+            refreshWaypointList()
+        end
+    end
+
+    local addServerButton = createButton(wpContent)
+    addServerButton.Caption = "+ ADD"
+    addServerButton.Left = 220
+    addServerButton.Top = 26
+    addServerButton.Width = 55
+    addServerButton.Height = 26
+    addServerButton.Font.Size = 9
+    addServerButton.Color = 0x1F1F1F
+    addServerButton.Font.Color = 0xDC5EFF
+    addServerButton.OnClick = function()
+        local name = inputQuery("Add Server/Folder", "Enter server or folder name:", "")
+        if name and name ~= "" then
+            addServer(name)
+            currentServer = name
+            refreshServerList()
+            refreshWaypointList()
+        end
+    end
+
+    local deleteServerButton = createButton(wpContent)
+    deleteServerButton.Caption = "- DEL"
+    deleteServerButton.Left = 285
+    deleteServerButton.Top = 26
+    deleteServerButton.Width = 55
+    deleteServerButton.Height = 26
+    deleteServerButton.Font.Size = 9
+    deleteServerButton.Color = 0x1F1F1F
+    deleteServerButton.Font.Color = 0xFF5555
+    deleteServerButton.OnClick = function()
+        if serverComboBox.ItemIndex &gt;= 0 then
+            local serverName = serverComboBox.Items[serverComboBox.ItemIndex]
+            if serverName ~= "Default" then
+                deleteServer(serverName)
+                refreshServerList()
+                refreshWaypointList()
+                setStatus("Server deleted: " .. serverName, false)
+            else
+                setStatus("Cannot delete Default folder", true)
+            end
+        end
+    end
+
+    -- Waypoints section
+    local waypointsLabel = createLabel(wpContent)
+    waypointsLabel.Caption = "WAYPOINTS"
+    waypointsLabel.Left = 15
+    waypointsLabel.Top = 65
+    waypointsLabel.Font.Size = 9
+    waypointsLabel.Font.Style = "[fsBold]"
+    waypointsLabel.Font.Color = 0xDC5EFF
+
+    waypointListBox = createListBox(wpContent)
+    waypointListBox.Left = 15
+    waypointListBox.Top = 88
+    waypointListBox.Width = 320
+    waypointListBox.Height = 180
+    waypointListBox.Color = 0x151515
+    waypointListBox.Font.Color = 0xFFFFFF
+
+    local loadWaypointButton = createButton(wpContent)
+    loadWaypointButton.Caption = "LOAD SELECTED"
+    loadWaypointButton.Left = 15
+    loadWaypointButton.Top = 280
+    loadWaypointButton.Width = 155
+    loadWaypointButton.Height = 35
+    loadWaypointButton.Font.Size = 10
+    loadWaypointButton.Font.Style = "[fsBold]"
+    loadWaypointButton.Color = 0xDC5EFF
+    loadWaypointButton.Font.Color = 0xFFFFFF
+    loadWaypointButton.OnClick = function()
+        local index = waypointListBox.ItemIndex
+        if index &gt;= 0 and waypointsData[currentServer] and waypointsData[currentServer][index + 1] then
+            local waypoint = waypointsData[currentServer][index + 1]
+            xInput.Text = string.format("%.2f", waypoint.x)
+            yInput.Text = string.format("%.2f", waypoint.y)
+            zInput.Text = string.format("%.2f", waypoint.z)
+            setStatus("Loaded waypoint: " .. waypoint.name, false)
+        end
+    end
+
+    local deleteWaypointButton = createButton(wpContent)
+    deleteWaypointButton.Caption = "DELETE"
+    deleteWaypointButton.Left = 180
+    deleteWaypointButton.Top = 280
+    deleteWaypointButton.Width = 155
+    deleteWaypointButton.Height = 35
+    deleteWaypointButton.Font.Size = 10
+    deleteWaypointButton.Font.Style = "[fsBold]"
+    deleteWaypointButton.Color = 0xFF5555
+    deleteWaypointButton.Font.Color = 0xFFFFFF
+    deleteWaypointButton.OnClick = function()
+        local index = waypointListBox.ItemIndex
+        if index &gt;= 0 then
+            deleteWaypoint(currentServer, index + 1)
+            refreshWaypointList()
+            setStatus("Waypoint deleted", false)
+        end
+    end
+
+    local saveCurrentPosButton = createButton(wpContent)
+    saveCurrentPosButton.Caption = "SAVE CURRENT POS"
+    saveCurrentPosButton.Left = 15
+    saveCurrentPosButton.Top = 325
+    saveCurrentPosButton.Width = 320
+    saveCurrentPosButton.Height = 35
+    saveCurrentPosButton.Font.Size = 10
+    saveCurrentPosButton.Font.Style = "[fsBold]"
+    saveCurrentPosButton.Color = 0x1F1F1F
+    saveCurrentPosButton.Font.Color = 0xDC5EFF
+    saveCurrentPosButton.OnClick = function()
+        local x, y, z = readCoordinates()
+        if x then
+            local name = inputQuery("Save Waypoint", "Enter waypoint name:", "")
+            if name and name ~= "" then
+                addWaypoint(currentServer, name, x, y, z)
+                refreshWaypointList()
+                setStatus("Waypoint saved: " .. name, false)
+            end
+        else
+            setStatus("Player not found!", true)
+        end
+    end
+
+    waypointsForm.OnClose = function()
+        waypointsForm.hide()
+        return caHide
+    end
+
+    -- Keep window on top
+    local function setWpTopmost()
+        local handle = waypointsForm.Handle
+        if handle then
+            pcall(winapi_SetWindowPos, handle, -1, 0, 0, 0, 0, 0x0003)
+        end
+    end
+    pcall(setWpTopmost)
+
+    local wpTopmostTimer = createTimer(waypointsForm)
+    wpTopmostTimer.Interval = 2000
+    wpTopmostTimer.OnTimer = function()
+        pcall(setWpTopmost)
+    end
+    wpTopmostTimer.Enabled = true
+
+    refreshServerList()
+    refreshWaypointList()
+    waypointsForm.show()
+end
+
+waypointsButton.OnClick = function()
+    showWaypointsWindow()
+end
+
+--============================================
+-- COORDINATE FUNCTIONS
+--============================================
+
+function readCoordinates()
+    if not isConnected then
+        return nil, nil, nil
+    end
+
+    local xAddr, yAddr, zAddr, usingSymbol = getCoordPointers()
+
+    local successX, x = pcall(readFloat, xAddr)
+    if not successX or not x then
+        return nil, nil, nil
+    end
+
+    local successY, y = pcall(readFloat, yAddr)
+    if not successY or not y then
+        return nil, nil, nil
+    end
+
+    local successZ, z = pcall(readFloat, zAddr)
+    if not successZ or not z then
+        return nil, nil, nil
+    end
+
+    return x, y, z
+end
+
+function writeCoordinates(x, y, z)
+    if not isConnected then
+        return false
+    end
+
+    local xAddr, yAddr, zAddr, usingSymbol = getCoordPointers()
+    pcall(writeFloat, xAddr, x)
+    pcall(writeFloat, yAddr, y)
+    pcall(writeFloat, zAddr, z)
+    return true
+end
+
+function updatePositionDisplay()
+    if not isConnected then
+        positionDisplay.Caption = "Not connected to game"
+        positionDisplay.Font.Color = 0x606060
+        return
+    end
+
+    local x, y, z = readCoordinates()
+    if x then
+        positionDisplay.Caption = string.format("X: %.1f | Y: %.1f | Z: %.1f", x, y, z)
+        coordinatesLabel.Caption = string.format("X: %.1f | Y: %.1f | Z: %.1f", x, y, z)
+        positionDisplay.Font.Color = 0xDC5EFF
+    else
+        positionDisplay.Caption = "Player not found"
+        positionDisplay.Font.Color = 0x606060
+    end
+end
+
+--============================================
+-- TELEPORT FUNCTIONS
+--============================================
+
+function sleepWithMessages(duration)
+    local endTime = getTickCount() + duration
+    while getTickCount() &lt; endTime do
+        sleep(10)
+        if processMessages then
+            processMessages()
+        end
+        if cancelTeleport then
+            return false
+        end
+    end
+    return true
+end
+
+function holdPosition(x, y, z, duration)
+    local endTime = getTickCount() + duration
+    while getTickCount() &lt; endTime do
+        if cancelTeleport then
+            return false
+        end
+        writeCoordinates(x, y, z)
+        sleep(10)
+        if processMessages then
+            processMessages()
+        end
+    end
+    return true
+end
+
+local wasFlightEnabled = false
+
+function bypassTeleport(targetX, targetY, targetZ, travelY, stepSize, stepDelay, freezeTime)
+    isTeleporting = true
+    cancelTeleport = false
+    cancelButton.Visible = true
+    teleportButton.Visible = false
+    waypointsButton.Visible = false
+
+    -- Enable flight if not already
+    if not cheatsEnabled.flight then
+        cheatsEnabled.flight = true
+        flightToggle.button.Caption = "ON"
+        flightToggle.button.Font.Color = 0x55FF55
+        flightToggle.accent.Color = 0xDC5EFF
+    end
+
+    local tolerance = 5
+    local currentX, currentY, currentZ = readCoordinates()
+
+    if currentX == nil then
+        if not wasFlightEnabled then
+            cheatsEnabled.flight = false
+            flightToggle.button.Caption = "OFF"
+            flightToggle.button.Font.Color = 0x606060
+            flightToggle.accent.Color = 0x252525
+        end
+        setStatus("Player not found!", true)
+        isTeleporting = false
+        cancelButton.Visible = false
+        teleportButton.Visible = true
+        waypointsButton.Visible = true
+        return false
+    end
+
+    -- Move to travel height
+    setStatus("Moving to Y=" .. math.floor(travelY) .. "...", false)
+    if not holdPosition(currentX, travelY, currentZ, freezeTime) then
+        isTeleporting = false
+        cancelButton.Visible = false
+        teleportButton.Visible = true
+        waypointsButton.Visible = true
+        return false
+    end
+
+    -- Move horizontally in steps
+    local posX, posZ = currentX, currentZ
+    local stepCount = 0
+
+    while true do
+        if cancelTeleport then
+            if not wasFlightEnabled then
+                cheatsEnabled.flight = false
+                flightToggle.button.Caption = "OFF"
+                flightToggle.button.Font.Color = 0x606060
+                flightToggle.accent.Color = 0x252525
+            end
+            isTeleporting = false
+            cancelButton.Visible = false
+            teleportButton.Visible = true
+            waypointsButton.Visible = true
+            return false
+        end
+
+        local deltaX = targetX - posX
+        local deltaZ = targetZ - posZ
+        local distance = math.sqrt(deltaX^2 + deltaZ^2)
+        stepCount = stepCount + 1
+
+        setStatus(string.format("Step %d: %.0f units left", stepCount, distance), false)
+
+        if distance &lt;= tolerance then
+            break
+        end
+
+        local moveDistance = math.min(stepSize, distance)
+        if distance &gt; 0 then
+            posX = posX + deltaX / distance * moveDistance
+            posZ = posZ + deltaZ / distance * moveDistance
+        end
+
+        if not holdPosition(posX, travelY, posZ, stepDelay) then
+            if not wasFlightEnabled then
+                cheatsEnabled.flight = false
+                flightToggle.button.Caption = "OFF"
+                flightToggle.button.Font.Color = 0x606060
+                flightToggle.accent.Color = 0x252525
+            end
+            isTeleporting = false
+            cancelButton.Visible = false
+            teleportButton.Visible = true
+            waypointsButton.Visible = true
+            return false
+        end
+
+        updatePositionDisplay()
+    end
+
+    -- Align to exact target X/Z
+    setStatus("Aligning to target...", false)
+    if not holdPosition(targetX, travelY, targetZ, stepDelay) then
+        if not wasFlightEnabled then
+            cheatsEnabled.flight = false
+            flightToggle.button.Caption = "OFF"
+            flightToggle.button.Font.Color = 0x606060
+            flightToggle.accent.Color = 0x252525
+        end
+        isTeleporting = false
+        cancelButton.Visible = false
+        teleportButton.Visible = true
+        waypointsButton.Visible = true
+        return false
+    end
+
+    -- Move to final Y
+    setStatus("Teleporting to final...", false)
+    if not holdPosition(targetX, targetY, targetZ, freezeTime) then
+        if not wasFlightEnabled then
+            cheatsEnabled.flight = false
+            flightToggle.button.Caption = "OFF"
+            flightToggle.button.Font.Color = 0x606060
+            flightToggle.accent.Color = 0x252525
+        end
+        isTeleporting = false
+        cancelButton.Visible = false
+        teleportButton.Visible = true
+        waypointsButton.Visible = true
+        return false
+    end
+
+    sleep(50)
+
+    -- Verify final position
+    local finalX, finalY, finalZ = readCoordinates()
+    if finalX then
+        local err = math.sqrt((finalX - targetX)^2 + (finalY - targetY)^2 + (finalZ - targetZ)^2)
+        if err &lt;= tolerance then
+            setStatus(string.format("Arrived! (%.0f, %.0f, %.0f)", finalX, finalY, finalZ), false)
+        else
+            setStatus(string.format("Near target (%.0f off)", err), false)
+        end
+    end
+
+    -- Restore flight state
+    if not wasFlightEnabled then
+        cheatsEnabled.flight = false
+        flightToggle.button.Caption = "OFF"
+        flightToggle.button.Font.Color = 0x606060
+        flightToggle.accent.Color = 0x252525
+    end
+
+    isTeleporting = false
+    cancelButton.Visible = false
+    teleportButton.Visible = true
+    waypointsButton.Visible = true
+    updatePositionDisplay()
+    return true
+end
+
+teleportButton.OnClick = function()
+    if not isConnected then
+        setStatus("Not connected!", true)
+        return
+    end
+
+    if isTeleporting then
+        setStatus("Already teleporting!", true)
+        return
+    end
+
+    local targetX = tonumber(xInput.Text)
+    local targetY = tonumber(yInput.Text)
+    local targetZ = tonumber(zInput.Text)
+    local freezeTime = tonumber(freezeInput.Text) or 500
+    local travelY = tonumber(travelYInput.Text) or 150
+    local stepSize = tonumber(stepInput.Text) or 25
+    local stepDelay = tonumber(delayInput.Text) or 100
+
+    if not targetX or not targetY or not targetZ then
+        setStatus("Invalid coordinates!", true)
+        return
+    end
+
+    local currentX, currentY, currentZ = readCoordinates()
+    if not currentX then
+        setStatus("Player not found!", true)
+        return
+    end
+
+    wasFlightEnabled = cheatsEnabled.flight
+
+    -- Enable flight for teleport
+    if not wasFlightEnabled then
+        cheatsEnabled.flight = true
+        flightToggle.button.Caption = "ON"
+        flightToggle.button.Font.Color = 0x55FF55
+        flightToggle.accent.Color = 0xDC5EFF
+    end
+
+    setStatus("Teleporting...", false)
+
+    -- Try direct teleport first
+    local startTime = getTickCount()
+    local endTime = startTime + freezeTime
+    while getTickCount() &lt; endTime do
+        writeCoordinates(targetX, targetY, targetZ)
+        sleep(1)
+    end
+
+    sleep(50)
+
+    -- Check if direct teleport worked
+    local finalX, finalY, finalZ = readCoordinates()
+    if finalX then
+        local err = math.sqrt((finalX - targetX)^2 + (finalY - targetY)^2 + (finalZ - targetZ)^2)
+        if err &lt; 5 then
+            if not wasFlightEnabled then
+                cheatsEnabled.flight = false
+                flightToggle.button.Caption = "OFF"
+                flightToggle.button.Font.Color = 0x606060
+                flightToggle.accent.Color = 0x252525
+            end
+            setStatus(string.format("Teleported! (%.0f, %.0f, %.0f)", finalX, finalY, finalZ), false)
+            updatePositionDisplay()
+            return
+        end
+    end
+
+    -- Direct teleport blocked, use bypass
+    setStatus("Blocked! Bypass...", false)
+    sleep(200)
+    bypassTeleport(targetX, targetY, targetZ, travelY, stepSize, stepDelay, freezeTime)
+end
+
+quickSaveButton.OnClick = function()
+    local x, y, z = readCoordinates()
+    if x then
+        savedX, savedY, savedZ = x, y, z
+        setStatus(string.format("Saved: %.0f, %.0f, %.0f", x, y, z), false)
+    else
+        setStatus("Player not found!", true)
+    end
+end
+
+quickLoadButton.OnClick = function()
+    xInput.Text = string.format("%.2f", savedX)
+    yInput.Text = string.format("%.2f", savedY)
+    zInput.Text = string.format("%.2f", savedZ)
+    setStatus("Position loaded", false)
+end
+
+xInput.OnDblClick = function()
+    local x, y, z = readCoordinates()
+    if x then
+        xInput.Text = string.format("%.2f", x)
+        yInput.Text = string.format("%.2f", y)
+        zInput.Text = string.format("%.2f", z)
+        setStatus("Current position loaded", false)
+    else
+        setStatus("Player not found!", true)
+    end
+end
+
+--============================================
+-- PROCESS ATTACHMENT
+--============================================
+
+function autoAttach()
+    local processNames = {"HytaleClient.exe", "Hytale.exe"}
+
+    for _, processName in ipairs(processNames) do
+        local pid = getProcessIDFromProcessName(processName)
+        if pid and pid ~= 0 then
+            openProcess(pid)
+            processId = pid
+            updateConnectionStatus(true)
+            setStatus("Connected to " .. processName, false)
+            initializeAOBScans()
+            return true
+        end
+    end
+
+    updateConnectionStatus(false)
+    setStatus("Waiting for Hytale...", true)
+    return false
+end
+
+function checkConnection()
+    if processId then
+        local stillRunning = false
+        local processNames = {"HytaleClient.exe", "Hytale.exe"}
+
+        for _, processName in ipairs(processNames) do
+            local pid = getProcessIDFromProcessName(processName)
+            if pid and pid == processId then
+                stillRunning = true
+                break
+            end
+        end
+
+        if not stillRunning then
+            updateConnectionStatus(false)
+            processId = nil
+            aobScansInitialized = false
+            setStatus("Game closed - Waiting...", true)
+            return false
+        end
+        return true
+    end
+    return false
+end
+
+--============================================
+-- TIMERS
+--============================================
+
+-- Cheat application timer
+local cheatTimer = createTimer(mainForm)
+cheatTimer.Interval = 100
+cheatTimer.OnTimer = function()
+    if not isConnected then
+        return
+    end
+
+    -- Flight
+    local flightAddr = getAddressSafe('[flight]+A7')
+    if flightAddr then
+        pcall(writeByte, flightAddr, cheatsEnabled.flight and 1 or 0)
+    end
+
+    -- No Clip
+    local noclipAddr = getAddressSafe('[flight]+71')
+    if noclipAddr then
+        pcall(writeByte, noclipAddr, cheatsEnabled.noclip and 1 or 0)
+    end
+
+    -- Speed Boost
+    local speedAddr = getAddressSafe('[pCords]+430')
+    if speedAddr then
+        pcall(writeFloat, speedAddr, cheatsEnabled.speedBoost and speedMultiplier or 1)
+    end
+
+    -- Infinite Stamina
+    local staminaAddr = getAddressSafe('[stamina]+10')
+    if staminaAddr and cheatsEnabled.infiniteStamina then
+        pcall(writeFloat, staminaAddr, 10)
+    end
+
+    -- Creative Mode
+    local gamemodeAddr = getAddressSafe('[gamemode]+A')
+    if gamemodeAddr then
+        pcall(writeByte, gamemodeAddr, cheatsEnabled.creativeMode and 1 or 0)
+    end
+end
+cheatTimer.Enabled = true
+
+-- Connection check timer
+local connectionTimer = createTimer(mainForm)
+connectionTimer.Interval = 2000
+connectionTimer.OnTimer = function()
+    if not isConnected then
+        autoAttach()
+    else
+        checkConnection()
+    end
+end
+connectionTimer.Enabled = true
+
+-- Position update timer
+local positionTimer = createTimer(mainForm)
+positionTimer.Interval = 250
+positionTimer.OnTimer = function()
+    if not isTeleporting then
+        updatePositionDisplay()
+    end
+end
+positionTimer.Enabled = true
+
+--============================================
+-- HOTKEYS
+--============================================
+
+local flightHotkey = createHotkey(function()
+    cheatsEnabled.flight = not cheatsEnabled.flight
+    if cheatsEnabled.flight then
+        flightToggle.button.Caption = "ON"
+        flightToggle.button.Font.Color = 0x55FF55
+        flightToggle.accent.Color = 0xDC5EFF
+        setStatus("Flight ON", false)
+    else
+        flightToggle.button.Caption = "OFF"
+        flightToggle.button.Font.Color = 0x606060
+        flightToggle.accent.Color = 0x252525
+        setStatus("Flight OFF", false)
+    end
+end, 0xC0)
+
+local noclipHotkey = createHotkey(function()
+    cheatsEnabled.noclip = not cheatsEnabled.noclip
+    if cheatsEnabled.noclip then
+        noclipToggle.button.Caption = "ON"
+        noclipToggle.button.Font.Color = 0x55FF55
+        noclipToggle.accent.Color = 0xDC5EFF
+        setStatus("No Clip ON", false)
+    else
+        noclipToggle.button.Caption = "OFF"
+        noclipToggle.button.Font.Color = 0x606060
+        noclipToggle.accent.Color = 0x252525
+        setStatus("No Clip OFF", false)
+    end
+end, VK_F1)
+
+local speedHotkey = createHotkey(function()
+    cheatsEnabled.speedBoost = not cheatsEnabled.speedBoost
+    if cheatsEnabled.speedBoost then
+        speedBoostToggle.button.Caption = "ON"
+        speedBoostToggle.button.Font.Color = 0x55FF55
+        speedBoostToggle.accent.Color = 0xDC5EFF
+        setStatus("Speed Boost ON", false)
+    else
+        speedBoostToggle.button.Caption = "OFF"
+        speedBoostToggle.button.Font.Color = 0x606060
+        speedBoostToggle.accent.Color = 0x252525
+        setStatus("Speed Boost OFF", false)
+    end
+end, VK_F2)
+
+local staminaHotkey = createHotkey(function()
+    cheatsEnabled.infiniteStamina = not cheatsEnabled.infiniteStamina
+    if cheatsEnabled.infiniteStamina then
+        staminaToggle.button.Caption = "ON"
+        staminaToggle.button.Font.Color = 0x55FF55
+        staminaToggle.accent.Color = 0xDC5EFF
+        setStatus("Infinite Stamina ON", false)
+    else
+        staminaToggle.button.Caption = "OFF"
+        staminaToggle.button.Font.Color = 0x606060
+        staminaToggle.accent.Color = 0x252525
+        setStatus("Infinite Stamina OFF", false)
+    end
+end, VK_F3)
+
+local creativeHotkey = createHotkey(function()
+    cheatsEnabled.creativeMode = not cheatsEnabled.creativeMode
+    if cheatsEnabled.creativeMode then
+        creativeModeToggle.button.Caption = "ON"
+        creativeModeToggle.button.Font.Color = 0x55FF55
+        creativeModeToggle.accent.Color = 0xDC5EFF
+        setStatus("Creative Mode ON", false)
+    else
+        creativeModeToggle.button.Caption = "OFF"
+        creativeModeToggle.button.Font.Color = 0x606060
+        creativeModeToggle.accent.Color = 0x252525
+        setStatus("Creative Mode OFF", false)
+    end
+end, VK_F4)
+
+--============================================
+-- KEEP WINDOW ON TOP
+--============================================
+
+local function setTopmost()
+    local handle = mainForm.Handle
+    if handle then
+        pcall(winapi_SetWindowPos, handle, -1, 0, 0, 0, 0, 0x0003)
+    end
+end
+pcall(setTopmost)
+
+local topmostTimer = createTimer(mainForm)
+topmostTimer.Interval = 2000
+topmostTimer.OnTimer = function()
+    pcall(setTopmost)
+end
+topmostTimer.Enabled = true
+
+--============================================
+-- INITIALIZATION
+--============================================
+
+autoAttach()
+updatePositionDisplay()
+mainForm.Show()
+</LuaScript>
+</CheatTable>
